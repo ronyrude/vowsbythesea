@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tampa Bay - Beach Ratings | Clearwater Coastal Weddings</title>
+<meta name="description" content="Side-by-side beach ratings for Tampa Bay area ceremony spots with an interactive map: capacity, permits, privacy, parking, and overall scores." />
+<link rel="canonical" href="https://clearwatercoastalweddings.com/beach-ratings" />
+
+<style>
+  :root{
+    --primary:#f28e1c;
+    --dark:#1a1a1a;
+    --light:#fff;
+    --text:#222;
+    --muted:#666;
+    --border:#e9e9e9;
+    --table-alt:#fffaf3;
+    --radius:12px;
+    --max:1100px;
+    --font:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0; font-family:var(--font); color:var(--text); background:var(--light)}
+
+  /* Top nav integrated with your site */
+  nav.primary{
+    background:var(--dark);
+    padding:12px 16px; position:sticky; top:0; z-index:1000;
+    box-shadow:0 2px 8px rgba(0,0,0,.3);
+    display:flex; gap:18px; align-items:center; flex-wrap:wrap;
+  }
+  nav.primary a{
+    color:#fff; text-decoration:none; font-weight:700; font-size:1.02rem; line-height:1;
+    padding:6px 0;
+  }
+  nav.primary a:hover, nav.primary a.active{color:var(--primary)}
+
+  header.hero{
+    padding:56px 16px 28px; text-align:center;
+    background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)), url('https://cdn.pixabay.com/photo/2016/02/19/11/53/clearwater-beach-1209438_1280.jpg') center/cover no-repeat;
+    color:#fff;
+  }
+  header.hero h1{margin:0 0 10px; font-size:2.2rem}
+  header.hero p{margin:0 auto 16px; max-width:760px; opacity:.95}
+
+  /* Buttons */
+  .btn{
+    background:var(--primary); color:#fff; padding:12px 22px; font-weight:800;
+    border:none; border-radius:10px; cursor:pointer; text-decoration:none; display:inline-block;
+    box-shadow:0 5px 10px rgba(242,142,28,.45); transition:background .25s;
+  }
+  .btn:hover,.btn:focus{background:#d87600; outline:none}
+  .btn.ghost{background:#ffffff; color:var(--dark); box-shadow:none; border:1px solid var(--border)}
+  .btn-row{display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:8px}
+
+  main{max-width:var(--max); margin:24px auto 60px; padding:0 16px}
+  .breadcrumbs{font-size:.95rem; color:#eee}
+  .breadcrumbs a{color:#fff; text-decoration:none}
+  .breadcrumbs a:hover{text-decoration:underline}
+
+  .note{
+    background:#fff5e9; border:1px solid var(--border); border-left:4px solid var(--primary);
+    padding:12px 14px; border-radius:var(--radius); color:#533b15; margin:20px 0; font-size:.95rem;
+  }
+
+  /* Legend */
+  .legend{
+    display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin:6px 0 18px;
+    color:var(--muted); font-size:.92rem;
+  }
+  .chip{
+    display:inline-flex; align-items:center; gap:6px;
+    background:#f7f7f7; border:1px solid #ececec; border-radius:999px; padding:4px 10px; font-weight:700; color:#444;
+  }
+  .swatch{width:10px; height:10px; border-radius:2px; display:inline-block}
+  .swatch.low{background:#e8f5e9}
+  .swatch.med{background:#fff3cd}
+  .swatch.high{background:#ffe3c2}
+
+  .region{
+    margin:30px 0 10px; color:var(--primary); font-size:1.45rem; font-weight:900;
+  }
+
+  /* Desktop/Tablet tables */
+  .table-wrap{
+    position:relative;
+    overflow:auto; border:1px solid var(--border); border-radius:var(--radius);
+    box-shadow:0 6px 18px rgba(0,0,0,.06); background:#fff; margin-bottom:22px;
+  }
+  .table-wrap::after{
+    content:"";
+    position:absolute; top:0; right:0; width:28px; height:100%;
+    pointer-events:none; background:linear-gradient(to left,#fff 40%, rgba(255,255,255,0));
+  }
+  table{width:100%; border-collapse:separate; border-spacing:0; min-width:900px; font-size:0.98rem}
+  thead th{
+    position:sticky; top:0; z-index:2;
+    background:linear-gradient(0deg, #fff7ec, #fff);
+    color:var(--dark); font-weight:900; text-align:left; padding:12px 10px; border-bottom:2px solid var(--primary);
+    white-space:nowrap;
+  }
+  th:first-child, td:first-child{
+    position:sticky; left:0; z-index:1; background:#fff;
+    box-shadow:1px 0 0 0 var(--border);
+  }
+  thead th:first-child{z-index:3; background:linear-gradient(0deg, #fff7ec, #fff)}
+  tbody td{padding:10px; border-bottom:1px solid var(--border); vertical-align:middle}
+  tbody tr:nth-child(odd){ background:var(--table-alt) }
+
+  .name-cell a{
+    color:var(--dark); font-weight:900; text-decoration:none; border-bottom:2px solid transparent; padding-bottom:2px;
+  }
+  .name-cell a:hover{color:#d87600; border-color:#ffd8a8}
+
+  .pill{display:inline-block; padding:3px 8px; background:#efefef; border-radius:999px; font-weight:700}
+  .permit-$   {background:#e8f5e9}
+  .permit-$$  {background:#fff3cd}
+  .permit-$$$ {background:#ffe3c2}
+
+  .privacy-low    {background:#e8f5e9}
+  .privacy-medium {background:#fff3cd}
+  .privacy-high   {background:#ffe3c2}
+
+  /* Stars with HTML entities */
+  .stars{font-size:1rem; letter-spacing:.5px; white-space:nowrap}
+  .sr-only{position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden}
+
+  .map-btn{
+    background:var(--primary); color:#fff; border:none; border-radius:999px; padding:8px 12px; font-weight:800; cursor:pointer;
+    box-shadow:0 3px 10px rgba(242,142,28,.35);
+  }
+  .map-btn:hover{background:#d87600}
+
+  /* MAP SECTION */
+  #map-block{
+    margin:36px 0 20px; border:1px solid var(--border); border-radius:var(--radius); overflow:hidden;
+    box-shadow:0 10px 28px rgba(0,0,0,.08); background:#fff;
+  }
+  #map-block header{
+    background:linear-gradient(0deg,#fff,#fff7ec);
+    color:var(--dark); text-align:left; padding:14px 16px; display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap;
+  }
+  #map-block header h2{margin:0; font-size:1.25rem; color:var(--dark)}
+  #map-block .iframe-wrap{aspect-ratio: 16 / 9; width:100%; background:#f7f7f7}
+  #map-frame{width:100%; height:100%; border:0; display:block}
+  .map-meta{display:flex; flex-wrap:wrap; gap:10px; padding:12px 16px; align-items:center; color:var(--muted); font-size:.95rem; border-top:1px solid var(--border)}
+
+  footer.page{max-width:var(--max); margin:20px auto 40px; padding:0 16px; color:var(--muted); font-size:.9rem}
+
+  /* Tablet tweaks */
+  @media (max-width: 900px){
+    header.hero h1{font-size:2rem}
+    table{min-width:820px; font-size:0.96rem}
+    nav.primary{gap:14px}
+  }
+
+  /* Cards: mobile-first for <480px */
+  .cards-wrap{display:none}
+  @media (max-width: 480px){
+    .table-wrap{display:none}
+    .cards-wrap{display:grid; gap:12px; margin-bottom:24px}
+    .card{
+      background:#fff; border:1px solid var(--border); border-radius:14px; overflow:hidden;
+      box-shadow:0 6px 16px rgba(0,0,0,.06);
+    }
+    .card .card-head{
+      display:flex; justify-content:space-between; align-items:center; gap:10px;
+      padding:12px 12px 8px; background:linear-gradient(0deg,#fff,#fff7ec);
+      border-bottom:1px solid var(--border);
+    }
+    .card .title{
+      font-weight:900; color:var(--dark); font-size:1.05rem; margin:0;
+    }
+    .card .card-body{padding:10px 12px; display:grid; gap:8px}
+    .row{display:flex; justify-content:space-between; gap:10px; align-items:center}
+    .row .label{color:#555; font-weight:700}
+    .row .value{font-weight:700}
+    .tag{display:inline-block; padding:3px 8px; background:#efefef; border-radius:999px; font-weight:700}
+    .stars{font-size:1rem}
+    .card .actions{padding:10px 12px 12px}
+    .map-btn{width:100%; padding:10px 14px}
+  }
+</style>
+</head>
+<body>
+
+<div id="site-nav" data-include="./locations/shared-menu/menu.html"></div>
+<script defer src="./locations/shared-menu/menu-loader.js"></script>
+
+<header class="hero" role="banner">
+  <div class="breadcrumbs"><a href="/#header">Home</a> > Beach Ratings</div>
+  <h1>Tampa Bay &ndash; Beach Ratings</h1>
+  <p>Capacity, permits, privacy, parking, and overall feel for popular ceremony spots &mdash; with a live map.</p>
+  <div class="btn-row">
+    <a class="btn" href="#map-block">Jump to Map</a>
+    <a class="btn ghost" href="/#packages">Back to Packages</a>
+  </div>
+</header>
+
+<main>
+
+  <div class="note">
+    <strong>Heads up:</strong> Privacy and permit details can change by season, time of day, holidays, and public events. We keep this guide helpful, but on-the-ground conditions vary.
+  </div>
+
+  <div class="legend" aria-label="Legend">
+    <span class="chip"><span class="swatch low"></span> Privacy: Low (busier)</span>
+    <span class="chip"><span class="swatch med"></span> Privacy: Medium</span>
+    <span class="chip"><span class="swatch high"></span> Privacy: High (secluded)</span>
+    <span class="chip">Permit: <span class="pill permit-$">$</span> <span class="pill permit-$$">$$</span> <span class="pill permit-$$$">$$$</span></span>
+  </div>
+
+  <!-- Helper templates for stars (fallback not strictly needed but kept) -->
+  <template id="star-5"><span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span></template>
+  <template id="star-4"><span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9734;</span></template>
+  <template id="star-3"><span aria-hidden="true">&#9733;&#9733;&#9733;&#9734;&#9734;</span></template>
+
+  <!-- ====== St Pete Beach ====== -->
+  <h2 class="region">St Pete Beach</h2>
+
+  <!-- TABLE -->
+  <div class="table-wrap">
+    <table aria-label="St Pete Beach Ratings">
+      <thead>
+        <tr>
+          <th>Location</th>
+          <th>Ideal Size</th>
+          <th>Permit</th>
+          <th>Privacy</th>
+          <th>Backup Pavilion</th>
+          <th>Sand</th>
+          <th>Parking</th>
+          <th>Overall</th>
+          <th># Boardwalks</th>
+          <th>Map</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="name-cell"><a href="#map-block" class="js-map-link" data-map="Fort De Soto Park, St. Petersburg, FL">Fort DeSoto Park</a></td>
+          <td>2 &ndash; 40</td><td><span class="pill permit-$$">$$</span></td>
+          <td><span class="pill privacy-medium">Medium</span></td><td class="pill">-</td>
+          <td class="stars"><span class="sr-only">3 out of 5</span>&#9733;&#9733;&#9733;&#9734;&#9734;</td>
+          <td>$5/Car</td>
+          <td class="stars"><span class="sr-only">4 out of 5</span>&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+          <td>1</td>
+          <td><button class="map-btn js-map-link" data-map="Fort De Soto Park, St. Petersburg, FL">View</button></td>
+        </tr>
+        <tr>
+          <td class="name-cell"><a href="#map-block" class="js-map-link" data-map="Pass-a-Grille Beach, FL">Pass-A-Grille Beach</a></td>
+          <td>2 &ndash; 100</td><td><span class="pill permit-$$">$$</span></td>
+          <td><span class="pill privacy-medium">Medium</span></td><td class="pill">Yes</td>
+          <td class="stars"><span class="sr-only">4 out of 5</span>&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+          <td class="pill">Yes</td>
+          <td class="stars"><span class="sr-only">5 out of 5</span>&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+          <td>2</td>
+          <td><button class="map-btn js-map-link" data-map="Pass-a-Grille Beach, FL">View</button></td>
+        </tr>
+        <tr>
+          <td class="name-cell"><a href="#map-block" class="js-map-link" data-map="Upham Beach Park, St Pete Beach, FL">Upham Beach</a></td>
+          <td>2 &ndash; 100</td><td><span class="pill permit-$$">$$</span></td>
+          <td><span class="pill privacy-medium">Medium</span></td><td class="pill">Yes</td>
+          <td class="stars"><span class="sr-only">4 out of 5</span>&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+          <td class="pill">Yes</td>
+          <td class="stars"><span class="sr-only">5 out of 5</span>&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+          <td>4</td>
+          <td><button class="map-btn js-map-link" data-map="Upham Beach Park, St Pete Beach, FL">View</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- CARDS (auto-generated via JS) -->
+  <div class="cards-wrap" data-cards-for="St Pete Beach"></div>
+
+  <!-- ====== Clearwater Beach (and Nearby) ====== -->
+  <h2 class="region">Clearwater Beach (and Nearby)</h2>
+
+  <div class="table-wrap">
+    <table aria-label="Clearwater Beach Ratings">
+      <thead>
+        <tr>
+          <th>Location</th><th>Ideal Size</th><th>Permit</th><th>Privacy</th>
+          <th>Backup Pavilion</th><th>Sand</th><th>Parking</th>
+          <th>Overall</th><th># Boardwalks</th><th>Map</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="name-cell"><a href="#map-block" class="js-map-link" data-map="Avalon Street Beach Access, Clearwater Beach, FL">Avalon Street</a></td>
+          <td>2 &ndash; 50</td><td><span class="pill permit-$">$</span></td>
+          <td><span class="pill privacy-low">Low</span></td><td class="pill">Yes</td>
+          <td class="stars"><span class="sr-only">4 out of 5</span>&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+          <td class="pill">Yes</td>
+          <td class="stars"><span class="sr-only">5 out of 5</span>&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+          <td>-</td>
+          <td><button class="map-btn js-map-link" data-map="Avalon Street Beach Access, Clearwater Beach, FL">View</button></td>
+        </tr>
+        <tr>
+          <td class="name-cell"><a href="#map-block" class="js-map-link" data-map="Sand Key Park, Clearwater, FL">Sand Key Park</a></td>
+          <td>2 &ndash; 100</td><td><span class="pill permit-$$$">$$$</span></td>
+          <td><span class="pill privacy-medium">Medium</span></td><td class="pill">-</td>
+          <td class="stars"><span class="sr-only">3 out of 5</span>&#9733;&#9733;&#9733;&#9734;&#9734;</td>
+          <td>$5/Car</td>
+          <td class="stars"><span class="sr-only">4 out of 5</span>&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+          <td>4</td>
+          <td><button class="map-btn js-map-link" data-map="Sand Key Park, Clearwater, FL">View</button></td>
+        </tr>
+        <tr>
+          <td class="name-cell"><a href="#map-block" class="js-map-link" data-map="Mandalay Park, Clearwater Beach, FL">Mandalay Park</a></td>
+          <td>2 &ndash; 50</td><td><span class="pill permit-$$">$$</span></td>
+          <td><span class="pill privacy-low">Low</span></td><td class="pill">Yes</td>
+          <td class="stars"><span class="sr-only">4 out of 5</span>&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+          <td class="pill">Yes</td>
+          <td class="stars"><span class="sr-only">4 out of 5</span>&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+          <td>3</td>
+          <td><button class="map-btn js-map-link" data-map="Mandalay Park, Clearwater Beach, FL">View</button></td>
+        </tr>
+        <tr>
+          <td class="name-cell"><a href="#map-block" class="js-map-link" data-map="Honeymoon Island State Park, Dunedin, FL">Honeymoon Island State Park</a></td>
+          <td>2 &ndash; 100</td><td><span class="pill permit-$$">$$</span></td>
+          <td><span class="pill privacy-high">High</span></td><td class="pill">-</td>
+          <td class="stars"><span class="sr-only">5 out of 5</span>&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+          <td>$8/Car</td>
+          <td class="stars"><span class="sr-only">5 out of 5</span>&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+          <td>5</td>
+          <td><button class="map-btn js-map-link" data-map="Honeymoon Island State Park, Dunedin, FL">View</button></td>
+        </tr>
+        <tr>
+          <td class="name-cell"><a href="#map-block" class="js-map-link" data-map="Caladesi Island State Park, FL">Caladesi Island State Park <span class="pill">Ferry/Boat</span></a></td>
+          <td>2 &ndash; 50</td><td><span class="pill permit-$$">$$</span></td>
+          <td><span class="pill privacy-high">High</span></td><td class="pill">-</td>
+          <td class="stars"><span class="sr-only">5 out of 5</span>&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+          <td class="pill">Ferry</td>
+          <td class="stars"><span class="sr-only">5 out of 5</span>&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+          <td>2</td>
+          <td><button class="map-btn js-map-link" data-map="Caladesi Island State Park, FL">View</button></td>
+        </tr>
+        <tr>
+          <td class="name-cell"><a href="#map-block" class="js-map-link" data-map="Belleair Beach, FL">Belleair Beach</a></td>
+          <td>2 &ndash; 30</td><td><span class="pill permit-$">$</span></td>
+          <td><span class="pill privacy-medium">Medium</span></td><td class="pill">-</td>
+          <td class="stars"><span class="sr-only">4 out of 5</span>&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+          <td class="pill">Limited</td>
+          <td class="stars"><span class="sr-only">4 out of 5</span>&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+          <td>1</td>
+          <td><button class="map-btn js-map-link" data-map="Belleair Beach, FL">View</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="cards-wrap" data-cards-for="Clearwater Beach (and Nearby)"></div>
+
+  <!-- ====== Treasure Island ====== -->
+  <h2 class="region">Treasure Island</h2>
+
+  <div class="table-wrap">
+    <table aria-label="Treasure Island Ratings">
+      <thead>
+        <tr>
+          <th>Location</th><th>Ideal Size</th><th>Permit</th><th>Privacy</th>
+          <th>Backup Pavilion</th><th>Sand</th><th>Parking</th>
+          <th>Overall</th><th># Boardwalks</th><th>Map</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="name-cell"><a href="#map-block" class="js-map-link" data-map="Sunset Beach, Treasure Island, FL">Sunset Beach</a></td>
+          <td>2 &ndash; 25</td><td><span class="pill permit-$$">$$</span></td>
+          <td><span class="pill privacy-medium">Medium</span></td><td class="pill">-</td>
+          <td class="stars"><span class="sr-only">3 out of 5</span>&#9733;&#9733;&#9733;&#9734;&#9734;</td>
+          <td class="pill">Yes</td>
+          <td class="stars"><span class="sr-only">4 out of 5</span>&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+          <td>4</td>
+          <td><button class="map-btn js-map-link" data-map="Sunset Beach, Treasure Island, FL">View</button></td>
+        </tr>
+        <tr>
+          <td class="name-cell"><a href="#map-block" class="js-map-link" data-map="Sunset Vistas Beachfront Suites, Treasure Island, FL">Sunset Vistas</a></td>
+          <td>2 &ndash; 75</td><td><span class="pill permit-$$">$$</span></td>
+          <td><span class="pill privacy-high">High</span></td><td class="pill">-</td>
+          <td class="stars"><span class="sr-only">3 out of 5</span>&#9733;&#9733;&#9733;&#9734;&#9734;</td>
+          <td class="pill">-</td>
+          <td class="stars"><span class="sr-only">4 out of 5</span>&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+          <td>2</td>
+          <td><button class="map-btn js-map-link" data-map="Sunset Vistas Beachfront Suites, Treasure Island, FL">View</button></td>
+        </tr>
+        <tr>
+          <td class="name-cell">Lions Club <span class="pill">No Longer Servicing</span></td>
+          <td>30 &ndash; 120</td><td>-</td><td><span class="pill privacy-high">High</span></td><td class="pill">-</td>
+          <td class="stars"><span class="sr-only">4 out of 5</span>&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+          <td class="pill">-</td>
+          <td class="stars"><span class="sr-only">4 out of 5</span>&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+          <td>-</td>
+          <td>-</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="cards-wrap" data-cards-for="Treasure Island"></div>
+
+  <!-- ====== Anna Maria Island ====== -->
+  <h2 class="region">Anna Maria Island</h2>
+
+  <div class="table-wrap">
+    <table aria-label="Anna Maria Island Ratings">
+      <thead>
+        <tr>
+          <th>Location</th><th>Ideal Size</th><th>Permit</th><th>Privacy</th>
+          <th>Backup Pavilion</th><th>Sand</th><th>Parking</th>
+          <th>Overall</th><th># Boardwalks</th><th>Map</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="name-cell"><a href="#map-block" class="js-map-link" data-map="Holmes Beach 52nd St, FL">Holmes Beach &ndash; 52nd St</a></td>
+          <td>2 &ndash; 20</td><td><span class="pill permit-$">$</span></td>
+          <td><span class="pill privacy-medium">Medium</span></td><td class="pill">-</td>
+          <td class="stars"><span class="sr-only">5 out of 5</span>&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+          <td class="pill">-</td>
+          <td class="stars"><span class="sr-only">5 out of 5</span>&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+          <td>1</td>
+          <td><button class="map-btn js-map-link" data-map="Holmes Beach 52nd St, FL">View</button></td>
+        </tr>
+        <tr>
+          <td class="name-cell"><a href="#map-block" class="js-map-link" data-map="Coquina Beach, Bradenton Beach, FL">Coquina Key Beach</a></td>
+          <td>2 &ndash; 100</td><td><span class="pill permit-$$">$$</span></td>
+          <td><span class="pill privacy-medium">Medium</span></td><td class="pill">-</td>
+          <td class="stars"><span class="sr-only">4 out of 5</span>&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+          <td class="pill">-</td>
+          <td class="stars"><span class="sr-only">4 out of 5</span>&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+          <td>-</td>
+          <td><button class="map-btn js-map-link" data-map="Coquina Beach, Bradenton Beach, FL">View</button></td>
+        </tr>
+        <tr>
+          <td class="name-cell"><a href="#map-block" class="js-map-link" data-map="Manatee Public Beach, Holmes Beach, FL">Holmes Beach &ndash; Public Beach</a></td>
+          <td>2 &ndash; 80</td><td><span class="pill permit-$$">$$</span></td>
+          <td><span class="pill privacy-low">Low</span></td><td class="pill">-</td>
+          <td class="stars"><span class="sr-only">3 out of 5</span>&#9733;&#9733;&#9733;&#9734;&#9734;</td>
+          <td class="pill">-</td>
+          <td class="stars"><span class="sr-only">3 out of 5</span>&#9733;&#9733;&#9733;&#9734;&#9734;</td>
+          <td>-</td>
+          <td><button class="map-btn js-map-link" data-map="Manatee Public Beach, Holmes Beach, FL">View</button></td>
+        </tr>
+        <tr>
+          <td class="name-cell"><a href="#map-block" class="js-map-link" data-map="46th St Beach Access, Holmes Beach, FL">Holmes Beach &ndash; 46th St</a></td>
+          <td>2 &ndash; 20</td><td><span class="pill permit-$">$</span></td>
+          <td><span class="pill privacy-medium">Medium</span></td><td class="pill">-</td>
+          <td class="stars"><span class="sr-only">4 out of 5</span>&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+          <td class="pill">-</td>
+          <td class="stars"><span class="sr-only">5 out of 5</span>&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+          <td>-</td>
+          <td><button class="map-btn js-map-link" data-map="46th St Beach Access, Holmes Beach, FL">View</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="cards-wrap" data-cards-for="Anna Maria Island"></div>
+
+  <!-- ====== Sarasota Beach ====== -->
+  <h2 class="region">Sarasota Beach</h2>
+
+  <div class="table-wrap">
+    <table aria-label="Sarasota Beach Ratings">
+      <thead>
+        <tr>
+          <th>Location</th><th>Ideal Size</th><th>Permit</th><th>Privacy</th>
+          <th>Backup Pavilion</th><th>Sand</th><th>Parking</th>
+          <th>Overall</th><th># Boardwalks</th><th>Map</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="name-cell"><a href="#map-block" class="js-map-link" data-map="Ted Sperling Park, Lido Key, FL">Lido Beach &ndash; Ted Sperling Park</a></td>
+          <td>2 &ndash; 50</td><td><span class="pill permit-$$">$$</span></td>
+          <td><span class="pill privacy-medium">Medium</span></td><td class="pill">-</td>
+          <td class="stars"><span class="sr-only">5 out of 5</span>&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+          <td class="pill">-</td>
+          <td class="stars"><span class="sr-only">5 out of 5</span>&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+          <td>-</td>
+          <td><button class="map-btn js-map-link" data-map="Ted Sperling Park, Lido Key, FL">View</button></td>
+        </tr>
+        <tr>
+          <td class="name-cell"><a href="#map-block" class="js-map-link" data-map="Turtle Beach, Siesta Key, FL">Siesta Key &ndash; Turtle Beach</a></td>
+          <td>2 &ndash; 30</td><td><span class="pill permit-$$">$$</span></td>
+          <td><span class="pill privacy-medium">Medium</span></td><td class="pill">-</td>
+          <td class="stars"><span class="sr-only">3 out of 5</span>&#9733;&#9733;&#9733;&#9734;&#9734;</td>
+          <td class="pill">-</td>
+          <td class="stars"><span class="sr-only">3 out of 5</span>&#9733;&#9733;&#9733;&#9734;&#9734;</td>
+          <td>3</td>
+          <td><button class="map-btn js-map-link" data-map="Turtle Beach, Siesta Key, FL">View</button></td>
+        </tr>
+        <tr>
+          <td class="name-cell"><a href="#map-block" class="js-map-link" data-map="Lido Beach, Sarasota, FL">Lido Beach &ndash; Zone 1</a></td>
+          <td>2 &ndash; 30</td><td><span class="pill permit-$$">$$</span></td>
+          <td><span class="pill privacy-medium">Medium</span></td><td class="pill">-</td>
+          <td class="stars"><span class="sr-only">5 out of 5</span>&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+          <td class="pill">-</td>
+          <td class="stars"><span class="sr-only">5 out of 5</span>&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+          <td>1</td>
+          <td><button class="map-btn js-map-link" data-map="Lido Beach, Sarasota, FL">View</button></td>
+        </tr>
+        <tr>
+          <td class="name-cell"><a href="#map-block" class="js-map-link" data-map="Lido Beach, Sarasota, FL">Lido Beach &ndash; Zone 2</a></td>
+          <td>2 &ndash; 80</td><td><span class="pill permit-$$">$$</span></td>
+          <td><span class="pill privacy-medium">Medium</span></td><td class="pill">-</td>
+          <td class="stars"><span class="sr-only">5 out of 5</span>&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+          <td class="pill">-</td>
+          <td class="stars"><span class="sr-only">5 out of 5</span>&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+          <td>-</td>
+          <td><button class="map-btn js-map-link" data-map="Lido Beach, Sarasota, FL">View</button></td>
+        </tr>
+        <tr>
+          <td class="name-cell"><a href="#map-block" class="js-map-link" data-map="Siesta Beach, Siesta Key, FL">Siesta Key Beach</a></td>
+          <td>2 &ndash; 100</td><td><span class="pill permit-$$$">$$$</span></td>
+          <td><span class="pill privacy-low">Low</span></td><td class="pill">-</td>
+          <td class="stars"><span class="sr-only">5 out of 5</span>&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+          <td class="pill">-</td>
+          <td class="stars"><span class="sr-only">5 out of 5</span>&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+          <td>3</td>
+          <td><button class="map-btn js-map-link" data-map="Siesta Beach, Siesta Key, FL">View</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="cards-wrap" data-cards-for="Sarasota Beach"></div>
+
+  <!-- ====== Indian Rocks Beach ====== -->
+  <h2 class="region">Indian Rocks Beach</h2>
+
+  <div class="table-wrap">
+    <table aria-label="Indian Rocks Beach Ratings">
+      <thead>
+        <tr>
+          <th>Location</th><th>Ideal Size</th><th>Permit</th><th>Privacy</th>
+          <th>Backup Pavilion</th><th>Sand</th><th>Parking</th>
+          <th>Overall</th><th># Boardwalks</th><th>Map</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="name-cell"><a href="#map-block" class="js-map-link" data-map="1st Ave & Gulf Blvd, Indian Rocks Beach, FL">1st Ave &amp; Gulf Blvd</a></td>
+          <td>2 &ndash; 10</td><td>-</td>
+          <td><span class="pill privacy-high">High</span></td><td class="pill">-</td>
+          <td class="stars"><span class="sr-only">3 out of 5</span>&#9733;&#9733;&#9733;&#9734;&#9734;</td>
+          <td class="pill">-</td>
+          <td class="stars"><span class="sr-only">3 out of 5</span>&#9733;&#9733;&#9733;&#9734;&#9734;</td>
+          <td>1</td>
+          <td><button class="map-btn js-map-link" data-map="1st Ave & Gulf Blvd, Indian Rocks Beach, FL">View</button></td>
+        </tr>
+        <tr>
+          <td class="name-cell"><a href="#map-block" class="js-map-link" data-map="4th Ave & Gulf Blvd, Indian Rocks Beach, FL">4th Ave &amp; Gulf Blvd</a></td>
+          <td>2 &ndash; 10</td><td>-</td>
+          <td><span class="pill privacy-medium">Medium</span></td><td class="pill">-</td>
+          <td class="stars"><span class="sr-only">3 out of 5</span>&#9733;&#9733;&#9733;&#9734;&#9734;</td>
+          <td class="pill">-</td>
+          <td class="stars"><span class="sr-only">4 out of 5</span>&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+          <td>1</td>
+          <td><button class="map-btn js-map-link" data-map="4th Ave & Gulf Blvd, Indian Rocks Beach, FL">View</button></td>
+        </tr>
+        <tr>
+          <td class="name-cell"><a href="#map-block" class="js-map-link" data-map="18th Ave Beach Access, Indian Rocks Beach, FL">18th Ave &ndash; Main Beach Access</a></td>
+          <td>2 &ndash; 10</td><td>-</td>
+          <td><span class="pill privacy-medium">Medium</span></td><td class="pill">Yes</td>
+          <td class="stars"><span class="sr-only">3 out of 5</span>&#9733;&#9733;&#9733;&#9734;&#9734;</td>
+          <td class="pill">Yes</td>
+          <td class="stars"><span class="sr-only">4 out of 5</span>&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+          <td>1</td>
+          <td><button class="map-btn js-map-link" data-map="18th Ave Beach Access, Indian Rocks Beach, FL">View</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="cards-wrap" data-cards-for="Indian Rocks Beach"></div>
+
+  <!-- ====== Redington Beach ====== -->
+  <h2 class="region">Redington Beach</h2>
+
+  <div class="table-wrap">
+    <table aria-label="Redington Beach Ratings">
+      <thead>
+        <tr>
+          <th>Location</th><th>Ideal Size</th><th>Permit</th><th>Privacy</th>
+          <th>Backup Pavilion</th><th>Sand</th><th>Parking</th>
+          <th>Overall</th><th># Boardwalks</th><th>Map</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="name-cell"><a href="#map-block" class="js-map-link" data-map="DoubleTree Beach Resort by Hilton, North Redington Beach, FL">Double Tree Hotel</a></td>
+          <td>2 &ndash; 80</td><td><span class="pill permit-$$$">$$$</span></td>
+          <td><span class="pill privacy-low">Low</span></td><td class="pill">-</td>
+          <td class="stars"><span class="sr-only">3 out of 5</span>&#9733;&#9733;&#9733;&#9734;&#9734;</td>
+          <td class="pill">-</td>
+          <td class="stars"><span class="sr-only">3 out of 5</span>&#9733;&#9733;&#9733;&#9734;&#9734;</td>
+          <td>-</td>
+          <td><button class="map-btn js-map-link" data-map="DoubleTree Beach Resort by Hilton, North Redington Beach, FL">View</button></td>
+        </tr>
+        <tr>
+          <td class="name-cell"><a href="#map-block" class="js-map-link" data-map="Constitution Park, Redington Shores, FL">Constitution Park</a></td>
+          <td>2 &ndash; 50</td><td><span class="pill permit-$">$</span></td>
+          <td><span class="pill privacy-medium">Medium</span></td><td class="pill">Yes</td>
+          <td class="stars"><span class="sr-only">3 out of 5</span>&#9733;&#9733;&#9733;&#9734;&#9734;</td>
+          <td class="pill">Yes</td>
+          <td class="stars"><span class="sr-only">4 out of 5</span>&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+          <td>2</td>
+          <td><button class="map-btn js-map-link" data-map="Constitution Park, Redington Shores, FL">View</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="cards-wrap" data-cards-for="Redington Beach"></div>
+
+  <!-- ====== Madeira Beach ====== -->
+  <h2 class="region">Madeira Beach</h2>
+
+  <div class="table-wrap">
+    <table aria-label="Madeira Beach Ratings">
+      <thead>
+        <tr>
+          <th>Location</th><th>Ideal Size</th><th>Permit</th><th>Privacy</th>
+          <th>Backup Pavilion</th><th>Sand</th><th>Parking</th>
+          <th>Overall</th><th># Boardwalks</th><th>Map</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="name-cell"><a href="#map-block" class="js-map-link" data-map="Archibald Memorial Beach Park, Madeira Beach, FL">Archibald Park</a></td>
+          <td>2 &ndash; 40</td><td><span class="pill permit-$">$</span></td>
+          <td><span class="pill privacy-medium">Medium</span></td><td class="pill">Yes</td>
+          <td class="stars"><span class="sr-only">3 out of 5</span>&#9733;&#9733;&#9733;&#9734;&#9734;</td>
+          <td class="pill">Yes</td>
+          <td class="stars"><span class="sr-only">4 out of 5</span>&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+          <td>1</td>
+          <td><button class="map-btn js-map-link" data-map="Archibald Memorial Beach Park, Madeira Beach, FL">View</button></td>
+        </tr>
+        <tr>
+          <td class="name-cell"><a href="#map-block" class="js-map-link" data-map="John's Pass Village & Boardwalk, Madeira Beach, FL">Johns Pass</a></td>
+          <td>2 &ndash; 20</td><td><span class="pill permit-$">$</span></td>
+          <td><span class="pill privacy-low">Low</span></td><td class="pill">Yes</td>
+          <td class="stars"><span class="sr-only">3 out of 5</span>&#9733;&#9733;&#9733;&#9734;&#9734;</td>
+          <td class="pill">Yes</td>
+          <td class="stars"><span class="sr-only">3 out of 5</span>&#9733;&#9733;&#9733;&#9734;&#9734;</td>
+          <td>1</td>
+          <td><button class="map-btn js-map-link" data-map="John's Pass Village & Boardwalk, Madeira Beach, FL">View</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="cards-wrap" data-cards-for="Madeira Beach"></div>
+
+  <!-- MAP -->
+  <section id="map-block" aria-labelledby="map-title">
+    <div role="region" aria-label="Beach Map">
+      <header>
+        <h2 id="map-title">Map</h2>
+        <span class="muted" id="map-selected">Currently showing: Clearwater Beach, FL</span>
+      </header>
+      <div class="iframe-wrap">
+        <iframe id="map-frame"
+          title="Beach location map"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Clearwater%20Beach%2C%20FL&output=embed">
+        </iframe>
+      </div>
+      <div class="map-meta">
+        <span class="chip">Tip: Click any beach name or "View" to jump here</span>
+        <span class="chip">Drag or zoom the map as needed</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="page">
+  <!-- (Intentionally minimal footer) -->
+</footer>
+
+<script>
+  // Smoothly scroll to the map and update the iframe
+  function goToMapAndUpdate(queryText){
+    const mapRegion = document.getElementById('map-block');
+    if(mapRegion && mapRegion.scrollIntoView){
+      mapRegion.scrollIntoView({behavior:'smooth', block:'start'});
+    }
+    updateMap(queryText);
+  }
+
+  // Update map iframe to a new place query
+  function updateMap(queryText){
+    const iframe = document.getElementById('map-frame');
+    const label = document.getElementById('map-selected');
+    if(!iframe) return;
+    const base = 'https://www.google.com/maps?q=';
+    const url = base + encodeURIComponent(queryText) + '&output=embed';
+    iframe.setAttribute('src', url);
+    if(label){ label.textContent = 'Currently showing: ' + queryText; }
+  }
+
+  // Bind clicks on any .js-map-link (links or buttons)
+  document.querySelectorAll('.js-map-link').forEach(el=>{
+    el.addEventListener('click', (evt)=>{
+      evt.preventDefault(); // control the scroll + update
+      const q = el.getAttribute('data-map');
+      if(q){ goToMapAndUpdate(q); }
+      if(location.hash !== '#map-block'){
+        history.replaceState(null, '', '#map-block');
+      }
+    });
+  });
+
+  // Build stacked cards from each table for mobile (<480px)
+  function buildCardsFromTables(){
+    document.querySelectorAll('.table-wrap table').forEach((table, idx)=>{
+      const tbody = table.querySelector('tbody');
+      if(!tbody) return;
+      const cardsWrap = table.parentElement.nextElementSibling;
+      if(!(cardsWrap && cardsWrap.classList.contains('cards-wrap'))) return;
+
+      // Clear any existing
+      cardsWrap.innerHTML = '';
+
+      tbody.querySelectorAll('tr').forEach(row=>{
+        const cells = row.querySelectorAll('td');
+        if(cells.length < 10) return;
+
+        const nameCell = cells[0];
+        const size = cells[1].textContent.trim();
+        const permit = cells[2].textContent.trim();
+        const privacy = cells[3].textContent.trim();
+        const backup = cells[4].textContent.trim();
+        const sandHTML = cells[5].innerHTML;     // keep stars
+        const parking = cells[6].textContent.trim();
+        const overallHTML = cells[7].innerHTML;  // keep stars
+        const boardwalks = cells[8].textContent.trim();
+
+        // Prefer button data-map; fallback to link data-map
+        let mapQuery = '';
+        const btn = cells[9].querySelector('.js-map-link');
+        if(btn){ mapQuery = btn.getAttribute('data-map') || ''; }
+        if(!mapQuery){
+          const link = nameCell.querySelector('.js-map-link');
+          if(link){ mapQuery = link.getAttribute('data-map') || ''; }
+        }
+
+        // Title text
+        let title = nameCell.textContent.trim();
+
+        // Build card
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+          <div class="card-head">
+            <h3 class="title">${title}</h3>
+          </div>
+          <div class="card-body">
+            <div class="row"><span class="label">Ideal Size</span><span class="value">${size.replace(' ','&ndash;')}</span></div>
+            <div class="row"><span class="label">Permit</span><span class="value">${permit}</span></div>
+            <div class="row"><span class="label">Privacy</span><span class="value">${privacy}</span></div>
+            <div class="row"><span class="label">Backup Pavilion</span><span class="value">${backup}</span></div>
+            <div class="row"><span class="label">Sand</span><span class="value stars">${sandHTML}</span></div>
+            <div class="row"><span class="label">Parking</span><span class="value">${parking}</span></div>
+            <div class="row"><span class="label">Overall</span><span class="value stars">${overallHTML}</span></div>
+            <div class="row"><span class="label"># Boardwalks</span><span class="value">${boardwalks}</span></div>
+          </div>
+          <div class="actions">
+            <button class="map-btn js-map-link" ${mapQuery ? `data-map="${mapQuery.replace(/"/g,'&quot;')}"` : ''}>View</button>
+          </div>
+        `;
+        cardsWrap.appendChild(card);
+      });
+    });
+
+    // Re-bind map links created in cards
+    document.querySelectorAll('.cards-wrap .js-map-link').forEach(el=>{
+      el.addEventListener('click', (evt)=>{
+        evt.preventDefault();
+        const q = el.getAttribute('data-map');
+        if(q){ goToMapAndUpdate(q); }
+        if(location.hash !== '#map-block'){
+          history.replaceState(null, '', '#map-block');
+        }
+      });
+    });
+  }
+
+  // Initial build and rebuild if content changes dynamically (not expected here)
+  buildCardsFromTables();
+
+  // Preload a map location if URL has ?place=...
+  (function preloadFromQuery(){
+    const params = new URLSearchParams(window.location.search);
+    const place = params.get('place');
+    if(place){
+      goToMapAndUpdate(place);
+      if(location.hash !== '#map-block'){
+        history.replaceState(null, '', '#map-block');
+      }
+    }
+  })();
+</script>
+
+</body>
+</html>

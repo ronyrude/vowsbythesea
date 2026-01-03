@@ -1,0 +1,82 @@
+<!-- /shared-footer/footer.html -->
+<footer class="vbts-footer" aria-label="Site footer">
+  <!-- Scoped styles so the footer looks identical on every page -->
+  <style>
+    .vbts-footer{background:#222;color:#fff;padding:40px 20px;text-align:center;font-family:'Segoe UI',Tahoma,Arial,sans-serif}
+    .vbts-footer h3{margin:0 0 20px;font-size:1.4rem}
+    .vbts-footer .awards{display:flex;flex-wrap:wrap;justify-content:center;gap:15px;margin:0 auto 30px;max-width:1100px}
+    .vbts-footer .awards img{height:60px;object-fit:contain}
+    .vbts-footer p{margin:6px 0}
+    .vbts-footer a{color:#ffcc66;text-decoration:none}
+    .vbts-footer a:hover{text-decoration:underline}
+    .vbts-footer hr{border:none;border-top:1px solid rgba(255,255,255,.2);margin:20px auto;max-width:1100px}
+    .vbts-footer .social{margin:16px 0 8px}
+    .vbts-footer .copyright{margin:0;font-size:.95rem;opacity:.95}
+    @media (max-width:600px){
+      .vbts-footer .awards img{height:52px}
+    }
+  </style>
+
+  <!-- Awards & Recognitions -->
+  <h3>Awards &amp; Recognitions</h3>
+  <div class="awards" role="list">
+    <img src="/images/awards/badge-weddingawards_en_US.png" alt="Wedding Awards" role="listitem" />
+    <img src="/images/awards/BCA_2015-badge-bottom.png" alt="BCA 2015 Award" role="listitem" />
+    <img src="/images/awards/BCA2016-logo_2x.png" alt="BCA 2016 Award" role="listitem" />
+    <img src="/images/awards/CCA-2014-badge-bottom.png" alt="CCA 2014 Award" role="listitem" />
+    <img src="/images/awards/wedding-badge.png" alt="Wedding Badge" role="listitem" />
+    <img src="/images/awards/WW-Rated-2009.jpg" alt="WeddingWire Rated 2009" role="listitem" />
+    <img src="/images/awards/WW-Rated-2010.jpg" alt="WeddingWire Rated 2010" role="listitem" />
+    <img src="/images/awards/WW-Rated-2011.jpg" alt="WeddingWire Rated 2011" role="listitem" />
+  </div>
+
+  <!-- Contact -->
+  <h3>Contact Us</h3>
+  <p>Address: 1234 Seabreeze Way, Clearwater, FL 33767</p>
+  <p>Email: <span id="vbts-email" aria-label="Email address"></span></p>
+  <p>Phone: <span id="vbts-phone" aria-label="Phone number"></span></p>
+
+  <!-- Instagram -->
+  <div class="social">
+    <a href="https://www.instagram.com/vowsbythesea/" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="#ffffff" aria-hidden="true">
+        <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11zm0 2A3.5 3.5 0 1 0 12 17.5 3.5 3.5 0 0 0 12 9.5zm6.75-.75a1.25 1.25 0 1 1-1.25 1.25 1.25 1.25 0 0 1 1.25-1.25z"/>
+      </svg>
+    </a>
+  </div>
+
+  <noscript>
+    <p style="opacity:.85">Enable JavaScript to see our email and phone, or use the contact form on our site.</p>
+  </noscript>
+
+  <hr>
+  <p class="copyright">&copy; <span id="vbts-year"></span> Vows By The Sea. All rights reserved.</p>
+
+  <!-- tiny helpers (scoped to footer) -->
+  <script>
+    (function(){
+      // Year
+      var y=document.getElementById('vbts-year'); if(y){ y.textContent=new Date().getFullYear(); }
+
+      // Email (scrape-resistant)
+      var u='contact', at='@', d1='vowsbythesea', d2='.com';
+      var eSpan=document.getElementById('vbts-email');
+      if(eSpan){
+        var a=document.createElement('a');
+        a.href='mailto:'+u+at+d1+d2;
+        a.innerHTML=u+'&#8203;'+at+d1+d2; // zero-width join in markup
+        eSpan.appendChild(a);
+      }
+
+      // Phone (scrape-resistant, pretty format)
+      var pSpan=document.getElementById('vbts-phone');
+      if(pSpan){
+        var pretty='+1 727\u2011 312\u2011 6900';
+        var tel='tel:7273126900';
+        var b=document.createElement('a');
+        b.href=tel; b.textContent=pretty;
+        pSpan.appendChild(b);
+      }
+    })();
+  </script>
+</footer>

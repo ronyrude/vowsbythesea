@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Blog index -->
+  <url>
+    <loc>https://vowsbythesea.com/blog.html</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Posts with image metadata -->
+  <url>
+    <loc>https://vowsbythesea.com/posts/clearwater-beach-elopement-cynthia-brian.html</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vowsbythesea.com/blog/content/images/20251001171149-Cynthia_Brian_Clearwater_beach_elopement%20%281%29.jpg</image:loc>
+      <image:title>Clearwater Beach Elopement – Cynthia &amp; Brian</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://vowsbythesea.com/posts/clearwater-beach-sunset-wedding-dani-steve.html</loc>
+    <lastmod>2025-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vowsbythesea.com/blog/content/images/20250926100356-Dani_Steve_Clearwater_beach_wedding%202.jpg</image:loc>
+      <image:title>Clearwater Beach Sunset Wedding – Dani &amp; Steve</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://vowsbythesea.com/posts/clearwater-beach-wedding-jessica-donald.html</loc>
+    <lastmod>2025-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vowsbythesea.com/blog/content/images/20250924124209-Clearwater_Jessica_Donald%20%281%29.jpg</image:loc>
+      <image:title>Clearwater Beach Wedding – Jessica &amp; Donald</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://vowsbythesea.com/posts/indian-rocks-beach-airbnb-wedding-jane-tarkington.html</loc>
+    <lastmod>2025-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vowsbythesea.com/blog/content/images/20250923151853-imgi_46_2210_Currumbin_Wedding_087-1.jpg</image:loc>
+      <image:title>Indian Rocks Beach Airbnb Wedding – Jane &amp; Tarkington</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://vowsbythesea.com/posts/indian-rocks-beach-airbnb-wedding-jina-chris.html</loc>
+    <lastmod>2025-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vowsbythesea.com/blog/content/images/20250922133128-1.webp</image:loc>
+      <image:title>Private Indian Rocks Beach Airbnb Wedding – Jina &amp; Chris</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://vowsbythesea.com/posts/honeymoon-island-wedding-jen-ryan.html</loc>
+    <lastmod>2025-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vowsbythesea.com/blog/content/images/20250910094440-2.jpg</image:loc>
+      <image:title>Honeymoon Island Wedding – Jen &amp; Ryan</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://vowsbythesea.com/posts/clearwater-beach-wedding-junpei-ovelia.html</loc>
+    <lastmod>2025-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vowsbythesea.com/blog/content/images/20250923133410-Junpei_Ovelia_clearwater_339%20%2811%29.jpg</image:loc>
+      <image:title>Clearwater Beach Wedding – Junpei &amp; Ovelia</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://vowsbythesea.com/posts/sand-key-beach-wedding-moli-jose.html</loc>
+    <lastmod>2025-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vowsbythesea.com/blog/content/images/20250815221420-SP-2301240022.jpg</image:loc>
+      <image:title>Sand Key Beach Wedding – Moli &amp; Jose</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://vowsbythesea.com/posts/fort-de-soto-beach-wedding-jamie-sally.html</loc>
+    <lastmod>2025-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vowsbythesea.com/blog/content/images/20250814141656-SP-2211080030.jpg</image:loc>
+      <image:title>Fort De Soto Beach Wedding – Jamie &amp; Sally</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://vowsbythesea.com/posts/indian-rocks-beach-wedding-sam-norma.html</loc>
+    <lastmod>2025-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vowsbythesea.com/blog/content/images/20250821112131-Sam_Norma%20%282%29.jpg</image:loc>
+      <image:title>Indian Rocks Beach Wedding – Sam &amp; Norma</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://vowsbythesea.com/posts/st-pete-beach-wedding-dan-airle.html</loc>
+    <lastmod>2024-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vowsbythesea.com/blog/content/images/20250816094128-SP-2302090025.jpg</image:loc>
+      <image:title>St. Pete Beach Wedding – Dan &amp; Airle</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://vowsbythesea.com/posts/florida-gulf-coast-wedding-larkin-kate.html</loc>
+    <lastmod>2024-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vowsbythesea.com/blog/content/images/20250815222632-SP-202308290001.jpg</image:loc>
+      <image:title>Florida Gulf Coast Wedding – Larkin &amp; Kate</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://vowsbythesea.com/posts/indian-rocks-beach-wedding-sandy-roland.html</loc>
+    <lastmod>2024-08-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vowsbythesea.com/blog/content/images/20250815164033-Sandy-12026.jpg</image:loc>
+      <image:title>Indian Rocks Beach Wedding – Sandy &amp; Roland</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://vowsbythesea.com/posts/clearwater-beach-wedding-owen-jane.html</loc>
+    <lastmod>2024-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vowsbythesea.com/blog/content/images/20250815094821-SP-2304060026.jpg</image:loc>
+      <image:title>Clearwater Beach Wedding – Owen &amp; Jane</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://vowsbythesea.com/posts/honeymoon-island-wedding-akons-cinta.html</loc>
+    <lastmod>2024-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vowsbythesea.com/blog/content/images/20250815162455-SP-2302150032.jpg</image:loc>
+      <image:title>Honeymoon Island Wedding – Akons &amp; Cinta</image:title>
+    </image:image>
+  </url>
+
+</urlset>

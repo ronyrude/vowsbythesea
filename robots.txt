@@ -1,0 +1,38 @@
+User-agent: *
+# Allow key public pages and directories
+Allow: /$
+Allow: /index.html
+Allow: /contact.html
+Allow: /beach-ratings.html
+Allow: /faq.html
+Allow: /packages.html
+Allow: /blog.html
+Allow: /blog/
+Allow: /locations/
+Allow: /images/
+
+# Block duplicate or non-public areas (safe defaults)
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /private/
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /thank-you/
+Disallow: /*?s=
+Disallow: /*?replytocom=
+
+# Make sure bots can render pages properly
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.webp$
+Allow: /*.svg$
+
+# Sitemaps (important for SEO)
+Sitemap: https://vowsbythesea.com/sitemap.xml
+Sitemap: https://vowsbythesea.com/blog.xml

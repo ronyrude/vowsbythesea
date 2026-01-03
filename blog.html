@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Florida Beach Wedding Blog | Vows By The Sea</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Primary SEO -->
+  <meta name="description" content="Real Florida beach weddings, tips, timelines, and location guides across Clearwater, St. Pete, Anna Maria Island, Sarasota, and more." />
+  <!-- IMPORTANT: this file is /blog.html, not /blog/ -->
+  <link rel="canonical" href="https://vowsbythesea.com/blog.html" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Florida Beach Wedding Blog | Vows By The Sea" />
+  <meta property="og:description" content="Real weddings, planning tips, permits, timing, and photography advice for Gulf Coast beach ceremonies." />
+  <meta property="og:url" content="https://vowsbythesea.com/blog.html" />
+  <meta property="og:site_name" content="Vows By The Sea" />
+  <meta property="og:image" content="https://vowsbythesea.com/images/hero-1920x1080-enhanced.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Florida Beach Wedding Blog | Vows By The Sea" />
+  <meta name="twitter:description" content="Real weddings and local tips for Clearwater, St. Pete, AMI, Sarasota & more." />
+  <meta name="twitter:image" content="https://vowsbythesea.com/images/hero-1920x1080-enhanced.jpg" />
+
+  <meta name="theme-color" content="#0f1115" />
+
+  <!-- RSS hint -->
+  <link rel="alternate" type="application/rss+xml" title="Vows By The Sea - Blog RSS" href="/rss.xml" />
+
+  <style>
+    /* Keep embedded post media inside the card width */
+    .post .card #postContent img,
+    .post .card #postContent video,
+    .post .card #postContent figure img {
+      display: block;
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+    .post .card #postContent figure { margin: 0; }
+
+    :root { --w: 820px; --bg: #f7f7f7; --card: #ffffff; --text: #111; --muted:#667085; --chip:#eef3ff; --link:#0d6efd; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg:#0f1115; --card:#171a21; --text:#e7e7e7; --muted:#a0a4ac; --chip:#2a3350; --link:#8ab4ff; }
+    }
+    .dark { --bg:#0f1115; --card:#171a21; --text:#e7e7e7; --muted:#a0a4ac; --chip:#2a3350; --link:#8ab4ff; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--bg); color: var(--text);
+      display: grid; place-items: start center; padding: 0 14px 40px;
+    }
+    a { color: var(--link); }
+    #site-nav { width: 100%; background: var(--card); box-shadow: 0 2px 10px rgba(0,0,0,.06); }
+
+    .wrap { width: min(100%, var(--w)); margin-top: 18px; }
+    header.page { display:flex; align-items:center; justify-content:space-between; gap:10px; margin:0 0 18px; }
+    h1 { margin:0; font-size: 1.75rem; }
+    .controls { display:flex; flex-wrap:wrap; gap:8px; }
+    input[type="search"] {
+      padding:10px 12px; border-radius:10px; border:1px solid #0000; outline:none; background:var(--card); color:var(--text);
+      box-shadow: 0 1px 4px rgba(0,0,0,.07); width: min(260px, 42vw);
+    }
+    button, .chip {
+      padding:8px 12px; border-radius:999px; border:1px solid #0000; background:var(--card); color:var(--text); cursor:pointer;
+      box-shadow: 0 1px 4px rgba(0,0,0,.07); font-weight:600;
+    }
+    .chip { display:inline-block; font-size:.85rem; margin:4px 6px 0 0; }
+    .chip[data-active="true"] { outline:2px solid #6aa3ff; background:var(--chip); }
+    .toolbar { display:flex; gap:8px; align-items:center; flex-wrap:wrap; margin:8px 0 18px; }
+    .muted { color: var(--muted); }
+    .list .card, .post .card {
+      background: var(--card); border-radius: 16px; padding: 18px; margin: 14px 0; box-shadow: 0 6px 18px rgba(0,0,0,.07);
+    }
+    .list h2 { margin:0 0 6px; font-size:1.3rem; }
+    .meta { font-size:.92rem; color:var(--muted); display:flex; gap:10px; flex-wrap:wrap; }
+    .excerpt { margin:10px 0 0; }
+    .actions { margin-top: 12px; display:flex; gap:10px; flex-wrap:wrap; }
+
+    /* Index cover images: consistent cards */
+    .cover { border-radius: 12px; width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; display:block; }
+
+    .toc { background:var(--card); border-radius:12px; padding:12px; margin:10px 0 18px; border-left:4px solid #6aa3ff; }
+    .toc h3 { margin:0 0 8px; font-size:1rem; }
+    .toc ul { margin:0; padding-left:20px; }
+
+    .navrow { display:flex; justify-content:space-between; gap:10px; margin-top:16px; }
+    .center { text-align:center; }
+    .hidden { display:none !important; }
+    .foot { margin-top: 26px; color:var(--muted); font-size:.9rem; }
+    .tagbar { margin: 6px 0 8px; }
+    .mode { min-width: 42px; }
+    .breadcrumbs { font-size:.9rem; color:var(--muted); margin: 6px 2px 16px; }
+    .breadcrumbs a { text-decoration:none; }
+    .error { background:#ffeceb; color:#a5281b; border:1px solid #f5c2c7; padding:10px 12px; border-radius:10px; margin:12px 0; }
+
+    /* Prev/Next navigation styling */
+    .navrow { 
+      display:flex; 
+      justify-content:space-between; 
+      gap:12px; 
+      margin-top:16px;
+    }
+    .navrow .btn {
+      display:flex; 
+      flex-direction:column; 
+      align-items:flex-start; 
+      gap:4px;
+      text-decoration:none;
+      padding:10px 14px; 
+      border-radius:12px; 
+      background: var(--card); 
+      border: 1px solid rgba(0,0,0,0.08);
+      box-shadow: 0 2px 8px rgba(0,0,0,.05);
+      color: var(--text);
+      min-width: 46%;
+    }
+    .navrow .btn:hover { 
+      border-color: rgba(0,0,0,0.18);
+      box-shadow: 0 4px 14px rgba(0,0,0,.08);
+    }
+    .navrow .label { 
+      font-weight: 700; 
+      font-size: .95rem; 
+    }
+    .navrow .sub {
+      font-size: .85rem; 
+      color: var(--muted); 
+      white-space: nowrap; 
+      overflow: hidden; 
+      text-overflow: ellipsis;
+      max-width: 100%;
+    }
+    .navrow .left  .label::before  { content: "« "; }
+    .navrow .right .label::after   { content: " »"; }
+    .navrow .hidden { display:none !important; }
+  </style>
+
+  <!-- Shared menu include -->
+  <script defer src="/locations/shared-menu/menu-loader.js"></script>
+
+  <!-- Static JSON-LD -->
+  <script type="application/ld+json" id="ld-static">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "name": "Vows By The Sea",
+        "url": "https://vowsbythesea.com/",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://vowsbythesea.com/blog.html?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "Organization",
+        "name": "Vows By The Sea",
+        "url": "https://vowsbythesea.com/",
+        "logo": "https://vowsbythesea.com/favicon.ico",
+        "sameAs": ["https://www.instagram.com/vowsbythesea/"]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://vowsbythesea.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://vowsbythesea.com/blog.html" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Site header injected from your shared menu -->
+  <div id="site-nav" data-include="/locations/shared-menu/menu.html"></div>
+
+  <div class="wrap">
+    <header class="page">
+      <h1><a href="/blog.html" style="color:inherit; text-decoration:none;">Vows By The Sea - Blog</a></h1>
+      <div class="controls">
+        <input id="q" type="search" placeholder="Search posts..." />
+        <button id="rssBtn" title="Download RSS feed">RSS</button>
+        <button id="mapBtn" title="Download sitemap.xml">Sitemap</button>
+        <button id="modeBtn" class="mode" title="Toggle dark mode">Dark/Light</button>
+      </div>
+    </header>
+
+    <nav class="breadcrumbs" aria-label="breadcrumbs">
+      <a href="/">Home</a> &rsaquo; <span>Blog</span>
+    </nav>
+
+    <div id="errBox" class="error hidden" role="alert"></div>
+
+    <div class="toolbar">
+      <div class="muted" id="count"></div>
+      <div id="tags" class="tagbar"></div>
+    </div>
+
+    <!-- Home/List view -->
+    <section id="listView" class="list" aria-label="Blog posts list"></section>
+    <div class="center"><button id="loadMoreBtn" class="hidden">Load more</button></div>
+
+    <!-- Single Post view (in-page reader) -->
+    <section id="postView" class="post hidden" aria-label="Blog post">
+      <div class="card">
+        <a id="backLink" href="/blog.html">&larr; Back</a>
+        <h2 id="postTitle" style="margin:8px 0 6px;"></h2>
+        <div class="meta" id="postMeta"></div>
+        <div id="toc" class="toc hidden"></div>
+        <article id="postContent"></article>
+        <div class="actions">
+          <button id="shareBtn">Copy link</button>
+        </div>
+        <div class="navrow">
+          <a id="prevPost" class="btn muted" href="#"></a>
+          <a id="nextPost" class="btn muted" href="#"></a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="foot center">
+      &copy; <span id="year"></span> Vows By The Sea. Florida beach weddings in Clearwater : St. Pete : Anna Maria : Sarasota.
+    </footer>
+  </div>
+
+  <script>
+    // --- CONFIG ---
+    const PAGE_SIZE = 6;
+    // Absolute path since blog.html is at root
+    const LIST_JSON_PATH = "/posts/list.json";
+
+    // --- STATE ---
+    let allPosts = [];
+    let filtered = [];
+    let renderedCount = 0;
+    let activeTag = null;
+
+    // --- HELPERS ---
+    const $ = s => document.querySelector(s);
+    const $$ = s => [...document.querySelectorAll(s)];
+    const fmtDate = iso => new Date(iso).toLocaleDateString(undefined, {year:'numeric', month:'short', day:'numeric'});
+    const words = t => (t.trim().split(/\s+/).length || 0);
+    const estReadMins = t => Math.max(1, Math.round(words(t)/200));
+    const extractNum = path => ((path.match(/(\d+)/)||[])[1] ? parseInt((path.match(/(\d+)/)||[])[1],10) : -Infinity);
+    const isSameOrigin = href => {
+      try { const u = new URL(href, location.href); return u.origin === location.origin; } catch { return false; }
+    };
+    function getHashFile(){ const m = location.hash.match(/#post=([^&]+)/); return m ? decodeURIComponent(m[1]) : null; }
+    function hashFor(file){ return `#post=${encodeURIComponent(file)}`; }
+
+    function setMode(){
+      const saved = localStorage.getItem("mode");
+      if(saved){ document.documentElement.classList.toggle("dark", saved==="dark"); }
+    }
+    function toggleMode(){
+      const isDark = document.documentElement.classList.toggle("dark");
+      localStorage.setItem("mode", isDark ? "dark" : "light");
+    }
+
+    function showError(msg){
+      console.error(msg);
+      const box = $('#errBox');
+      box.textContent = typeof msg === 'string' ? msg : (msg?.message || 'Unknown error');
+      box.classList.remove('hidden');
+    }
+
+    function renderTagBar(){
+      const wrap = $('#tags'); wrap.innerHTML = '';
+      const counts = new Map();
+      allPosts.forEach(p=> (p.tags||[]).forEach(t=> counts.set(t, (counts.get(t)||0)+1)));
+      const tags = [...counts.keys()].sort((a,b)=>a.localeCompare(b));
+      if(tags.length===0) return;
+      const all = document.createElement('span');
+      all.className='chip'; all.textContent='All'; all.dataset.active = activeTag? 'false':'true';
+      all.onclick=()=>{ activeTag=null; applyFilters(); };
+      wrap.appendChild(all);
+      tags.forEach(tag=>{
+        const el = document.createElement('span');
+        el.className = 'chip';
+        el.textContent = `${tag} (${counts.get(tag)})`;
+        el.dataset.active = (activeTag===tag)+'';
+        el.onclick = ()=>{ activeTag = (activeTag===tag)? null : tag; applyFilters(); };
+        wrap.appendChild(el);
+      });
+    }
+
+    function renderList(reset=false){
+      const list = $('#listView');
+      if (reset){ list.innerHTML=''; renderedCount=0; }
+      const next = filtered.slice(renderedCount, renderedCount + PAGE_SIZE);
+      next.forEach(p=>{
+        const card = document.createElement('div'); card.className='card';
+        const coverHTML = p.cover ? `<a href="${p.file}" data-spa="1"><img class="cover" loading="lazy" src="${p.cover}" alt="${(p.title||'Wedding blog post').replace(/"/g,'&quot;')}" /></a>` : '';
+        card.innerHTML = `
+          ${coverHTML}
+          <h2><a href="${p.file}" data-spa="1" style="color:inherit;text-decoration:none">${p.title}</a></h2>
+          <div class="meta">
+            <span>${fmtDate(p.dateISO)}</span>
+            <span>&middot; ${p.minutes} min read</span>
+          </div>
+          <div class="excerpt">${p.desc || ''}</div>
+          <div class="tagbar">
+            ${(p.tags||[]).map(t=>`<span class="chip" data-active="false">${t}</span>`).join('')}
+          </div>
+          <div class="actions">
+            <a class="btn" href="${p.file}" data-spa="1" aria-label="Read ${p.title}">Read more &rarr;</a>
+          </div>
+        `;
+        list.appendChild(card);
+      });
+      renderedCount += next.length;
+      $('#loadMoreBtn').classList.toggle('hidden', renderedCount >= filtered.length);
+      $('#count').textContent = `${filtered.length} post${filtered.length===1?'':'s'}`;
+    }
+
+    async function renderPost(file){
+      $('#listView').classList.add('hidden');
+      $('#loadMoreBtn').classList.add('hidden');
+      $('#postView').classList.remove('hidden');
+
+      const post = allPosts.find(p=>p.file===file || p.url===file);
+      if (!post) { $('#postContent').innerHTML = `<p class="muted">Post not found.</p>`; return; }
+
+      $('#postTitle').textContent = post.title;
+      $('#postMeta').textContent = `${fmtDate(post.dateISO)} · ${post.minutes} min read · ${(post.tags||[]).join(', ')}`;
+
+
+      const res = await fetch(post.file, {cache:'no-store'});
+      const html = await res.text();
+      const tmp = document.createElement('div'); tmp.innerHTML = html;
+
+      // Try to read from a full HTML post (with <article>) or fallback to body nodes
+      let article = tmp.querySelector('article');
+      if (!article) {
+        article = document.createElement('article');
+        tmp.querySelectorAll('head, meta, title, link, script[type="application/ld+json"], time, h1').forEach(n=>n.remove());
+        article.append(...tmp.childNodes);
+      }
+
+      const content = $('#postContent'); content.innerHTML = '';
+      content.appendChild(article);
+
+      // Ensure images never overflow the card
+      content.querySelectorAll('img, video').forEach(el => {
+        el.removeAttribute('width');
+        el.removeAttribute('height');
+        el.style.maxWidth = '100%';
+        el.style.width = '100%';
+        el.style.height = 'auto';
+        el.loading = el.loading || 'lazy';
+      });
+
+      // Build TOC
+      const tocBox = $('#toc'); tocBox.innerHTML=''; tocBox.classList.add('hidden');
+      const heads = [...content.querySelectorAll('h2, h3')];
+      if (heads.length >= 2){
+        const ul = document.createElement('ul');
+        heads.forEach(h => {
+          if(!h.id){ h.id = h.textContent.trim().toLowerCase().replace(/[^\w]+/g,'-'); }
+          const li = document.createElement('li');
+          if (h.tagName === 'H3') li.style.marginLeft = '16px';
+          const a = document.createElement('a');
+          a.href = '#'+h.id;
+          a.textContent = h.textContent;
+          li.appendChild(a);
+          ul.appendChild(li);
+        });
+	tocBox.classList.remove('hidden');
+	const h3 = document.createElement('h3');
+	h3.textContent = 'On this page';
+	tocBox.innerHTML = '';
+	tocBox.appendChild(h3);
+	tocBox.appendChild(ul);
+      }
+
+      // Prev/Next (filtered is newest->oldest)
+      const idx  = filtered.findIndex(p => p.file === post.file);
+      const prev = filtered[idx + 1];
+      const next = filtered[idx - 1];
+
+      const prevA = $('#prevPost');
+      const nextA = $('#nextPost');
+
+      function truncate(txt, n = 56) {
+        if (!txt) return '';
+        return txt.length > n ? txt.slice(0, n - 1) + '…' : txt;
+      }
+
+      // PREV
+      if (prev) {
+        prevA.href = prev.file;
+        prevA.dataset.spa = "1";
+        prevA.rel = "prev";
+        prevA.classList.remove('hidden');
+        prevA.classList.add('left');
+        prevA.setAttribute('aria-label', 'Previous post: ' + prev.title);
+        prevA.innerHTML = `
+          <span class="label">Previous</span>
+          <span class="sub">${truncate(prev.title)}</span>
+        `;
+      } else {
+        prevA.classList.add('hidden');
+        prevA.removeAttribute('href');
+        prevA.innerHTML = '';
+      }
+
+      // NEXT
+      if (next) {
+        nextA.href = next.file;
+        nextA.dataset.spa = "1";
+        nextA.rel = "next";
+        nextA.classList.remove('hidden');
+        nextA.classList.add('right');
+        nextA.setAttribute('aria-label', 'Next post: ' + next.title);
+        nextA.innerHTML = `
+          <span class="label">Next</span>
+          <span class="sub">${truncate(next.title)}</span>
+        `;
+      } else {
+        nextA.classList.add('hidden');
+        nextA.removeAttribute('href');
+        nextA.innerHTML = '';
+      }
+    } // <-- end of renderPost()
+
+    function applyFilters(){
+      const q = $('#q').value.trim().toLowerCase();
+      filtered = allPosts.filter(p=>{
+        if (p.draft) return false;
+        const tagOk = activeTag ? (p.tags||[]).includes(activeTag) : true;
+        if (!tagOk) return false;
+        if (!q) return true;
+        const hay = [p.title.toLowerCase(), (p.desc||'').toLowerCase(), (p.tags||[]).join(' ').toLowerCase()].join(' ');
+        return hay.includes(q);
+      });
+      $('#postView').classList.add('hidden');
+      $('#listView').classList.remove('hidden');
+      renderList(true);
+      renderTagBar();
+      updateDynamicLD();
+    }
+
+    function sortNewest(a,b){
+      const d = (new Date(b.dateISO)) - (new Date(a.dateISO));
+      if (d !== 0) return d;
+      return (b.idNum||-Infinity) - (a.idNum||-Infinity);
+    }
+
+    async function readPostMeta(file, extra={}){
+      try{
+        const res = await fetch(file, {cache:'no-store'});
+        const html = await res.text();
+        const tmp = document.createElement('html'); tmp.innerHTML = html;
+
+        const title = extra.title || (tmp.querySelector('h1')?.textContent?.trim() || tmp.querySelector('title')?.textContent?.trim() || 'Untitled Post');
+        const dateISO = extra.date || tmp.querySelector('time[datetime]')?.getAttribute('datetime') || tmp.querySelector('meta[name="date"]')?.content || new Date().toISOString().slice(0,10);
+        const desc = extra.description || tmp.querySelector('meta[name="description"]')?.content || tmp.querySelector('meta[name="excerpt"]')?.content || (tmp.querySelector('p')?.textContent?.trim()?.slice(0, 250) || '');
+        const tags = extra.tags || (tmp.querySelector('meta[name="tags"]')?.content?.split(',').map(t=>t.trim()).filter(Boolean) || []);
+        const cover = extra.cover || tmp.querySelector('meta[property="og:image"]')?.content || tmp.querySelector('img')?.src || '';
+        const minutes = estReadMins(tmp.textContent || '');
+        const idNum = extractNum(file);
+
+        return { ...extra, file, title, dateISO, desc, tags, cover, minutes, idNum };
+      }catch(e){
+        showError('Could not read post: ' + file);
+        return { ...extra, file, title: extra.title||file, dateISO: extra.date||new Date().toISOString().slice(0,10), desc: extra.description||'', tags: extra.tags||[], cover: extra.cover||'', minutes:1, idNum: extractNum(file) };
+      }
+    }
+
+    async function loadList(){
+      try{
+        const r = await fetch(LIST_JSON_PATH, {cache:'no-store'});
+        if (!r.ok) throw new Error('posts/list.json not found or blocked');
+        const arr = await r.json();
+
+        const metas = await Promise.all(arr.map(async it => {
+          const item = typeof it === 'string' ? { file: it } : it;
+          item.file = item.file || item.url;
+          item.url = item.url || item.file;
+          return await readPostMeta(item.file, item);
+        }));
+        allPosts = metas.sort(sortNewest);
+        filtered = allPosts.slice();
+      } catch (e){
+        showError('Failed to load list.json. Make sure it is valid JSON (UTF-8) at /posts/list.json. ' + e.message);
+      }
+    }
+
+    function updateDynamicLD(){
+      const base = new URL('.', location.href).toString(); // current directory as base
+      const items = filtered.slice(0,20).map((p, i) => ({
+        "@type": "ListItem",
+        "position": i+1,
+        "url": new URL(p.url || p.file, base).toString(),
+        "name": p.title
+      }));
+
+      const graph = [
+        {
+          "@type": "Blog",
+          "name": "Vows By The Sea - Blog",
+          "url": location.origin + "/blog.html",
+          "inLanguage": "en",
+          "publisher": { "@type": "Organization", "name": "Vows By The Sea", "url": "https://vowsbythesea.com/" },
+          "blogPost": filtered.slice(0,10).map(p => ({
+            "@type": "BlogPosting",
+            "headline": p.title,
+            "url": new URL(p.url || p.file, base).toString(),
+            "datePublished": p.dateISO,
+            "image": p.cover || undefined,
+            "keywords": (p.tags||[]).join(", "),
+            "description": p.desc || undefined
+          }))
+        },
+        { "@type": "ItemList", "itemListElement": items }
+      ];
+
+      let el = document.getElementById('ld-dynamic');
+      if (!el){ el = document.createElement('script'); el.type='application/ld+json'; el.id='ld-dynamic'; document.head.appendChild(el); }
+      el.textContent = JSON.stringify({ "@context":"https://schema.org", "@graph": graph });
+    }
+
+    async function generateRSS(){
+      const site = new URL('.', location.href).toString();
+      const items = allPosts.slice(0,50).map(p=>{
+        const link = new URL(p.url || p.file, site).toString();
+        const pubDate = new Date(p.dateISO).toUTCString();
+        const title = p.title.replace(/&/g,'&amp;').replace(/</g,'&lt;');
+        const img = p.cover ? `<img src="${p.cover}" alt="${title}"/>` : '';
+        return `
+  <item>
+    <title>${title}</title>
+    <link>${link}</link>
+    <guid>${link}</guid>
+    <pubDate>${pubDate}</pubDate>
+    <description><![CDATA[${img}<p>${(p.desc||'')}</p>]]></description>
+  </item>`;
+      }).join('\n');
+
+      const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>Vows By The Sea - Blog</title>
+  <link>${site}</link>
+  <description>Florida beach wedding stories &amp; planning tips.</description>
+  <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
+${items}
+</channel>
+</rss>`;
+      const blob = new Blob([xml], {type:'application/rss+xml'});
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'rss.xml';
+      a.click();
+      URL.revokeObjectURL(a.href);
+    }
+
+    async function generateSitemap(){
+      const baseDir = location.origin + location.pathname.replace(/\/[^/]*$/, '/'); // directory of blog.html
+      const urls = [
+        { loc: location.origin + "/blog.html", lastmod: new Date().toISOString().slice(0,10), changefreq: "weekly", priority: "0.6" },
+        ...allPosts.map(p => ({
+          loc: new URL(p.url || p.file, baseDir).toString(),
+          lastmod: p.dateISO,
+          changefreq: "monthly",
+          priority: "0.8"
+        }))
+      ];
+      const entries = urls.map(u => `
+  <url>
+    <loc>${u.loc}</loc>
+    <lastmod>${u.lastmod}</lastmod>
+    <changefreq>${u.changefreq}</changefreq>
+    <priority>${u.priority}</priority>
+  </url>`).join('');
+      const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${entries}
+</urlset>`;
+      const blob = new Blob([xml], {type:'application/xml'});
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'sitemap.xml';
+      a.click();
+      URL.revokeObjectURL(a.href);
+    }
+
+    async function route(){
+      const file = getHashFile();
+      if (!file){
+        $('#postView').classList.add('hidden');
+        $('#listView').classList.remove('hidden');
+        renderList(true);
+        renderTagBar();
+        updateDynamicLD();
+        return;
+      }
+      await renderPost(file);
+    }
+
+    (async function init(){
+      $('#year').textContent = new Date().getFullYear();
+      setMode();
+      $('#modeBtn').onclick = toggleMode;
+
+      // SPA intercept
+      document.addEventListener('click', e => {
+        const a = e.target.closest('a[data-spa="1"]');
+        if (!a) return;
+        const href = a.getAttribute('href');
+        if (isSameOrigin(href)) {
+          e.preventDefault();
+          history.pushState(null, '', hashFor(href));
+          route();
+        }
+      });
+
+      $('#q').addEventListener('input', applyFilters);
+      $('#loadMoreBtn').onclick = ()=> renderList(false);
+      $('#backLink').onclick = (e)=>{ e.preventDefault(); history.pushState(null,'','#'); route(); };
+      $('#shareBtn').onclick = async ()=>{
+        try{ await navigator.clipboard.writeText(location.href); alert('Link copied!'); }
+        catch{ alert('Copy failed.'); }
+      };
+      $('#rssBtn').onclick = generateRSS;
+      $('#mapBtn').onclick = generateSitemap;
+
+      await loadList();
+      renderList(true);
+      renderTagBar();
+      updateDynamicLD();
+      window.addEventListener('hashchange', route);
+      await route();
+    })();
+  </script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9JYYDX0VEW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9JYYDX0VEW');
+</script>
+
+
+</body>
+</html>
