@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Beach Wedding FAQ | Vows By The Sea</title>
+<meta name="description" content="Answers to common questions about Florida beach weddings: permits, locations, weather back-up, timing, accessibility, and more." />
+<link rel="icon" href="https://vowsbythesea.com/favicon.ico" />
+<link rel="canonical" href="https://vowsbythesea.com/faq.html" />
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US" />
+<meta property="og:title" content="Beach Wedding FAQ | Vows By The Sea" />
+<meta property="og:description" content="Your top questions answered about Clearwater, Sarasota, and Gulf Coast beach weddings." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://vowsbythesea.com/faq.html" />
+<meta property="og:image" content="https://vowsbythesea.com/images/hero-social-1200x630-enhanced.jpg" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Beach Wedding FAQ | Vows By The Sea" />
+<meta name="twitter:description" content="Plan with confidence — see answers to permits, timing, weather, and logistics." />
+<meta name="twitter:image" content="https://vowsbythesea.com/images/hero-social-1200x630-enhanced.jpg" />
+
+<!-- JSON-LD: LocalBusiness -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"LocalBusiness",
+  "@id":"https://vowsbythesea.com/#business",
+  "name":"Vows By The Sea",
+  "url":"https://vowsbythesea.com/",
+  "image":"https://vowsbythesea.com/images/just2ofus.jpg",
+  "email":"contact@vowsbythesea.com",
+  "address":{
+    "@type":"PostalAddress",
+    "addressLocality":"Clearwater",
+    "addressRegion":"FL",
+    "addressCountry":"US"
+  }
+}
+</script>
+
+<!-- JSON-LD: FAQPage (ASCII text to avoid encoding issues) -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"Do we need a beach permit for our ceremony?",
+      "acceptedAnswer":{"@type":"Answer","text":"Many Gulf Coast beaches require a special event permit for ceremonies, arches, or chair setups. Permit rules differ by city and park. We will guide you to options that fit your guest count and help with permit steps where required."}
+    },
+    {
+      "@type":"Question",
+      "name":"What is the best time of day for a beach wedding?",
+      "acceptedAnswer":{"@type":"Answer","text":"Golden hour (about 1-2 hours before sunset) offers softer light, cooler temperatures, and beautiful photos. Morning ceremonies are also lovely with fewer crowds; midday tends to be brighter and warmer."}
+    },
+    {
+      "@type":"Question",
+      "name":"What happens if it rains or there is bad weather?",
+      "acceptedAnswer":{"@type":"Answer","text":"We help you plan a practical backup, such as a covered pavilion or nearby indoor space. We also monitor forecasts and can adjust ceremony start time when possible."}
+    },
+    {
+      "@type":"Question",
+      "name":"How many guests can we have on the beach?",
+      "acceptedAnswer":{"@type":"Answer","text":"Capacity depends on the beach access, parking, and local rules. Intimate elopements work almost anywhere; for larger groups we will recommend locations with more space and amenities."}
+    },
+    {
+      "@type":"Question",
+      "name":"Can you help with photography, flowers, and decor?",
+      "acceptedAnswer":{"@type":"Answer","text":"Yes. Our packages include essentials like an officiant, ceremony decor, and photography options. We will tailor details (bouquets, arches, torches) to your style and beach choice."}
+    },
+    {
+      "@type":"Question",
+      "name":"Is the beach accessible for guests with limited mobility?",
+      "acceptedAnswer":{"@type":"Answer","text":"Many locations offer ramps, nearby parking, or boardwalk access. Tell us your needs and we will suggest the most accessible options along Clearwater, St. Pete Beach, and Sarasota."}
+    },
+    {
+      "@type":"Question",
+      "name":"How do Florida marriage licenses work?",
+      "acceptedAnswer":{"@type":"Answer","text":"Marriage licenses are issued by Florida county clerks. Requirements and processes can differ slightly by county, so we will point you to the appropriate clerk's office and timelines for your chosen beach."}
+    },
+    {
+      "@type":"Question",
+      "name":"Can we customize a package?",
+      "acceptedAnswer":{"@type":"Answer","text":"Absolutely. You can add photo coverage, arches, seating, unity ceremonies, and more. Share your vision and we will create a plan that fits your style and budget."}
+    },
+    {
+      "@type":"Question",
+      "name":"Which beaches do you serve?",
+      "acceptedAnswer":{"@type":"Answer","text":"We frequently serve Clearwater Beach, Sand Key Park, St. Pete Beach, Pass-A-Grille, Fort De Soto, Indian Rocks, Madeira Beach, Redington, Siesta Key, Lido Beach, Anna Maria Island, and more."}
+    }
+  ]
+}
+</script>
+
+<style>
+  :root{
+    --primary:#f28e1c; --dark:#1a1a1a; --light:#fff; --text:#222; --muted:#666; --border:#ddd;
+    --radius:10px; --max:1000px; --font:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:var(--font);background:#fff;color:var(--text);line-height:1.6;}
+  nav{background:#1a1a1a;padding:12px 0;position:sticky;top:0;z-index:1000;box-shadow:0 2px 8px rgba(0,0,0,.3);text-align:center;}
+  nav a{color:#fff;text-decoration:none;margin:0 20px;font-weight:600;font-size:1.05rem;transition:color .2s;}
+  nav a:hover,nav a.active{color:var(--primary);}
+  header{
+    background:linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)), url('images/hero-1920x1080-enhanced.jpg') center/cover no-repeat;
+    padding:80px 20px;color:#fff;text-align:center;
+  }
+  header h1{font-size:2.4rem;margin:0 0 8px;}
+  header p{margin:0 auto;max-width:760px;font-size:1.05rem;opacity:.95;}
+  main{max-width:var(--max);margin:40px auto;padding:0 20px;}
+
+  /* Robust FAQ styles */
+  .faq{max-width:var(--max);margin:0 auto 40px;}
+  .faq h2{color:var(--primary);margin:0 0 16px;font-size:1.8rem;}
+  details{border:1px solid var(--border);border-radius:10px;padding:0;background:#fff;margin:12px 0;overflow:hidden}
+  summary{
+    padding:14px 16px;cursor:pointer;font-weight:700;position:relative;outline:none;
+    display:flex;align-items:center;gap:10px; list-style: none;
+  }
+  details .content{padding:0 16px 14px 16px;border-top:1px solid var(--border);}
+  .muted{color:var(--muted);font-size:.95rem;margin-top:12px;}
+
+  /* Contact form (same as index) */
+  #contact{max-width:var(--max);margin:30px auto 40px;padding:20px;background:#f9f9f9;border-radius:var(--radius);box-shadow:0 5px 15px rgba(0,0,0,.05);text-align:left;}
+  #contact h2{color:var(--primary);text-align:center;margin-bottom:20px;font-size:1.6rem;}
+  form{display:flex;flex-direction:column;gap:16px;}
+  label{font-weight:600;display:block;}
+  input,textarea,select,button{font-family:inherit;}
+  input,textarea,select{padding:10px;border-radius:var(--radius);border:1px solid var(--border);font-size:1rem;width:100%;resize:vertical;background:#fff;}
+  input:focus,textarea:focus,select:focus,button:focus{outline:2px solid var(--primary);}
+  .hint{margin-top:6px;font-size:.92rem;color:#555;}
+  .submit-btn{background:var(--primary);color:#fff;padding:15px;border:none;font-weight:700;cursor:pointer;border-radius:var(--radius);transition:background-color .2s;}
+  .submit-btn:hover{background:#d87600;}
+  .form-message{font-weight:600;font-size:1rem;margin-top:10px;color:green;}
+  .sr-only{position:absolute !important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+  #beach{min-height:220px;}
+
+  /* Footer */
+  footer{background:#222;color:#fff;padding:40px 20px;text-align:center;margin-top:30px;}
+  footer h3{margin-bottom:20px;}
+  footer .awards{display:flex;flex-wrap:wrap;justify-content:center;gap:15px;margin-bottom:30px;}
+  footer .awards img{height:60px;}
+  footer a{color:#ffcc66;text-decoration:none;}
+  footer a:hover{text-decoration:underline;}
+</style>
+</head>
+<body>
+
+<div id="site-nav" data-include="./locations/shared-menu/menu.html"></div>
+<script defer src="./locations/shared-menu/menu-loader.js"></script>
+
+<header>
+  <h1>Beach Wedding FAQ</h1>
+  <p>Planning a Gulf Coast celebration? Here are answers to common questions about permits, timing, weather, and logistics.</p>
+</header>
+
+<main>
+  <section class="faq" aria-label="Frequently Asked Questions">
+    <h2>Your Questions, Answered</h2>
+
+    <details>
+      <summary>Do we need a beach permit for our ceremony?</summary>
+      <div class="content">
+        <p>Many Gulf Coast beaches require a special event permit for ceremonies, arches, or seating. Rules differ by city and park. We'll help identify whether a permit is needed and suggest the best access points for your group size.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>What's the best time of day for a beach wedding?</summary>
+      <div class="content">
+        <p><strong>Golden hour</strong> (about 1-2 hours before sunset) offers flattering light, cooler temps, and beautiful photos. Mornings are quieter with softer light; midday can be bright and warm.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>What if it rains or there's inclement weather?</summary>
+      <div class="content">
+        <p>We always recommend a backup like a covered pavilion or nearby indoor space. We monitor the forecast and can adjust timing when feasible. Your coordinator will walk you through options in advance.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>How many guests can we have?</summary>
+      <div class="content">
+        <p>Capacity depends on the specific beach access, parking, and local guidelines. Intimate elopements fit almost anywhere; for larger groups we'll recommend beaches with more space and amenities.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Can you help with photography, flowers, and decor?</summary>
+      <div class="content">
+        <p>Yes - our packages include essentials and optional upgrades like bouquets, arches, tiki torches, and extended photo coverage. We'll tailor everything to your style and location.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Is the beach accessible for guests with limited mobility?</summary>
+      <div class="content">
+        <p>Many locations feature ramps, boardwalks, or close parking. Tell us your needs and we'll guide you to the most accessible spots around Clearwater, St. Pete Beach, and Sarasota.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>How do Florida marriage licenses work?</summary>
+      <div class="content">
+        <p>Marriage licenses are issued by Florida county clerks. Requirements and timelines can vary slightly by county. We'll point you to the correct clerk's office for your chosen beach and help you understand the steps.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Can we customize a package?</summary>
+      <div class="content">
+        <p>Absolutely. You can add photo coverage, arches, seating, unity ceremonies, and more. Share your vision and we'll create a plan that fits your style and budget.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Which beaches do you serve?</summary>
+      <div class="content">
+        <p>We frequently serve Clearwater Beach, Sand Key Park, St. Pete Beach, Pass-A-Grille, Fort De Soto, Indian Rocks, Madeira Beach, Redington, Siesta Key, Lido Beach, Anna Maria Island, and more.</p>
+      </div>
+    </details>
+
+    <p class="muted">Have a question that's not listed? <a href="index.html#contact">Contact us</a> - we're happy to help.</p>
+  </section>
+
+  <!-- Contact Form (same as index) -->
+  <section id="contact" aria-labelledby="contact-title">
+    <h2 id="contact-title">Ready to Plan?</h2>
+    <form id="contact-form" action="https://formsubmit.co/ajax/contact@vowsbythesea.com" method="POST">
+      <input type="hidden" name="_subject" value="New Vows By The Sea Inquiry" />
+      <input type="hidden" name="_captcha" value="true" />
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+
+      <label for="name">Name *</label>
+      <input type="text" id="name" name="name" required aria-required="true" />
+
+      <label for="email">Email *</label>
+      <input type="email" id="email" name="email" required aria-required="true" />
+
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone" pattern="^\+?[\d\s\-\(\)]{7,}$" placeholder="+1 (555) 123-4567" />
+
+      <label for="package">Preferred Package *</label>
+      <select id="package" name="package" required aria-required="true">
+        <option value="">Select a package...</option>
+      </select>
+
+      <fieldset style="border:1px solid #ddd; padding:12px; border-radius:10px;">
+        <legend style="font-weight:700;">Preferred Date(s) *</legend>
+        <div id="dates-wrap" style="display:flex; flex-direction:column; gap:8px;">
+          <input type="date" name="preferred_dates[]" required aria-required="true" />
+          <noscript>
+            <input type="date" name="preferred_dates[]" />
+            <input type="date" name="preferred_dates[]" />
+          </noscript>
+        </div>
+        <button type="button" id="add-date" class="btn" style="margin-top:10px; padding:10px 16px;">Add another date</button>
+        <div id="dates-hint" class="hint">You can add multiple dates that work for you.</div>
+      </fieldset>
+
+      <label for="beach">Preferred Beach Location(s) *</label>
+      <select id="beach" name="preferred_beach[]" required aria-required="true" multiple size="12"></select>
+      <div id="beach-note" class="hint" role="note">Tip: You can select multiple beaches. On mobile, tap to add; on desktop, use Ctrl/Cmd-click.</div>
+
+      <label for="message">Message *</label>
+      <textarea id="message" name="message" rows="5" required aria-required="true"
+        placeholder="Tell us anything else (guest count, accessibility needs, exact date(s), ceremony details)…"></textarea>
+
+      <button type="submit" class="submit-btn">Send Message</button>
+      <div class="form-message" aria-live="polite" role="alert" id="form-message"></div>
+
+      <div class="sr-only" aria-live="polite">Call us at: <span id="secure-phone" data-p1="0727" data-p2="213" data-p3="0960"></span></div>
+    </form>
+  </section>
+
+  <!-- Direct contact block -->
+  <section aria-label="Direct Contact" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin:20px 0 10px;">
+    <div style="border:1px solid #ddd;border-radius:12px;padding:14px;background:#fff;">
+      <h3 style="margin:0 0 8px;font-size:1.05rem;color:#333;">Email</h3>
+      <p style="margin:0;color:#444;"><span id="vbts-email"></span></p>
+    </div>
+    <div style="border:1px solid #ddd;border-radius:12px;padding:14px;background:#fff;">
+      <h3 style="margin:0 0 8px;font-size:1.05rem;color:#333;">Phone</h3>
+      <p style="margin:0;color:#444;"><span id="vbts-phone"></span></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <h3>Awards &amp; Recognitions</h3>
+  <div class="awards">
+    <img src="images/awards/badge-weddingawards_en_US.png" alt="Wedding Awards">
+    <img src="images/awards/BCA_2015-badge-bottom.png" alt="BCA 2015 Award">
+    <img src="images/awards/BCA2016-logo_2x.png" alt="BCA 2016 Award">
+    <img src="images/awards/CCA-2014-badge-bottom.png" alt="CCA 2014 Award">
+    <img src="images/awards/wedding-badge.png" alt="Wedding Badge">
+    <img src="images/awards/WW-Rated-2009.jpg" alt="WeddingWire Rated 2009">
+    <img src="images/awards/WW-Rated-2010.jpg" alt="WeddingWire Rated 2010">
+    <img src="images/awards/WW-Rated-2011.jpg" alt="WeddingWire Rated 2011">
+  </div>
+  <!-- Added Instagram link per your request -->
+  <p><a href="https://www.instagram.com/vowsbythesea/" target="_blank" rel="noopener" aria-label="Vows By The Sea on Instagram">Instagram</a></p>
+  <hr style="border:none;border-top:1px solid rgba(255,255,255,0.2);margin:20px 0;">
+  <p style="margin:0;">&copy; 2025 Vows By The Sea. All rights reserved.</p>
+</footer>
+<script>
+  // Populate packages & beaches
+  (function(){
+    const pkgSel=document.getElementById('package');
+    if(pkgSel){
+      const packages=[
+        {value:'Sweet & Simple Package',label:'Sweet & Simple Package - $448.00'},
+        {value:'Just The Two of Us Package',label:'Just The Two of Us Package - $549.00'},
+        {value:'I Love You Package',label:'I Love You Package - $595.00'},
+        {value:'Bamboo & Stars Package',label:'Bamboo & Stars Package - $695.00'},
+        {value:'Stars of Love I Package',label:'Stars of Love I Package - $950.00'},
+        {value:'Stars of Love II Package',label:'Stars of Love II Package - $1,149.00'},
+        {value:'Tiki Parasol Package',label:'Tiki Parasol Package - $998.00'},
+        {value:'A Little More Package',label:'A Little More Package - Starting at $1,198.00'},
+        {value:'Something Blue Stars Package',label:'Something Blue Stars Package - $1,988.00'},
+        {value:'Bamboo Love II Package',label:'Bamboo Love II Package - $3,999.00'},
+        {value:'Tropical Bliss Package',label:'Tropical Bliss Package - $6,500.00 + tax'}
+      ];
+      pkgSel.innerHTML='<option value="">Select a package...</option>';
+      packages.forEach(p=>{ const o=document.createElement('option'); o.value=p.value; o.textContent=p.label; pkgSel.appendChild(o); });
+    }
+    const beachSel=document.getElementById('beach');
+    if(beachSel){
+      const beaches=[
+        'Clearwater Beach','Sand Key Park','Honeymoon Island','Caladesi Island State Park','Belleair Beach',
+        'Indian Rocks Beach','Indian Shores','Redington Beach','Madeira Beach','Treasure Island','Sunset Beach',
+        'Pass-a-Grille Beach','St Pete Beach','Fort De Soto Park','Tampa Beach','Sarasota Beach','Anna Maria Island'
+      ];
+      beachSel.innerHTML='';
+      beaches.forEach(name=>{ const opt=document.createElement('option'); opt.value=name; opt.textContent=name; beachSel.appendChild(opt); });
+    }
+  })();
+
+  // Preferred Date(s) repeater
+  (function(){
+    const wrap=document.getElementById('dates-wrap');
+    const btn=document.getElementById('add-date');
+    if(!wrap || !btn) return;
+    btn.addEventListener('click', ()=>{
+      const input=document.createElement('input');
+      input.type='date';
+      input.name='preferred_dates[]';
+      input.required=false;
+      wrap.appendChild(input);
+      input.focus();
+    });
+  })();
+
+  // AJAX submit
+  (function(){
+    const form=document.getElementById('contact-form');
+    const messageDiv=document.getElementById('form-message');
+    if(!form) return;
+
+    function hasAtLeastOneDate(){
+      const dates=[...form.querySelectorAll('input[name="preferred_dates[]"]')].map(i=>i.value.trim()).filter(Boolean);
+      return dates.length>0;
+    }
+    function hasBeaches(){
+      const sel=form.querySelector('#beach');
+      return sel && Array.from(sel.selectedOptions).length>0;
+    }
+
+    form.addEventListener('submit', async (e)=>{
+      e.preventDefault();
+      messageDiv.textContent='';
+      messageDiv.style.color='green';
+
+      if(!hasAtLeastOneDate()){
+        messageDiv.style.color='red';
+        messageDiv.textContent='Please add at least one preferred date.';
+        return;
+      }
+      if(!hasBeaches()){
+        messageDiv.style.color='red';
+        messageDiv.textContent='Please select at least one preferred beach location.';
+        return;
+      }
+      if(!form.checkValidity()){
+        messageDiv.style.color='red';
+        messageDiv.textContent='Please fill out all required fields correctly.';
+        form.reportValidity();
+        return;
+      }
+
+      const actionUrl=form.getAttribute('action')||'';
+      if(!/^https:\/\/formsubmit\.co\//i.test(actionUrl)){ form.submit(); return; }
+
+      try{
+        const fd=new FormData(form);
+        const res=await fetch(actionUrl,{method:'POST',headers:{'Accept':'application/json'},body:fd});
+        if(res.ok){
+          messageDiv.style.color='green';
+          messageDiv.textContent='Thank you! Your message has been sent.';
+          form.reset();
+        }else{
+          const data=await res.json().catch(()=> ({}));
+          messageDiv.style.color='red';
+          messageDiv.textContent=data?.message||'Something went wrong. Please try again later.';
+        }
+      }catch(err){
+        messageDiv.style.color='red';
+        messageDiv.textContent='Network error. Please try again.';
+      }
+    });
+  })();
+
+  // Hidden SR-only phone
+  (function(){
+    const el=document.getElementById('secure-phone'); if(!el) return;
+    const p1=el.getAttribute('data-p1'); const p2=el.getAttribute('data-p2'); const p3=el.getAttribute('data-p3');
+    const norm=(s)=>s.split('').reverse().join('');
+    const pretty=`+1\u00A0${norm(p1)}\u2011${norm(p2)}\u2011${norm(p3)}`;
+    el.textContent=pretty;
+  })();
+
+  // Scrape-resistant email & phone
+  (function(){
+    var u='contact', at='@', d1='vowsbythesea', d2='.com';
+    var eSpan=document.getElementById('vbts-email');
+    if(eSpan){
+      var a=document.createElement('a');
+      a.href='mailto:'+u+at+d1+d2;
+      a.innerHTML=u+'&#8203;'+at+d1+d2;
+      eSpan.appendChild(a);
+    }
+    var p='+1 '+'727'+'\u2011'+'312'+'\u2011'+'6900';
+    var tel='tel:'+'727'+'312'+'6900';
+    var pSpan=document.getElementById('vbts-phone');
+    if(pSpan){
+      var b=document.createElement('a');
+      b.href=tel; b.textContent=p;
+      pSpan.appendChild(b);
+    }
+  })();
+</script>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/68cedf97f60acf192897a700/1j5k1ipt9';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+</body>
+</html>

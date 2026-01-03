@@ -1,0 +1,104 @@
+<!-- /shared-menu/menu.html -->
+<nav class="vbts-nav" aria-label="Primary">
+  <style>
+    .vbts-nav{position:sticky;top:0;z-index:1000;background:linear-gradient(180deg,#111425 0%,#151937 100%);color:#fff;box-shadow:0 10px 30px rgba(0,0,0,.28);font-family:'Segoe UI',Tahoma,Arial,sans-serif}
+    .vbts-nav .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    .vbts-nav .bar{display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
+    .vbts-nav .brand{color:#fff;font-weight:900;letter-spacing:.2px;text-decoration:none}
+    .vbts-nav .menu-toggle{display:none;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:#fff;border-radius:10px;padding:8px 12px;cursor:pointer}
+    .vbts-nav .links{display:flex;align-items:center;gap:18px}
+    .vbts-nav .links>a{color:#fff;font-weight:600;opacity:.98;text-decoration:none}
+    .vbts-nav .links>a:hover{opacity:1;text-decoration:underline}
+    .vbts-nav .locations{position:relative}
+    .vbts-nav .dropbtn{display:inline-flex;align-items:center;gap:6px;color:#fff;font-weight:700;padding:8px 10px;border-radius:10px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);text-decoration:none}
+    .vbts-nav .dropbtn svg{width:14px;height:14px;opacity:.85}
+    .vbts-nav .dropdown{
+      position:absolute;top:44px;right:0;background:#fff;color:#111;
+      min-width:420px;max-width:640px;max-height:70vh;overflow:auto;
+      border-radius:14px;padding:12px 14px;box-shadow:0 18px 50px rgba(0,0,0,.25);display:none
+    }
+    .vbts-nav .locations.open .dropdown{display:block}
+    .vbts-nav .dropdown .cols{display:grid;grid-template-columns:1fr 1fr;gap:8px 14px}
+    .vbts-nav .dropdown a{
+      display:block;color:#111;padding:8px 10px;border-radius:10px;text-decoration:none;
+      font-weight:700;font-size:.96rem;line-height:1.25;border:1px solid #f0f0f0;background:#fafbff
+    }
+    .vbts-nav .dropdown a:hover{background:#f4f6ff}
+    body:has(.vbts-nav.open){overflow:hidden}
+    @media (max-width:880px){
+      .vbts-nav .menu-toggle{display:inline-block}
+      .vbts-nav .links{
+        display:none;position:fixed;inset:56px 0 0 0;
+        background:linear-gradient(180deg,#111425 0%,#151937 100%);
+        padding:14px 20px;flex-direction:column;align-items:stretch;gap:10px;
+        height:calc(100dvh - 56px);height:calc(100svh - 56px);height:calc(100vh - 56px);
+        overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;
+      }
+      .vbts-nav.open .links{display:flex}
+      .vbts-nav .dropbtn{justify-content:space-between;width:100%}
+      .vbts-nav .dropdown{position:static;box-shadow:none;background:transparent;color:#fff;padding:0;display:block;max-height:none;min-width:0;overflow:visible}
+      .vbts-nav .dropdown .cols{grid-template-columns:1fr;gap:10px 0}
+      .vbts-nav .dropdown a{color:#fff;background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18)}
+      .vbts-nav .dropdown a:hover{background:rgba(255,255,255,.14)}
+    }
+  </style>
+
+  <div class="bar container">
+    <a class="brand" href="/">Vows By The Sea</a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="primary-links">Menu</button>
+
+    <div id="primary-links" class="links">
+      <a href="/">Home</a>
+      <a href="/packages.html">Packages</a>
+      <a href="/blog.html">Recent Wedding Gallery</a>
+      <a href="/faq.html">FAQ</a>
+
+      <!-- Major-area Locations dropdown -->
+      <div class="locations">
+        <a href="/locations/" class="dropbtn" aria-haspopup="true" aria-expanded="false">
+          Locations
+          <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M5 7l5 6 5-6z" fill="currentColor"/></svg>
+        </a>
+
+        <div class="dropdown" role="menu" aria-label="Locations">
+          <div class="cols">
+            <a href="/locations/clearwater-area.html">Clearwater / Sand Key / Honeymoon</a>
+            <a href="/locations/st-pete-treasure-island.html">St. Pete Beach / Treasure Island</a>
+            <a href="/locations/anna-maria-island-area.html">Anna Maria Island / Coquina / Bean Point</a>
+            <a href="/locations/sarasota-area.html">Sarasota / Siesta Key / Lido</a>
+            <!-- NEW -->
+            <a href="/locations/on-site-venues.html">Hotel / Resort / Airbnb (on-site)</a>
+            <a href="/contact.html#other">Other (share details)</a>
+          </div>
+        </div>
+      </div>
+
+      <a href="/contact.html">Contact</a>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      const nav = document.querySelector('.vbts-nav');
+      const btn = nav.querySelector('.menu-toggle');
+      const loc = nav.querySelector('.locations');
+      const dropBtn = nav.querySelector('.dropbtn');
+
+      btn.addEventListener('click', () => {
+        const open = nav.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+
+      dropBtn.addEventListener('click', (e)=>{
+        if (window.matchMedia('(max-width:880px)').matches) return;
+        e.preventDefault();
+        loc.classList.toggle('open');
+        dropBtn.setAttribute('aria-expanded', loc.classList.contains('open') ? 'true' : 'false');
+      });
+
+      document.addEventListener('click', (e)=>{
+        if (!loc.contains(e.target)) { loc.classList.remove('open'); dropBtn.setAttribute('aria-expanded','false'); }
+      });
+    })();
+  </script>
+</nav>

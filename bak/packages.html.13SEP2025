@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Wedding Packages | Vows By The Sea</title>
+<meta name="description" content="Browse Florida beach wedding packages&mdash;Sweet &amp; Simple to Tropical Bliss&mdash;with clear inclusions, ideal fit, and additional options for each package." />
+<link rel="icon" href="https://vowsbythesea.com/favicon.ico" />
+<link rel="canonical" href="https://vowsbythesea.com/packages.html" />
+
+<!-- Open Graph / Twitter -->
+<meta property="og:locale" content="en_US" />
+<meta property="og:title" content="Wedding Packages | Vows By The Sea" />
+<meta property="og:description" content="Sweet &amp; Simple, Stars of Love, Tiki Parasol, Bamboo Love II, Tropical Bliss and more&mdash;see inclusions, who each is best for, plus optional add-ons." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://vowsbythesea.com/packages.html" />
+<meta property="og:image" content="https://vowsbythesea.com/images/hero-social-1200x630-enhanced.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<style>
+  :root{
+    --primary:#f28e1c; --dark:#1a1a1a; --light:#fff; --text-dark:#222; --text-muted:#666;
+    --border-light:#ddd; --radius:10px; --max-width:1000px;
+    --font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:var(--font-family);background:var(--light);color:var(--text-dark);line-height:1.5}
+  nav{background:var(--dark);padding:12px 0;position:sticky;top:0;z-index:1000;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+  nav a{color:#fff;text-decoration:none;margin:0 20px;font-weight:600;font-size:1.1rem}
+  nav a:hover,nav a.active{color:var(--primary)}
+  header{
+    background:linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)), url('images/hero-1920x1080-enhanced.jpg') center/cover no-repeat;
+    padding:84px 20px;color:#fff;text-align:center
+  }
+  @media (max-width:768px){
+    header{background-image:linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)), url('images/hero-mobile-768-enhanced.jpg');}
+  }
+  header h1{font-size:2.8rem;margin:.1em 0 .2em}
+  header p{max-width:740px;margin:0 auto}
+  main{max-width:var(--max-width);margin:40px auto;padding:0 20px}
+  h2{font-size:2.2rem;color:var(--primary);text-align:center;margin:0 0 24px}
+
+  /* grid/cards */
+  .packages{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:25px;margin-bottom:60px}
+  .package{border:1px solid var(--border-light);border-radius:var(--radius);padding:15px 18px 16px;background:#fff;box-shadow:0 4px 14px rgba(0,0,0,.08)}
+  .package:hover{box-shadow:0 10px 30px rgba(242,142,28,.35)}
+  .package img{width:100%;height:190px;object-fit:cover;border-radius:10px;margin-bottom:10px}
+  .package h3{margin:0 0 6px;font-size:1.4rem}
+  .price{color:var(--primary);font-weight:800;margin:0 0 10px}
+  .bullets{margin:8px 0 0;padding-left:18px}
+  .bullets li{margin-bottom:.35em}
+  .subbullets{margin:.25em 0 0 1em;padding-left:18px;list-style:disc}
+  .btn{background:var(--primary);color:#fff;text-decoration:none;font-weight:800;padding:11px 16px;border-radius:999px;display:inline-block;box-shadow:0 5px 10px rgba(242,142,28,.45)}
+  .btn:hover{background:#d87600}
+  .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+  .muted{color:var(--text-muted)}
+</style>
+</head>
+<body>
+
+
+<div id="site-nav" data-include="./locations/shared-menu/menu.html"></div>
+<script defer src="./locations/shared-menu/menu-loader.js"></script>
+
+
+<header role="banner">
+  <h1>Wedding Packages</h1>
+  <p>Exactly the same packages and pricing from our homepage&mdash;now with fuller descriptions, who each is best for, and clearly listed additional options at the bottom of each card.</p>
+</header>
+
+<main>
+  <h2>All Packages &amp; Inclusions</h2>
+
+  <section class="packages" role="list">
+
+    <!-- Sweet & Simple -->
+    <article class="package" role="listitem">
+      <img src="images/sweet_simple.jpg" alt="Sweet &amp; Simple beach wedding package" loading="lazy" />
+      <h3>Sweet &amp; Simple Package</h3>
+      <p class="price">$448.00</p>
+      <ul class="bullets">
+        <li>Streamlined seaside ceremony&mdash;arrive, say &ldquo;I do,&rdquo; take a few keepsake photos, and head to a celebratory dinner.</li>
+        <li>Perfect for sunrise or sunset elopements where the natural beach backdrop is the star.</li>
+      </ul>
+      <ul class="bullets">
+        <li><strong>Includes:</strong> Wedding Officiant, legal filing of marriage license, 15 professional digital photos, help selecting vows.</li>
+        <li><strong>Ideal for:</strong> Elopements, last-minute plans, couples traveling light, or anyone wanting a simple legal ceremony with minimal setup.</li>
+        <li><strong>Typical group size:</strong> Couple + up to ~5 guests standing.</li>
+      </ul>
+      <ul class="bullets">
+        <li><strong>Additional options:</strong>
+          <ul class="subbullets">
+            <li><strong>Seating:</strong> Not included; chairs can be added.</li>
+          </ul>
+        </li>
+      </ul>
+      <div class="cta-row">
+        <a class="btn" href="/index.html#contact">Get a Quote</a>
+      </div>
+    </article>
+
+    <!-- Just The Two of Us -->
+    <article class="package" role="listitem">
+      <img src="images/just2ofus.jpg" alt="Just The Two of Us beach wedding package" loading="lazy" />
+      <h3>Just The Two of Us Package</h3>
+      <p class="price">$549.00</p>
+      <ul class="bullets">
+        <li>Romantic, intimate ceremony with a touch of d&eacute;cor and more photography time.</li>
+        <li>Still easy and lightweight, but with sweet details for your keepsakes.</li>
+      </ul>
+      <ul class="bullets">
+        <li><strong>Includes:</strong> Officiant, decorated table arrangement, Unity Sand Ceremony (value $35), use of silk bouquet, keepsake vows &amp; certificate, license filing, 50 professional photos, help choosing vows.</li>
+        <li><strong>Ideal for:</strong> Couples eloping without a crowd who still want a little styling and more photo coverage.</li>
+        <li><strong>Typical group size:</strong> Couple + a few guests (standing).</li>
+      </ul>
+      <ul class="bullets">
+        <li><strong>Additional options:</strong>
+          <ul class="subbullets">
+            <li><strong>Seating:</strong> Not included; chairs can be added.</li>
+          </ul>
+        </li>
+      </ul>
+      <div class="cta-row">
+        <a class="btn" href="/index.html#contact">Get a Quote</a>
+      </div>
+    </article>
+
+    <!-- I Love You (photo options split into lines) -->
+    <article class="package" role="listitem">
+      <img src="images/iloveyoupackage.jpg" alt="I Love You package" loading="lazy" />
+      <h3>I Love You Package</h3>
+      <p class="price">$595.00</p>
+      <ul class="bullets">
+        <li>A classic, budget-friendly ceremony with core d&eacute;cor and flexible photo options to match your priorities.</li>
+      </ul>
+      <ul class="bullets">
+        <li><strong>Includes:</strong> Officiant, decorated table, Unity Sand Ceremony, use of silk bouquet, keepsake vows &amp; marriage certificate, license filing.</li>
+        <li><strong>Ideal for:</strong> Small groups who want meaningful touches and flexible photo quantities without a full arch setup.</li>
+        <li><strong>Typical group size:</strong> Couple + up to ~10 guests standing.</li>
+      </ul>
+      <ul class="bullets">
+        <li><strong>Additional options:</strong>
+          <ul class="subbullets">
+            <li><strong>Photo options:</strong>
+              <ul class="subbullets">
+                <li>&ldquo;I Love You&rdquo; &mdash; 50 photos ($595)</li>
+                <li>&ldquo;I Love You More&rdquo; &mdash; 75 photos ($695)</li>
+                <li>&ldquo;I Love You Always&rdquo; &mdash; 100 photos ($795)</li>
+              </ul>
+            </li>
+            <li><strong>Add-on:</strong> 6 tiki torches (+$75).</li>
+            <li><strong>Seating:</strong> Not included; chairs can be added.</li>
+          </ul>
+        </li>
+      </ul>
+      <div class="cta-row">
+        <a class="btn" href="/index.html#contact">Get a Quote</a>
+      </div>
+    </article>
+
+    <!-- Bamboo & Stars -->
+    <article class="package" role="listitem">
+      <img src="images/bamboo_stars.jpg" alt="Bamboo &amp; Stars package" loading="lazy" />
+      <h3>Bamboo &amp; Stars Package</h3>
+      <p class="price">$695.00</p>
+      <ul class="bullets">
+        <li>Tropical vibe with light styling: decorated bamboo sticks and playful parasols for photos.</li>
+        <li>Great when you want a defined &ldquo;spot&rdquo; without a full arch.</li>
+      </ul>
+      <ul class="bullets">
+        <li><strong>Includes:</strong> Officiant, decorated table, Unity Sand Ceremony, use of silk bouquet, keepsake vows &amp; certificate, license filing, 50 photos, six decorated bamboo sticks, parasols for portraits.</li>
+        <li><strong>Ideal for:</strong> Couples who want a breezy, island look on a modest budget.</li>
+        <li><strong>Typical group size:</strong> Couple + up to ~10&ndash;15 guests standing.</li>
+      </ul>
+      <ul class="bullets">
+        <li><strong>Additional options:</strong>
+          <ul class="subbullets">
+            <li><strong>Seating:</strong> Not included; chairs can be added.</li>
+          </ul>
+        </li>
+      </ul>
+      <div class="cta-row">
+        <a class="btn" href="/index.html#contact">Get a Quote</a>
+      </div>
+    </article>
+
+    <!-- Stars of Love I & II (versions split into lines) -->
+    <article class="package" role="listitem">
+      <img src="images/starsoflove.jpg" alt="Stars of Love arch" loading="lazy" />
+      <h3>Stars of Love I &amp; II Package</h3>
+      <p class="price">$950.00 / $1,149.00</p>
+      <ul class="bullets">
+        <li>Beach-chic focal point with a sheer fabric arch accented by starfish&mdash;great for framing your vows and photos.</li>
+      </ul>
+      <ul class="bullets">
+        <li><strong>Includes:</strong> Officiant, Stars of Love Arch (white sheer &amp; starfish), decorated table, Unity Sand Ceremony, use of silk bouquet, keepsake vows &amp; certificate, license filing.</li>
+        <li><strong>Ideal for:</strong> Couples who want a defined altar look and a little more presence in photos.</li>
+        <li><strong>Typical group size:</strong> ~10&ndash;30 guests standing.</li>
+      </ul>
+      <ul class="bullets">
+        <li><strong>Additional options:</strong>
+          <ul class="subbullets">
+            <li><strong>Versions:</strong>
+              <ul class="subbullets">
+                <li><strong>Stars of Love</strong> &mdash; 3-stick arch + 50 photos ($950)</li>
+                <li><strong>Stars of Love II</strong> &mdash; 4-stick arch + 75 photos ($1,149)</li>
+              </ul>
+            </li>
+            <li><strong>Seating:</strong> Not included; chairs can be added.</li>
+          </ul>
+        </li>
+      </ul>
+      <div class="cta-row">
+        <a class="btn" href="/index.html#contact">Get a Quote</a>
+      </div>
+    </article>
+
+    <!-- Tiki Parasol -->
+    <article class="package" role="listitem">
+      <img src="images/tikiparasol.jpg" alt="Tiki Parasol package" loading="lazy" />
+      <h3>Tiki Parasol Package</h3>
+      <p class="price">$998.00</p>
+      <ul class="bullets">
+        <li>Festive and photo-friendly: torches and parasols create a fun aisle and sunny island feel&mdash;great for golden-hour ceremonies.</li>
+      </ul>
+      <ul class="bullets">
+        <li><strong>Includes:</strong> Officiant, decorated table, Unity Sand Ceremony, use of silk bouquet, keepsake vows &amp; certificate, license filing, 50 photos, six decorated tiki torches, parasols for photos.</li>
+        <li><strong>Ideal for:</strong> Larger standing groups that want a lively vibe without chair logistics.</li>
+        <li><strong>Typical group size:</strong> Flexible; subject to beach rules and permitting.</li>
+      </ul>
+      <ul class="bullets">
+        <li><strong>Additional options:</strong>
+          <ul class="subbullets">
+            <li><strong>Seating:</strong> Not included; chairs can be added.</li>
+          </ul>
+        </li>
+      </ul>
+      <div class="cta-row">
+        <a class="btn" href="/index.html#contact">Get a Quote</a>
+      </div>
+    </article>
+
+    <!-- A Little More (levels split into lines + seating note) -->
+    <article class="package" role="listitem">
+      <img src="images/alittemorepackage.jpg" alt="A Little More package" loading="lazy" />
+      <h3>A Little More Package</h3>
+      <p class="price">Starting at $1,198.00</p>
+      <ul class="bullets">
+        <li>Add structure and seating with a decorated arch and reserved chairs&mdash;perfect for intimate guest lists.</li>
+      </ul>
+      <ul class="bullets">
+        <li><strong>Includes:</strong> Officiant; sand ceremony (bottle, sand, setup); hand-tied rose bouquet &amp; groom&rsquo;s boutonni&egrave;re; decorated wedding arch; keepsake certificate; printed ceremony; license filing.</li>
+        <li><strong>Ideal for:</strong> Couples hosting a small seated ceremony who want both d&eacute;cor and photo coverage in one bundle.</li>
+        <li><strong>Typical group size:</strong> ~10&ndash;25 guests.</li>
+      </ul>
+      <ul class="bullets">
+        <li><strong>Additional options:</strong>
+          <ul class="subbullets">
+            <li><strong>Seating:</strong> Included with basic package &mdash; 10 chairs; additional chairs can be added.</li>
+            <li><strong>Levels:</strong>
+              <ul class="subbullets">
+                <li><strong>Silver</strong> &mdash; $1,198 (75 photos + no tiki torches)</li>
+                <li><strong>Gold</strong> &mdash; $1,298 (100 photos + six tiki torches)</li>
+                <li><strong>Platinum</strong> &mdash; $1,398 (100 photos + Rose Petal Aisle Way + six tiki torches)</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <div class="cta-row">
+        <a class="btn" href="/index.html#contact">Get a Quote</a>
+      </div>
+    </article>
+
+    <!-- Something Blue Stars (seating note) -->
+    <article class="package" role="listitem">
+      <img src="images/somethingblue.jpg" alt="Something Blue Stars package" loading="lazy" />
+      <h3>Something Blue Stars Package</h3>
+      <p class="price">$1,988.00 + tax</p>
+      <ul class="bullets">
+        <li>Upscale arch experience with added seating and expanded photo time&mdash;elegant without going &ldquo;full production.&rdquo;</li>
+      </ul>
+      <ul class="bullets">
+        <li><strong>Includes:</strong> Officiant; Stars of Love 4-pole arch (white sheer + starfish); decorated table; Unity Sand Ceremony; use of silk bouquet; keepsake vows &amp; certificate; license filing; 100 photos.</li>
+        <li><strong>Ideal for:</strong> Mid-sized gatherings that want a refined altar and seated guests with strong photo coverage.</li>
+        <li><strong>Typical group size:</strong> ~20&ndash;40 guests.</li>
+      </ul>
+      <ul class="bullets">
+        <li><strong>Additional options:</strong>
+          <ul class="subbullets">
+            <li><strong>Seating:</strong> Included with basic package &mdash; 20 chairs; additional chairs can be added.</li>
+          </ul>
+        </li>
+      </ul>
+      <div class="cta-row">
+        <a class="btn" href="/index.html#contact">Get a Quote</a>
+      </div>
+    </article>
+
+    <!-- Bamboo Love II (seating note) -->
+    <article class="package" role="listitem">
+      <img src="images/bamboo_love_ii.jpg" alt="Bamboo Love II package" loading="lazy" />
+      <h3>Bamboo Love II Package</h3>
+      <p class="price">$3,999.00</p>
+      <ul class="bullets">
+        <li>A fuller ceremony and guest experience with photography, video, and chair setup&mdash;great for destination groups.</li>
+      </ul>
+      <ul class="bullets">
+        <li><strong>Includes:</strong> Officiant; digital wedding photography (100 photos); video of ceremony; delivery &amp; setup.</li>
+        <li><strong>Ideal for:</strong> Couples wanting a coordinated look with seating and both photo + video for the big moments.</li>
+        <li><strong>Typical group size:</strong> ~25&ndash;80 guests.</li>
+      </ul>
+      <ul class="bullets">
+        <li><strong>Additional options:</strong>
+          <ul class="subbullets">
+            <li><strong>Seating:</strong> Included with basic package &mdash; up to 50 chairs (with covers &amp; bows); additional chairs can be added.</li>
+          </ul>
+        </li>
+      </ul>
+      <div class="cta-row">
+        <a class="btn" href="/index.html#contact">Get a Quote</a>
+      </div>
+    </article>
+
+    <!-- Tropical Bliss (optional add-on + seating note at bottom) -->
+    <article class="package" role="listitem">
+      <img src="images/tropical_bliss.jpg" alt="Tropical Bliss package" loading="lazy" />
+      <h3>Tropical Bliss Package</h3>
+      <p class="price">$6,500.00 + tax</p>
+      <ul class="bullets">
+        <li>Our most complete package&mdash;styling, aisle d&eacute;cor, photo + video, music, petals, and coordinated seating.</li>
+        <li>Ideal for destination weddings where guests expect a polished, all-in experience.</li>
+      </ul>
+      <ul class="bullets">
+        <li><strong>Includes:</strong> Officiant; 100 photos + video; hand-tied rose bouquet &amp; groom&rsquo;s boutonni&egrave;re; sand ceremony; Bamboo Love II or Tropical Bliss setup; pre-recorded music; starfish aisle way; rose petals; printed ceremony copy; keepsake certificate; license filing.</li>
+        <li><strong>Ideal for:</strong> Couples hosting larger destination groups who want signature visuals and the most coverage.</li>
+        <li><strong>Typical group size:</strong> ~40&ndash;100 guests.</li>
+      </ul>
+      <ul class="bullets">
+        <li><strong>Additional options:</strong>
+          <ul class="subbullets">
+            <li><strong>Seating:</strong> Included with basic package &mdash; up to 50 chairs (with covers &amp; bows); additional chairs can be added.</li>
+            <li><strong>Optional all-inclusive add-on:</strong>
+              <ul class="subbullets">
+                <li>Fairytale Sand Castle (date-dependent)</li>
+                <li>Classic Car with red-carpet champagne toast (max 3 hours)</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <div class="cta-row">
+        <a class="btn" href="/index.html#contact">Get a Quote</a>
+      </div>
+    </article>
+
+  </section>
+</main>
+
+<!-- Floating Get a Quote CTA (kept pointing to index.html#contact) -->
+<a href="/index.html#contact" class="btn" style="position:fixed;right:18px;bottom:18px;z-index:1001;">Get a Quote</a>
+
+<!-- Footer with Awards + scrape-resistant contacts (copied from index.html) -->
+<footer style="background:#222;color:#fff;padding:40px 20px;text-align:center;">
+  <h3 style="margin-bottom:20px;">Awards &amp; Recognitions</h3>
+  <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:15px;margin-bottom:30px;">
+    <img src="images/awards/badge-weddingawards_en_US.png" alt="Wedding Awards" style="height:60px;">
+    <img src="images/awards/BCA_2015-badge-bottom.png" alt="BCA 2015 Award" style="height:60px;">
+    <img src="images/awards/BCA2016-logo_2x.png" alt="BCA 2016 Award" style="height:60px;">
+    <img src="images/awards/CCA-2014-badge-bottom.png" alt="CCA 2014 Award" style="height:60px;">
+    <img src="images/awards/wedding-badge.png" alt="Wedding Badge" style="height:60px;">
+    <img src="images/awards/WW-Rated-2009.jpg" alt="WeddingWire Rated 2009" style="height:60px;">
+    <img src="images/awards/WW-Rated-2010.jpg" alt="WeddingWire Rated 2010" style="height:60px;">
+    <img src="images/awards/WW-Rated-2011.jpg" alt="WeddingWire Rated 2011" style="height:60px;">
+  </div>
+
+  <h3 style="margin-bottom:10px;">Contact Us</h3>
+  <p>Email: <span id="vbts-email" aria-label="Email address"></span></p>
+  <p>Phone: <span id="vbts-phone" aria-label="Phone number"></span></p>
+
+  <!-- Instagram link (logo) -->
+  <div style="margin:16px 0 8px;">
+    <a href="https://www.instagram.com/vowsbythesea/" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="#ffffff" aria-hidden="true">
+        <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11zm0 2A3.5 3.5 0 1 0 12 17.5 3.5 3.5 0 0 0 12 9.5zm6.75-.75a1.25 1.25 0 1 1-1.25 1.25 1.25 1.25 0 0 1 1.25-1.25z"/>
+      </svg>
+    </a>
+  </div>
+
+  <noscript>
+    <p style="opacity:.85">Enable JavaScript to see our email and phone, or use the contact form above.</p>
+  </noscript>
+
+  <hr style="border:none;border-top:1px solid rgba(255,255,255,0.2);margin:20px 0;">
+  <p style="margin:0;">&copy; 2025 Vows By The Sea. All rights reserved.</p>
+</footer>
+
+<!-- Scripts (guarded: safe even without on-page form) -->
+<script>
+  // Scrape-resistant email and phone in footer (copied from index.html)
+  (function(){
+    // Email
+    var u='contact', at='@', d1='vowsbythesea', d2='.com';
+    var eSpan=document.getElementById('vbts-email');
+    if(eSpan){
+      var a=document.createElement('a');
+      a.href='mailto:'+u+at+d1+d2;
+      a.innerHTML=u+'&#8203;'+at+d1+d2;
+      a.style.color='#ffcc66';
+      eSpan.appendChild(a);
+    }
+    // Phone
+    var p='+1 '+'727'+'\u2011'+'312'+'\u2011'+'6900';
+    var tel='tel:'+'727'+'312'+'6900';
+    var pSpan=document.getElementById('vbts-phone');
+    if(pSpan){
+      var b=document.createElement('a');
+      b.href=tel; b.textContent=p; b.style.color='#ffcc66';
+      pSpan.appendChild(b);
+    }
+  })();
+</script>
+
+<!-- Google tag (gtag.js) — copied from index.html -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9JYYDX0VEW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9JYYDX0VEW');
+</script>
+
+</body>
+</html>

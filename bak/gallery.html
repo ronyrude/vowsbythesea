@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Wedding Gallery – Vows By The Sea</title>
+<meta name="description" content="Browse our Vows By The Sea photo gallery. Real beach ceremonies and styled details captured on Florida’s Gulf Coast." />
+<link rel="icon" href="https://vowsbythesea.com/favicon.ico" />
+<link rel="canonical" href="https://vowsbythesea.com/gallery.html" />
+
+<style>
+  :root{
+    --primary:#f28e1c;
+    --dark:#1a1a1a;
+    --light:#fff;
+    --text-dark:#222;
+    --text-muted:#666;
+    --border:#e7e7e7;
+    --radius:14px;
+    --max-width:1200px;
+    --font:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; font-family:var(--font); color:var(--text-dark); background:var(--light);
+  }
+  /* Nav */
+  nav{
+    background:var(--dark);
+    padding:12px 0;
+    position:sticky; top:0; z-index:1000;
+    box-shadow:0 2px 8px rgba(0,0,0,.3);
+  }
+  nav .wrap{max-width:var(--max-width); margin:0 auto; padding:0 16px; display:flex; gap:20px; align-items:center; justify-content:space-between;}
+  nav .brand{color:#fff; font-weight:900; text-decoration:none; letter-spacing:.2px}
+  nav .links a{
+    color:#fff; text-decoration:none; margin:0 12px; font-weight:600; font-size:1.05rem; transition:color .25s;
+  }
+  nav .links a:hover, nav .links a.active{color:var(--primary)}
+
+  /* Header */
+  header{
+    text-align:center; padding:56px 16px 28px;
+    background:
+      radial-gradient(1200px 300px at 50% -50%, rgba(242,142,28,.25), transparent 70%),
+      linear-gradient(#111, #111) no-repeat center / 100% 0px;
+  }
+  header h1{font-size:2.6rem; margin:.1em 0; color:var(--dark);}
+  header p{max-width:700px; margin:10px auto 0; color:var(--text-muted); font-weight:600}
+  .cta-row{margin-top:18px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap}
+  .btn{
+    background:var(--primary); color:#fff; border:0; border-radius:12px; padding:12px 20px;
+    text-decoration:none; font-weight:800; box-shadow:0 6px 14px rgba(242,142,28,.35); transition:transform .15s, background .25s;
+  }
+  .btn:hover{transform:translateY(-1px); background:#d87600}
+  .btn.outline{background:#fff; color:var(--primary); border:2px solid var(--primary); box-shadow:none}
+  .btn.outline:hover{background:#fff0e6}
+
+  /* Gallery Grid */
+  main{max-width:var(--max-width); margin:10px auto 80px; padding:0 16px}
+  .toolbar{
+    display:flex; align-items:center; justify-content:space-between; gap:10px; margin:14px 0 10px;
+    flex-wrap:wrap;
+  }
+  .toolbar .hint{color:var(--text-muted); font-size:.95rem}
+  .gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(210px, 1fr));
+    gap:14px;
+  }
+  .card{
+    position:relative; overflow:hidden; border-radius:var(--radius); background:#fafafa; border:1px solid var(--border);
+    box-shadow:0 8px 18px rgba(0,0,0,.06);
+  }
+  .card img{
+    width:100%; height:220px; object-fit:cover; display:block; background:#eee;
+    transition:transform .35s ease;
+  }
+  .card:hover img{transform:scale(1.03)}
+  .card .cap{
+    position:absolute; left:10px; bottom:10px; background:rgba(0,0,0,.45); color:#fff;
+    padding:6px 10px; border-radius:999px; font-size:.86rem; backdrop-filter:saturate(1.2) blur(2px);
+  }
+
+  /* Lightbox */
+  .lightbox{
+    position:fixed; inset:0; background:rgba(0,0,0,.9); display:none; align-items:center; justify-content:center;
+    z-index:2000; padding:20px;
+  }
+  .lightbox.open{display:flex}
+  .lightbox .frame{
+    position:relative; max-width:min(1000px, 95vw); max-height:85vh;
+  }
+  .lightbox img{
+    width:100%; height:auto; max-height:85vh; border-radius:12px; display:block;
+  }
+  .lightbox .close, .lightbox .nav{
+    position:absolute; top:50%; transform:translateY(-50%); background:rgba(255,255,255,.12);
+    color:#fff; border:1px solid rgba(255,255,255,.25); width:44px; height:44px; border-radius:50%;
+    display:grid; place-items:center; cursor:pointer; user-select:none;
+    backdrop-filter: blur(6px);
+  }
+  .lightbox .close{
+    top:-18px; right:-18px; transform:none; width:40px; height:40px;
+  }
+  .lightbox .nav.left{left:-18px}
+  .lightbox .nav.right{right:-18px}
+  .lightbox .meta{
+    margin-top:10px; color:#ddd; text-align:center; font-size:.95rem
+  }
+
+  /* Footer (match index) */
+  footer{background:#222;color:#fff;padding:40px 20px;text-align:center;margin-top:30px;}
+  footer h3{margin-bottom:20px;}
+  footer .awards{display:flex;flex-wrap:wrap;justify-content:center;gap:15px;margin-bottom:30px;}
+  footer .awards img{height:60px;}
+  footer a{color:#ffcc66;text-decoration:none;}
+  footer a:hover{text-decoration:underline;}
+
+  @media (max-width:640px){
+    header h1{font-size:2.15rem}
+    .card img{height:200px}
+    .lightbox .nav.left{left:4px} .lightbox .nav.right{right:4px}
+    .lightbox .close{right:6px; top:6px}
+  }
+</style>
+</head>
+<body>
+
+<div id="site-nav" data-include="./locations/shared-menu/menu.html"></div>
+<script defer src="./locations/shared-menu/menu-loader.js"></script>
+
+<header>
+  <h1>Wedding Gallery</h1>
+  <p>Real moments from Clearwater Beach, St. Pete Beach, Anna Maria Island, and beyond.</p>
+  <div class="cta-row">
+    <a class="btn" href="/index.html#packages">Back to Packages</a>
+    <a class="btn outline" href="/index.html#contact">Request Availability</a>
+  </div>
+</header>
+
+<main>
+  <div class="toolbar">
+    <div class="hint" id="count-hint" aria-live="polite"></div>
+  </div>
+
+  <!-- Responsive gallery grid -->
+  <section id="gallery" class="gallery" aria-label="Photo gallery"></section>
+</main>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <div class="frame">
+    <button class="close" id="lbClose" aria-label="Close">X</button>
+    <button class="nav left" id="lbPrev" aria-label="Previous image"><</button>
+    <img id="lbImg" alt="" />
+    <button class="nav right" id="lbNext" aria-label="Next image">></button>
+    <div class="meta" id="lbMeta"></div>
+  </div>
+</div>
+
+<footer>
+  <h3>Awards &amp; Recognitions</h3>
+  <div class="awards">
+    <img src="images/awards/badge-weddingawards_en_US.png" alt="Wedding Awards">
+    <img src="images/awards/BCA_2015-badge-bottom.png" alt="BCA 2015 Award">
+    <img src="images/awards/BCA2016-logo_2x.png" alt="BCA 2016 Award">
+    <img src="images/awards/CCA-2014-badge-bottom.png" alt="CCA 2014 Award">
+    <img src="images/awards/wedding-badge.png" alt="Wedding Badge">
+    <img src="images/awards/WW-Rated-2009.jpg" alt="WeddingWire Rated 2009">
+    <img src="images/awards/WW-Rated-2010.jpg" alt="WeddingWire Rated 2010">
+    <img src="images/awards/WW-Rated-2011.jpg" alt="WeddingWire Rated 2011">
+  </div>
+  <hr style="border:none;border-top:1px solid rgba(255,255,255,0.2);margin:20px 0;">
+  <p style="margin:0;">&copy; <span id="yr"></span> Vows By The Sea. All rights reserved.</p>
+</footer>
+
+<script>
+  // Footer year
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  /**
+   * GALLERY LOADING STRATEGY (no backend needed):
+   * 1) Try to fetch `/gallery/manifest.json` -> ["file1.jpg", "file2.webp", ...]
+   * 2) If missing, probe numbered files in /gallery like 01.jpg..80.(jpg|jpeg|png|webp)
+   *    Only images that actually exist will be shown.
+   */
+
+  const galleryEl = document.getElementById('gallery');
+  const countHint = document.getElementById('count-hint');
+  let images = [];  // {src, alt}
+  let currentIndex = -1;
+
+  async function loadManifest() {
+    try {
+      const res = await fetch('/gallery/manifest.json', {cache: 'no-store'});
+      if (!res.ok) throw 0;
+      const list = await res.json();
+      if (Array.isArray(list) && list.length) {
+        return list.map(name => String(name));
+      }
+    } catch (e) {}
+    return null;
+  }
+
+  async function probeFiles() {
+    const exts = ['jpg','jpeg','png','webp'];
+    const max = 80;
+    const names = [];
+    for (let i=1;i<=max;i++){
+      const base = String(i).padStart(2,'0');
+      exts.forEach(ext => names.push(`${base}.${ext}`));
+    }
+    for (let i=1;i<=max;i++){
+      const base = String(i);
+      exts.forEach(ext => names.push(`${base}.${ext}`));
+    }
+    return Array.from(new Set(names));
+  }
+
+  function testImage(url){
+    return new Promise(resolve=>{
+      const img = new Image();
+      const done = ok => resolve(ok);
+      img.onload = ()=> done(true);
+      img.onerror = ()=> done(false);
+      img.src = url + (url.includes('?')?'&':'?') + 'v=' + Date.now();
+    });
+  }
+
+  async function buildList() {
+    const manifest = await loadManifest();
+    const candidates = manifest ? manifest : await probeFiles();
+    const found = [];
+    const chunkSize = 16;
+    for (let i=0; i<candidates.length; i+=chunkSize){
+      const chunk = candidates.slice(i, i+chunkSize);
+      const checks = await Promise.all(chunk.map(name => testImage(`/gallery/${name}`)));
+      checks.forEach((ok, idx)=>{
+        if (ok) found.push(`/gallery/${chunk[idx]}`);
+      });
+    }
+    return found;
+  }
+
+  function filenameToAlt(src){
+    const f = src.split('/').pop().split('.').shift();
+    return f.replace(/[-_]+/g,' ').replace(/\b\w/g, m=>m.toUpperCase());
+  }
+
+  function renderGallery(){
+    galleryEl.innerHTML = '';
+    images.forEach((it, idx)=>{
+      const card = document.createElement('figure');
+      card.className = 'card';
+      const img = document.createElement('img');
+      img.loading = 'lazy';
+      img.alt = it.alt;
+      img.src = it.src;
+      img.decoding = 'async';
+      img.addEventListener('click', ()=> openLightbox(idx));
+      const cap = document.createElement('figcaption');
+      cap.className = 'cap';
+      cap.textContent = it.alt;
+      card.appendChild(img);
+      card.appendChild(cap);
+      galleryEl.appendChild(card);
+    });
+    countHint.textContent = images.length ? `${images.length} photos` : 'No images found in /gallery';
+  }
+
+  // Lightbox
+  const lb = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lbImg');
+  const lbMeta = document.getElementById('lbMeta');
+  const lbPrev = document.getElementById('lbPrev');
+  const lbNext = document.getElementById('lbNext');
+  const lbClose = document.getElementById('lbClose');
+
+  function openLightbox(index){
+    currentIndex = index;
+    const it = images[currentIndex];
+    lbImg.src = it.src;
+    lbImg.alt = it.alt;
+    lbMeta.textContent = it.alt + ` (${currentIndex+1}/${images.length})`;
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox(){
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+    lbImg.src = '';
+  }
+  function nav(delta){
+    if (!images.length) return;
+    currentIndex = (currentIndex + delta + images.length) % images.length;
+    const it = images[currentIndex];
+    lbImg.src = it.src;
+    lbImg.alt = it.alt;
+    lbMeta.textContent = it.alt + ` (${currentIndex+1}/${images.length})`;
+  }
+
+  lbPrev.addEventListener('click', ()=> nav(-1));
+  lbNext.addEventListener('click', ()=> nav(1));
+  lbClose.addEventListener('click', closeLightbox);
+  lb.addEventListener('click', (e)=> { if(e.target === lb) closeLightbox(); });
+  window.addEventListener('keydown', (e)=>{
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') nav(-1);
+    if (e.key === 'ArrowRight') nav(1);
+  });
+
+  // Init
+  (async function(){
+    const list = await buildList();
+    images = list.map(src => ({src, alt: filenameToAlt(src)}));
+    renderGallery();
+  })();
+</script>
+</body>
+</html>

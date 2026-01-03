@@ -1,0 +1,137 @@
+<!-- /shared-menu/menu.html -->
+<nav class="vbts-nav" aria-label="Primary">
+  <!-- Scoped styles so the menu looks identical on every page -->
+  <style>
+    .vbts-nav{position:sticky;top:0;z-index:1000;background:linear-gradient(180deg,#111425 0%,#151937 100%);color:#fff;box-shadow:0 10px 30px rgba(0,0,0,.28);font-family:'Segoe UI',Tahoma,Arial,sans-serif}
+    .vbts-nav .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    .vbts-nav .bar{display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
+    .vbts-nav .brand{color:#fff;font-weight:900;letter-spacing:.2px;text-decoration:none}
+    .vbts-nav .menu-toggle{display:none;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:#fff;border-radius:10px;padding:8px 12px;cursor:pointer}
+    .vbts-nav .links{display:flex;align-items:center;gap:18px}
+    .vbts-nav .links>a{color:#fff;font-weight:600;opacity:.98;text-decoration:none}
+    .vbts-nav .links>a:hover{opacity:1;text-decoration:underline}
+
+    /* Locations dropdown (denser & organized) */
+    .vbts-nav .locations{position:relative}
+    .vbts-nav .dropbtn{display:inline-flex;align-items:center;gap:6px;color:#fff;font-weight:700;padding:8px 10px;border-radius:10px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);text-decoration:none}
+    .vbts-nav .dropbtn svg{width:14px;height:14px;opacity:.85}
+    .vbts-nav .dropdown{
+      position:absolute;top:44px;right:0;background:#fff;color:#111;
+      min-width:640px;max-width:860px;max-height:70vh;overflow:auto;
+      border-radius:14px;padding:12px 14px;box-shadow:0 18px 50px rgba(0,0,0,.25);display:none
+    }
+    .vbts-nav .locations.open .dropdown{display:block}
+    .vbts-nav .dropdown .cols{
+      display:grid;grid-template-columns:repeat(3,minmax(180px,1fr));gap:12px 18px
+    }
+    .vbts-nav .dropdown .group{padding:8px 0;border-top:1px solid #f0f0f0}
+    .vbts-nav .dropdown .group:first-child{border-top:0;padding-top:0}
+    .vbts-nav .dropdown h4{
+      margin:.1em 0 .45em;font-size:.8rem;line-height:1;color:#6b7280;
+      font-weight:800;text-transform:uppercase;letter-spacing:.04em
+    }
+    .vbts-nav .dropdown a{
+      display:block;color:#111;padding:6px 8px;border-radius:10px;text-decoration:none;
+      font-weight:600;font-size:.92rem;line-height:1.25
+    }
+    .vbts-nav .dropdown a:hover{background:#f6f7fb}
+
+    /* Prevent background scroll when menu is open (modern browsers) */
+    body:has(.vbts-nav.open){overflow:hidden}
+
+    /* Mobile */
+    @media (max-width:880px){
+      .vbts-nav .menu-toggle{display:inline-block}
+      .vbts-nav .links{
+        display:none;position:fixed;inset:56px 0 0 0;
+        background:linear-gradient(180deg,#111425 0%,#151937 100%);
+        padding:14px 20px;flex-direction:column;align-items:stretch;gap:10px;
+        /* Make the panel itself scrollable */
+        height:calc(100dvh - 56px); /* fallback below */
+        height:calc(100svh - 56px);
+        height:calc(100vh - 56px);
+        overflow-y:auto;
+        overscroll-behavior:contain;
+        -webkit-overflow-scrolling:touch;
+      }
+      .vbts-nav.open .links{display:flex}
+      .vbts-nav .dropbtn{justify-content:space-between;width:100%}
+      .vbts-nav .dropdown{
+        position:static;box-shadow:none;background:transparent;color:#fff;
+        padding:0;display:block;max-height:none;min-width:0;overflow:visible
+      }
+      .vbts-nav .dropdown .cols{grid-template-columns:1fr;gap:6px 0}
+      .vbts-nav .dropdown .group{border-color:rgba(255,255,255,.18)}
+      .vbts-nav .dropdown h4{color:#fff;margin-top:8px}
+      .vbts-nav .dropdown a{color:#fff;font-size:1rem}
+      .vbts-nav .dropdown a:hover{background:rgba(255,255,255,.08)}
+    }
+  </style>
+
+  <div class="bar container">
+    <a class="brand" href="/">Vows By The Sea</a>
+
+    <button class="menu-toggle" aria-expanded="false" aria-controls="primary-links">Menu</button>
+
+    <div id="primary-links" class="links">
+      <a href="/">Home</a>
+      <a href="/packages.html">Packages</a>
+      <a href="/blog.html">Recent Wedding Gallery</a>
+      <a href="/faq.html">FAQ</a>
+
+      <!-- Single-level Locations dropdown -->
+      <div class="locations">
+        <a href="/locations/" class="dropbtn" aria-haspopup="true" aria-expanded="false">
+          Locations
+          <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M5 7l5 6 5-6z" fill="currentColor"/></svg>
+        </a>
+
+        <div class="dropdown" role="menu" aria-label="Locations">
+          <div class="cols">
+            <div class="group">
+              <h4>Pinellas County</h4>
+              <a href="/locations/clearwater-beach-weddings.html">Clearwater Beach</a>
+              <a href="/locations/sand-key-park-weddings.html">Sand Key Park</a>
+              <a href="/locations/honeymoon-island-weddings.html">Honeymoon Island</a>
+              <a href="/locations/caladesi-island-weddings.html">Caladesi Island</a>
+              <a href="/locations/belleair-beach-weddings.html">Belleair Beach</a>
+              <a href="/locations/indian-rocks-beach-weddings.html">Indian Rocks Beach</a>
+              <a href="/locations/redington-beach-weddings.html">Redington Beach</a>
+              <a href="/locations/madeira-beach-weddings.html">Madeira Beach</a>
+              <a href="/locations/archibald-park-weddings.html">Archibald Park</a>
+              <a href="/locations/johns-pass-weddings.html">Johns Pass</a>
+              <a href="/locations/treasure-island-weddings.html">Treasure Island</a>
+              <a href="/locations/sunset-beach-weddings.html">Sunset Beach</a>
+              <a href="/locations/sunset-vistas-weddings.html">Sunset Vistas</a>
+              <a href="/locations/lions-club-weddings.html">Lions Club</a>
+              <a href="/locations/st-pete-beach-weddings.html">St. Pete Beach</a>
+              <a href="/locations/pass-a-grille-beach-weddings.html">Pass-a-Grille Beach</a>
+              <a href="/locations/upham-beach-weddings.html">Upham Beach</a>
+              <a href="/locations/fort-de-soto-park-weddings.html">Fort De Soto Park</a>
+            </div>
+
+            <div class="group">
+              <h4>Manatee County</h4>
+              <a href="/locations/anna-maria-island-weddings.html">Anna Maria Island</a>
+              <a href="/locations/bean-point-weddings.html">Bean Point</a>
+              <a href="/locations/holmes-beach-52nd-street-weddings.html">Holmes Beach - 52nd St</a>
+              <a href="/locations/holmes-beach-public-beach-weddings.html">Holmes Beach - Public Beach</a>
+              <a href="/locations/holmes-beach-46th-street-weddings.html">Holmes Beach - 46th St</a>
+              <a href="/locations/coquina-beach-weddings.html">Coquina Beach</a>
+              <a href="/locations/cortez-beach-weddings.html">Cortez Beach</a>
+            </div>
+
+            <div class="group">
+              <h4>Sarasota County</h4>
+              <a href="/locations/siesta-key-weddings.html">Siesta Key</a>
+              <a href="/locations/lido-beach-weddings.html">Lido Beach</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Updated: direct link to standalone contact form -->
+      <a href="/contact.html">Contact</a>
+    </div>
+  </div>
+</nav>

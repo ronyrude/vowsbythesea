@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>St. Pete Beach & Treasure Island Weddings | Sunset Beach, Pass-a-Grille, Upham</title>
+<meta name="description" content="Compare St. Pete Beach and Treasure Island wedding spots including Sunset Beach, Pass-a-Grille, Upham Beach, Madeira, Redington, Archibald Park, and more." />
+<link rel="canonical" href="https://vowsbythesea.com/locations/st-pete-treasure-island.html" />
+<meta property="og:title" content="St. Pete Beach & Treasure Island Weddings" />
+<meta property="og:description" content="Top Gulf Coast ceremony spots across SPB & Treasure Island." />
+<style>
+  :root{--panel-grad1:#111425;--panel-grad2:#151937}
+  html,body{margin:0}
+  body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#f6f8ff}
+  .themed-hero{background:linear-gradient(180deg,var(--panel-grad1),var(--panel-grad2));color:#fff;padding:36px 20px 28px}
+  .container{max-width:980px;margin:0 auto}
+  .themed-hero h1{margin:0 0 8px;font-size:clamp(26px,3.2vw,38px)}
+  .themed-hero p{margin:0;color:#c7d2fe}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:20px 0 30px;padding:0 20px}
+  .card{display:block;text-decoration:none;background:#0f172a;color:#fff;border:1px solid #20305e;border-radius:14px;padding:16px 18px;font-weight:700}
+  .card:hover{outline:2px solid #3b82f6}
+  .cta{margin:0 20px 40px;background:#0f172a;color:#fff;border-radius:16px;padding:18px}
+  .cta p{color:#e5edff}
+  .btn{display:inline-block;background:#fff;color:#0f172a;padding:10px 14px;border-radius:12px;font-weight:800;text-decoration:none}
+  #site-menu{position:relative;z-index:1000}
+</style>
+</head>
+<body>
+  <div id="site-menu"></div>
+
+  <header class="themed-hero">
+    <div class="container">
+      <h1>St. Pete Beach &amp; Treasure Island</h1>
+      <p>From quiet dunes to easy boardwalk access, these beaches suit groups of all sizes with classic west-coast sunsets.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="grid">
+      <a class="card" href="/locations/st-pete-beach-weddings.html">St. Pete Beach</a>
+      <a class="card" href="/locations/pass-a-grille-beach-weddings.html">Pass-a-Grille Beach</a>
+      <a class="card" href="/locations/upham-beach-weddings.html">Upham Beach</a>
+      <a class="card" href="/locations/treasure-island-weddings.html">Treasure Island</a>
+      <a class="card" href="/locations/sunset-beach-weddings.html">Sunset Beach</a>
+      <a class="card" href="/locations/sunset-vistas-weddings.html">Sunset Vistas</a>
+      <a class="card" href="/locations/lions-club-weddings.html">Lions Club</a>
+      <a class="card" href="/locations/madeira-beach-weddings.html">Madeira Beach</a>
+      <a class="card" href="/locations/archibald-park-weddings.html">Archibald Park</a>
+      <a class="card" href="/locations/redington-beach-weddings.html">Redington Beach</a>
+      <a class="card" href="/locations/johns-pass-weddings.html">Johns Pass</a>
+    </section>
+
+    <section class="cta">
+      <h2>Permits &amp; timing help</h2>
+      <p>We’ll advise on crowd levels, parking, and the best light for photos—then secure the location for you.</p>
+      <p><a class="btn" href="/contact.html">Start planning</a></p>
+    </section>
+  </main>
+
+  <script>
+    fetch('/locations/shared-menu/menu.html').then(r=>r.text()).then(html=>{
+      document.getElementById('site-menu').innerHTML = html;
+    }).catch(()=>{});
+  </script>
+</body>
+</html>

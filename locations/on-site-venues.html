@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Hotel, Resort, Airbnb & Private Property Beach Weddings | On-Site Ceremonies</title>
+<meta name="description" content="Yes—we set up ceremonies at hotels, resorts, Airbnbs, and private properties. What to know about permissions, logistics, HOA/condo rules, beach access, and weather back-ups." />
+<link rel="canonical" href="https://vowsbythesea.com/locations/on-site-venues.html" />
+<meta property="og:title" content="On-Site Ceremonies (Hotel / Resort / Airbnb / Private)" />
+<meta property="og:description" content="We bring the arch, décor, sound, and photo to your location. Guidance on approvals, logistics, and back-up plans." />
+<style>
+  :root{--panel-grad1:#111425;--panel-grad2:#151937}
+  html,body{margin:0}
+  body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#f6f8ff;color:#111}
+  .themed-hero{background:linear-gradient(180deg,var(--panel-grad1),var(--panel-grad2));color:#fff;padding:36px 20px 28px}
+  .container{max-width:980px;margin:0 auto}
+  .themed-hero h1{margin:0 0 8px;font-size:clamp(26px,3.2vw,38px)}
+  .themed-hero p{margin:0;color:#c7d2fe}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:20px 20px 10px}
+  .card{border:1px solid #20305e;border-radius:14px;background:#0f172a;color:#fff;padding:16px 18px}
+  .card h3{margin:0 0 8px;font-size:1.05rem}
+  ul{margin:8px 0 0 18px}
+  .note{background:#0f172a;color:#fff;border-radius:14px;padding:18px;margin:24px 20px}
+  .cta{display:flex;gap:12px;flex-wrap:wrap;margin:16px 20px 36px}
+  .btn{display:inline-block;text-decoration:none;font-weight:800;border-radius:12px;padding:10px 14px}
+  .btn-primary{background:#fff;color:#0f172a}
+  .btn-ghost{background:transparent;border:2px solid #fff;color:#fff}
+  #site-menu{position:relative;z-index:1000}
+</style>
+</head>
+<body>
+  <div id="site-menu"></div>
+
+  <header class="themed-hero">
+    <div class="container">
+      <h1>On-Site Ceremonies: Hotel, Resort, Airbnb &amp; Private Property</h1>
+      <p>We’ll bring the arch, décor, audio, and photo to <em>your</em> location. Use this checklist so everything is smooth with the venue, HOA/condo, and local rules.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="/contact.html">Check your date</a>
+        <a class="btn btn-ghost" href="/packages.html">View packages</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="grid">
+      <div class="card">
+        <h3>1) Permission &amp; point-of-contact</h3>
+        <ul>
+          <li>Get written approval from the hotel/resort/host/HOA for a beach or lawn ceremony setup.</li>
+          <li>Share the on-site contact so we can coordinate load-in and quiet hours.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>2) Location &amp; access</h3>
+        <ul>
+          <li>Exact ceremony spot (beach, lawn, rooftop, private sand access).</li>
+          <li>Nearest parking/loading and route to the setup area (elevators/boardwalks).</li>
+          <li>Power availability (we also carry battery audio).</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>3) Rules to respect</h3>
+        <ul>
+          <li>Noise limits, glass restrictions, décor rules (stakes/flames).</li>
+          <li>Guest number limits and chair allowances in common areas.</li>
+          <li>Public beach behind a hotel may still require a city/county permit—we’ll advise.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>4) Weather &amp; back-up</h3>
+        <ul>
+          <li>Have a covered option (ballroom, patio) ready just in case.</li>
+          <li>We monitor wind/tide/surf and adjust layout for comfort and safety.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="note">
+      <h2 style="margin:0 0 8px">What we provide on-site</h2>
+      <ul>
+        <li>Arch &amp; décor per your selected package (plus aisle accents if included).</li>
+        <li>Officiant with custom vows and license guidance.</li>
+        <li>Portable audio for music and vows.</li>
+        <li>Photography coverage per package.</li>
+        <li>Full setup and clean-up within venue rules and timelines.</li>
+      </ul>
+    </section>
+
+    <section class="cta" style="margin-top:0">
+      <a class="btn btn-primary" href="/contact.html">Tell us your location</a>
+      <a class="btn btn-ghost" href="/faq.html">Read FAQs</a>
+    </section>
+  </main>
+
+  <script>
+    fetch('/locations/shared-menu/menu.html').then(r=>r.text()).then(html=>{
+      document.getElementById('site-menu').innerHTML = html;
+    }).catch(()=>{});
+  </script>
+</body>
+</html>

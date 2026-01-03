@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Clearwater Area Beach Weddings | Clearwater, Sand Key, Honeymoon Island</title>
+<meta name="description" content="Plan your Clearwater area beach wedding. Compare Clearwater Beach, Sand Key Park, Honeymoon Island and nearby spots like Caladesi, Belleair, and Indian Rocks." />
+<link rel="canonical" href="https://vowsbythesea.com/locations/clearwater-area.html" />
+<meta property="og:title" content="Clearwater Area Beach Weddings" />
+<meta property="og:description" content="Clearwater, Sand Key, Honeymoon Island & nearby beaches." />
+<style>
+  :root{--ink:#0f172a;--ink-sub:#64748b;--panel:#0f172a;--panel-grad1:#111425;--panel-grad2:#151937;--card:#0b1220;--card-bd:#1c2546;--accent:#93c5fd;--link:#e5edff}
+  html,body{margin:0}
+  body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#111;background:#f6f8ff}
+  /* THEMED HEADER to match menu */
+  .themed-hero{background:linear-gradient(180deg,var(--panel-grad1) 0%,var(--panel-grad2) 100%);color:#fff;padding:36px 20px 28px}
+  .container{max-width:980px;margin:0 auto}
+  .themed-hero h1{margin:0 0 8px;font-size:clamp(26px,3.2vw,38px)}
+  .themed-hero p{margin:0;color:#c7d2fe;max-width:70ch}
+  /* cards */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:20px 0 30px;padding:0 20px}
+  .card{display:block;text-decoration:none;background:#0f172a;color:#fff;border:1px solid #20305e;border-radius:14px;padding:16px 18px;font-weight:700}
+  .card:hover{outline:2px solid #3b82f6}
+  /* CTA block in dark to match theme */
+  .cta{margin:0 20px 40px;background:#0f172a;color:#fff;border-radius:16px;padding:18px}
+  .cta p{color:#e5edff}
+  .btn{display:inline-block;background:#fff;color:#0f172a;padding:10px 14px;border-radius:12px;font-weight:800;text-decoration:none}
+  /* shared-menu placeholder */
+  #site-menu{position:relative;z-index:1000}
+</style>
+</head>
+<body>
+  <!-- Shared menu will be injected here -->
+  <div id="site-menu"></div>
+
+  <header class="themed-hero">
+    <div class="container">
+      <h1>Clearwater Area Beach Weddings</h1>
+      <p>These locations offer wide sands, Gulf sunsets, and easy guest access. Explore each beach guide for parking, permits, and photo tips.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="grid">
+      <a class="card" href="/locations/clearwater-beach-weddings.html">Clearwater Beach</a>
+      <a class="card" href="/locations/sand-key-park-weddings.html">Sand Key Park</a>
+      <a class="card" href="/locations/honeymoon-island-weddings.html">Honeymoon Island</a>
+      <a class="card" href="/locations/caladesi-island-weddings.html">Caladesi Island</a>
+      <a class="card" href="/locations/belleair-beach-weddings.html">Belleair Beach</a>
+      <a class="card" href="/locations/indian-rocks-beach-weddings.html">Indian Rocks Beach</a>
+    </section>
+
+    <section class="cta">
+      <h2>Need help choosing?</h2>
+      <p>Tell us your guest count, accessibility needs, and photo vibe— we’ll suggest the best spot and handle permits.</p>
+      <p><a class="btn" href="/contact.html">Check your date</a></p>
+    </section>
+  </main>
+
+  <script>
+    // Inject shared menu (same on every page)
+    fetch('/locations/shared-menu/menu.html').then(r=>r.text()).then(html=>{
+      document.getElementById('site-menu').innerHTML = html;
+    }).catch(()=>{});
+  </script>
+</body>
+</html>

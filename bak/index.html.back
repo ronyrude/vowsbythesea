@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Clearwater Coastal Weddings - Beach Wedding Packages & Locations</title>
+<meta name="description" content="Clearwater Coastal Weddings offers beautiful Florida beach wedding packages and top beaches including Clearwater Beach, St Pete Beach, Anna Maria Island, and more." />
+<meta name="keywords" content="Beach weddings, Florida wedding packages, Clearwater Beach weddings, St Pete Beach, Anna Maria Island weddings" />
+<meta name="author" content="Clearwater Coastal Weddings" />
+<link rel="icon" href="https://affordablebeachweddingsflorida.com/favicon.ico" />
+<link rel="canonical" href="https://clearwatercoastalweddings.com/" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Clearwater Coastal Weddings - Beach Wedding Packages & Locations" />
+<meta property="og:description" content="Beautiful Florida beach wedding packages across Clearwater Beach, St Pete Beach, Anna Maria Island, Treasure Island, and more." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://clearwatercoastalweddings.com/" />
+<meta property="og:image" content="https://cdn.pixabay.com/photo/2016/02/19/11/53/clearwater-beach-1209438_1280.jpg" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Clearwater Coastal Weddings - Beach Wedding Packages & Locations" />
+<meta name="twitter:description" content="Florida beach wedding packages with photo options and beautiful locations like Clearwater Beach and St Pete Beach." />
+<meta name="twitter:image" content="https://cdn.pixabay.com/photo/2016/02/19/11/53/clearwater-beach-1209438_1280.jpg" />
+
+<!-- Preload hero image (non-blocking hint) -->
+<link rel="preload" as="image" href="https://cdn.pixabay.com/photo/2016/02/19/11/53/clearwater-beach-1209438_1280.jpg" imagesrcset="https://cdn.pixabay.com/photo/2016/02/19/11/53/clearwater-beach-1209438_1280.jpg 1280w" imagesizes="100vw" />
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Clearwater Coastal Weddings",
+  "image": "https://clearwatercoastalweddings.com/images/just2ofus.jpg",
+  "telephone": "+1-555-123-4567",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Clearwater",
+    "addressRegion": "FL",
+    "addressCountry": "US"
+  },
+  "url": "https://clearwatercoastalweddings.com",
+  "sameAs": [
+    "https://www.facebook.com/ClearwaterCoastalWeddings",
+    "https://instagram.com/clearwatercoastalweddings"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Wedding Packages",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Just The Two of Us Package",
+          "description": "Wedding Officiant, Decorated Table Setup, Unity Sand Ceremony, Silk Flower Bouquet, Personalized Keepsake Vows and Marriage Certificate",
+          "price": "395",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "I Love You Package",
+          "description": "Wedding Officiant, Decorated Table Setup, Unity Sand Ceremony, Silk Flower Bouquet, Personalized Keepsake Vows and Marriage Certificate",
+          "price": "495",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Tiki Parasol Package",
+          "description": "Wedding Officiant, Decorated Table Setup, Unity Sand Ceremony, Silk Flower Bouquet, Personalized Keepsake Vows and Marriage Certificate",
+          "price": "695",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "A Little More Package",
+          "description": "Wedding Officiant, Digital Wedding Photography (75 photos), Up to 50 Chairs with Covers & Bows, Decorated Tiki Torches, Rose Bridal Bouquet",
+          "price": "749",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Something Blue Stars Package",
+          "description": "Wedding Officiant, Decorated Table Setup, Unity Sand Ceremony, Silk Flower Bouquet, Personalized Keepsake Vows and Marriage Certificate",
+          "price": "1499",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Sweet & Simple Package",
+          "description": "Wedding Officiant, Legal Filing of Marriage License, Photo CD – 25 professional photos, Assistance with Vows",
+          "price": "295",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Stars of Love I & II Package",
+          "description": "Wedding Officiant, Stars of Love Arch, 50 professional photos, additional features",
+          "price": "695",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Bamboo & Stars Package",
+          "description": "Wedding Officiant, Decorated Table Setup, Unity Sand Ceremony, Silk Flower Bouquet, Personalized Keepsake Vows",
+          "price": "495",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Bamboo Love II Package",
+          "description": "Wedding Officiant, Digital Wedding Photography (100 photos), Video of Ceremony, Up to 50 Chairs with Covers & Bows, Delivery & Setup",
+          "price": "2999",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Tropical Bliss Package",
+          "description": "Wedding Officiant, Champagne Bottle, Red Carpet Treatment, Maximum of three hours of service",
+          "price": "4999",
+          "priceCurrency": "USD"
+        }
+      }
+    ]
+  }
+}
+</script>
+
+<style>
+  :root {
+    --primary: #f28e1c;
+    --dark: #1a1a1a;
+    --light: #fff;
+    --text-dark: #222;
+    --text-muted: #666;
+    --border-light: #ddd;
+    --radius: 10px;
+    --max-width: 1000px;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-family);
+    background: var(--light);
+    color: var(--text-dark);
+    line-height: 1.5;
+    text-align: center;
+    min-height: 100vh;
+    padding-bottom: 60px;
+  }
+
+  nav {
+    background: var(--dark);
+    padding: 12px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+  nav a {
+    color: var(--light);
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+  }
+  nav a:hover,
+  nav a.active {
+    color: var(--primary);
+  }
+
+  header {
+    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('https://cdn.pixabay.com/photo/2016/02/19/11/53/clearwater-beach-1209438_1280.jpg') center/cover no-repeat;
+    padding: 100px 20px 120px;
+    color: var(--light);
+    user-select: none;
+  }
+  header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.2em;
+  }
+  header p {
+    font-size: 1.3rem;
+    max-width: 650px;
+    margin: 0 auto 30px;
+  }
+  .btn {
+    background: var(--primary);
+    color: var(--light);
+    padding: 15px 40px;
+    font-weight: 700;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+    box-shadow: 0 5px 10px rgba(242, 142, 28, 0.5);
+    transition: background-color 0.3s;
+  }
+  .btn:hover,
+  .btn:focus {
+    background: #d87600;
+    outline: none;
+  }
+
+  main {
+    max-width: var(--max-width);
+    margin: 50px auto 0;
+    padding: 0 20px;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 30px;
+    user-select: none;
+  }
+
+  /* Packages */
+  .packages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+    gap: 25px;
+    margin-bottom: 70px;
+  }
+  .package {
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius);
+    padding: 15px 20px 10px;
+    text-align: left;
+    background: var(--light);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    cursor: default;
+    user-select: none;
+    transition: box-shadow 0.3s;
+    position: relative;
+  }
+  .package:hover,
+  .package:focus-within {
+    box-shadow: 0 10px 30px rgba(242, 142, 28, 0.5);
+    outline: none;
+  }
+  .package h3 {
+    margin-top: 0;
+    margin-bottom: 6px;
+    font-weight: 900;
+    color: var(--dark);
+    font-size: 1.5rem;
+  }
+  .package .price {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+  }
+  .package p.desc {
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+    white-space: normal;
+    max-height: 100px;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+  }
+  .package.expanded .desc {
+    max-height: 1000px;
+  }
+  .package .readmore {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    user-select: none;
+    display: inline-block;
+  }
+  .package .readmore:hover,
+  .package .readmore:focus {
+    text-decoration: underline;
+    outline: none;
+  }
+
+  /* Package images */
+  .package img {
+    width: 100%;
+    border-radius: var(--radius);
+    margin-bottom: 10px;
+    object-fit: cover;
+    max-height: 180px;
+  }
+
+  /* Beaches */
+  .beaches {
+    max-width: var(--max-width);
+    margin: 0 auto 80px;
+  }
+  .beach-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 25px;
+  }
+  .beach-card {
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    cursor: pointer;
+    background: var(--light);
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+    transition: box-shadow 0.3s ease;
+  }
+  .beach-card:hover,
+  .beach-card:focus-within {
+    box-shadow: 0 12px 36px rgba(242, 142, 28, 0.5);
+    outline: none;
+  }
+  .beach-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  .beach-card a {
+    padding: 15px 10px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--primary);
+    text-decoration: none;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .beach-card a:hover,
+  .beach-card a:focus {
+    color: #d87600;
+    outline: none;
+    text-decoration: underline;
+  }
+
+  /* Contact form */
+  #contact {
+    max-width: var(--max-width);
+    margin: 0 auto 80px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: var(--radius);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: left;
+  }
+  #contact h2 {
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  label {
+    font-weight: 600;
+    display: block;
+  }
+  input, textarea {
+    padding: 10px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-light);
+    font-size: 1rem;
+    width: 100%;
+    resize: vertical;
+  }
+  input:focus, textarea:focus {
+    outline: 2px solid var(--primary);
+  }
+  button.submit-btn {
+    background: var(--primary);
+    color: var(--light);
+    padding: 15px;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: var(--radius);
+    transition: background-color 0.3s ease;
+  }
+  button.submit-btn:hover {
+    background: #d87600;
+  }
+  .form-message {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 10px;
+    color: green;
+  }
+
+  /* Responsive typography */
+  @media (max-width: 900px) {
+    header h1 {
+      font-size: 2.8rem;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 2.4rem;
+    }
+    .packages {
+      grid-template-columns: 1fr;
+    }
+    .beach-list {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</head>
+<body>
+
+<nav aria-label="Primary navigation">
+  <a href="#header" class="active">Home</a>
+  <a href="#packages">Packages</a>
+  <a href="#beaches">Beaches</a>
+  <a href="https://instagram.com/tommatthew_photography">Wedding Gallery</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<header id="header" role="banner">
+  <h1>Clearwater Coastal Weddings</h1>
+  <p>Beautiful Florida beach wedding packages & top beaches including Clearwater Beach, St Pete Beach, Anna Maria Island, and more.</p>
+  <a href="#packages" class="btn">View Packages</a>
+  <a href="#beaches" class="btn">Explore Beaches</a>
+</header>
+
+<main>
+
+  <!-- PACKAGES -->
+  <section id="packages" aria-labelledby="packages-title">
+    <h2 id="packages-title">Wedding Packages</h2>
+
+    <div class="packages" role="list">
+
+      <!-- 1) $395.00 -->
+      <article class="package" tabindex="0" role="listitem" aria-expanded="false" aria-controls="desc-sweet-simple">
+        <img src="images/sweet_simple.jpg" alt="Sweet and Simple Wedding Package" loading="lazy" />
+        <h3>Sweet & Simple Package</h3>
+        <p class="price">$395.00</p>
+        <div id="desc-sweet-simple" class="desc" hidden>
+<ul>
+  <li>Wedding Officiant to perform marriage ceremony</li>
+  <li>Legal filing of marriage license</li>
+  <li>Digital delivery of 15 professional digital photos</li>
+  <li>Assistance selecting vows if needed</li>
+</ul>
+        </div>
+        <span class="readmore" role="button" tabindex="0" aria-expanded="false" aria-controls="desc-sweet-simple">READ MORE</span>
+      </article>
+
+      <!-- 2) $495.00 -->
+      <article class="package" tabindex="0" role="listitem" aria-expanded="false" aria-controls="desc-just-two">
+        <img src="images/just2ofus.jpg" alt="Just The Two of Us Wedding Package" loading="lazy" />
+        <h3>Just The Two of Us Package</h3>
+        <p class="price">$495.00</p>
+        <div id="desc-just-two" class="desc" hidden>
+<ul>
+  <li>Officiant to lead the marriage ceremony</li>
+  <li>Elegantly decorated table arrangement</li>
+  <li>Unity Sand Ceremony (valued at $35)</li>
+  <li>Silk flower bouquet provided for use</li>
+  <li>Customized keepsake copy of vows</li>
+  <li>Commemorative keepsake marriage certificate</li>
+  <li>Processing and filing of marriage license</li>
+  <li>Digital delivery of 50 professional digital photos</li>
+  <li>Guidance in selecting vows, if desired</li>
+</ul>
+        </div>
+        <span class="readmore" role="button" tabindex="0" aria-expanded="false" aria-controls="desc-just-two">READ MORE</span>
+      </article>
+
+      <!-- 3) $595.00 -->
+      <article class="package" tabindex="0" role="listitem" aria-expanded="false" aria-controls="desc-i-love-you">
+        <img src="images/iloveyoupackage.jpg" alt="I Love You Wedding Package" loading="lazy" />
+        <h3>I Love You Package</h3>
+        <p class="price">$595.00</p>
+        <div id="desc-i-love-you" class="desc" hidden>
+<ul>
+  <li>Wedding Officiant to perform the marriage ceremony</li>
+  <li>Elegantly decorated table set-up</li>
+  <li>Unity Sand Ceremony (a $35.00 value)</li>
+  <li>Use of silk flower bouquet</li>
+  <li>Personalized keepsake copy of vows</li>
+  <li>Personalized keepsake marriage certificate</li>
+  <li>Legal filing of the marriage license</li>
+</ul>
+
+<ul>
+  <li><strong>"I Love You" Package - $595.00</strong>
+    <ul>
+      <li>Digital delivery of 50 professional digital photos</li>
+    </ul>
+  </li>
+  <li><strong>"I Love You More" Package - $695.00</strong>
+    <ul>
+      <li>Digital delivery of 75 professional digital photos</li>
+    </ul>
+  </li>
+  <li><strong>"I Love You Always" Package - $795.00</strong>
+    <ul>
+      <li>Digital delivery of 100 professional digital photos</li>
+    </ul>
+  </li>
+</ul>
+
+<p><em>Add 6 tiki torches to any package for an additional $75.00</em></p>
+        </div>
+        <span class="readmore" role="button" tabindex="0" aria-expanded="false" aria-controls="desc-i-love-you">READ MORE</span>
+      </article>
+
+      <!-- 4) $595.00 -->
+      <article class="package" tabindex="0" role="listitem" aria-expanded="false" aria-controls="desc-bamboo-stars">
+        <img src="images/bamboo_stars.jpg" alt="Bamboo & Stars Wedding Package" loading="lazy" />
+        <h3>Bamboo & Stars Package</h3>
+        <p class="price">$595.00</p>
+        <div id="desc-bamboo-stars" class="desc" hidden>
+<ul>
+  <li>Wedding Officiant to perform the marriage ceremony</li>
+  <li>Elegantly decorated table set-up</li>
+  <li>Unity Sand Ceremony (a $35.00 value)</li>
+  <li>Use of silk flower bouquet</li>
+  <li>Personalized keepsake copy of vows</li>
+  <li>Personalized keepsake marriage certificate</li>
+  <li>Legal filing of the marriage license</li>
+  <li>Digital delivery of 50 professional digital photos</li>
+  <li>Six decorated bamboo sticks</li>
+  <li>Use of parasols for photographs</li>
+</ul>
+        </div>
+        <span class="readmore" role="button" tabindex="0" aria-expanded="false" aria-controls="desc-bamboo-stars">READ MORE</span>
+      </article>
+
+      <!-- 5) $695.00 / $895.00 (min used for sorting) -->
+      <article class="package" tabindex="0" role="listitem" aria-expanded="false" aria-controls="desc-stars-love">
+        <img src="images/starsoflove.jpg" alt="Stars of Love Wedding Package" loading="lazy" />
+        <h3>Stars of Love I & II Package</h3>
+        <p class="price">$695.00 / $895.00</p>
+        <div id="desc-stars-love" class="desc" hidden>
+<!-- Common Features -->
+<ul>
+  <li>Wedding Officiant to perform the marriage ceremony</li>
+  <li>Stars of Love Arch &mdash; white sheer fabric with two starfish on each end</li>
+  <li>Decorated table set-up</li>
+  <li>Unity Sand Ceremony (a $35.00 value)</li>
+  <li>Use of silk flower bouquet</li>
+  <li>Personalized keepsake copy of vows</li>
+  <li>Personalized keepsake marriage certificate</li>
+  <li>Legal filing of the marriage license</li>
+</ul>
+
+<!-- Package Differences -->
+<ul>
+  <li><strong>Stars of Love &ndash; $695.00</strong>
+    <ul>
+      <li>Arch with 3 sticks</li>
+      <li>Digital delivery of 50 professional wedding photos</li>
+    </ul>
+  </li>
+
+  <li><strong>Stars of Love II &ndash; $895.00</strong>
+    <ul>
+      <li>Arch with 4 sticks</li>
+      <li>Digital delivery of 75 professional wedding photos</li>
+    </ul>
+  </li>
+</ul>
+        </div>
+        <span class="readmore" role="button" tabindex="0" aria-expanded="false" aria-controls="desc-stars-love">READ MORE</span>
+      </article>
+
+      <!-- 6) $795.00 -->
+      <article class="package" tabindex="0" role="listitem" aria-expanded="false" aria-controls="desc-tiki-parasol">
+        <img src="images/tikiparasol.jpg" alt="Tiki Parasol Wedding Package" loading="lazy" />
+        <h3>Tiki Parasol Package</h3>
+        <p class="price">$795.00</p>
+        <div id="desc-tiki-parasol" class="desc" hidden>
+<!-- Common Features -->
+<ul>
+  <li>Wedding Officiant to perform the marriage ceremony</li>
+  <li>Elegantly decorated table set-up</li>
+  <li>Unity Sand Ceremony (a $35.00 value)</li>
+  <li>Use of silk flower bouquet</li>
+  <li>Personalized keepsake copy of vows</li>
+  <li>Personalized keepsake marriage certificate</li>
+  <li>Legal filing of the marriage license</li>
+  <li>Digital delivery of 50 professional digital photos</li>
+  <li>Six decorated tiki torches</li>
+  <li>Use of parasols for photographs</li>
+  <li>Unlimited guests (no seating)</li>
+</ul>
+        </div>
+        <span class="readmore" role="button" tabindex="0" aria-expanded="false" aria-controls="desc-tiki-parasol">READ MORE</span>
+      </article>
+
+      <!-- 7) Starting at $849.00 -->
+      <article class="package" tabindex="0" role="listitem" aria-expanded="false" aria-controls="desc-a-little-more">
+        <img src="images/alittemorepackage.jpg" alt="A Little More Wedding Package" loading="lazy" />
+        <h3>A Little More Package</h3>
+        <p class="price">Starting at $849.00</p>
+        <div id="desc-a-little-more" class="desc" hidden>
+<ul>
+  <li>Wedding Officiant to perform the ceremony</li>
+  <li>Sand ceremony with bottle, sand, and setup</li>
+  <li>Hand-tied rose bridal bouquet</li>
+  <li>Decorated wedding arch (setup included)</li>
+  <li>Keepsake wedding certificate</li>
+  <li>Rose groom&rsquo;s boutonni&egrave;re</li>
+  <li>Printed copy of your wedding ceremony</li>
+  <li>Filing of the marriage license after the ceremony</li>
+  <li>Seating for up to 10 guests</li>
+</ul>
+
+<!-- Package Differences -->
+<ul>
+  <li><strong>Beach Wedding Package &ldquo;Platinum&rdquo; &ndash; $1,159</strong>
+    <ul>
+      <li>Digital delivery of 100 professional wedding photos</li>
+      <li>Rose Petal Aisle Way</li>
+      <li>Six decorated tiki torches</li>
+    </ul>
+  </li>
+
+  <li><strong>Beach Wedding Package &ldquo;Gold&rdquo; &ndash; $999</strong>
+    <ul>
+      <li>Digital delivery of 100 professional wedding photos</li>
+      <li>Six decorated tiki torches</li>
+    </ul>
+  </li>
+
+  <li><strong>Beach Wedding Package &ldquo;Silver&rdquo; &ndash; $849</strong>
+    <ul>
+      <li>Digital delivery of 75 professional wedding photos</li>
+      <li>Six decorated tiki torches</li>
+    </ul>
+  </li>
+</ul>
+        </div>
+        <span class="readmore" role="button" tabindex="0" aria-expanded="false" aria-controls="desc-a-little-more">READ MORE</span>
+      </article>
+
+      <!-- 8) $1,499.00 + tax -->
+      <article class="package" tabindex="0" role="listitem" aria-expanded="false" aria-controls="desc-something-blue">
+        <img src="images/somethingblue.jpg" alt="Something Blue Stars Wedding Package" loading="lazy" />
+        <h3>Something Blue Stars Package</h3>
+        <p class="price">$1,499.00 + tax</p>
+        <div id="desc-something-blue" class="desc" hidden>
+<ul>
+  <li>Wedding officiant to conduct the ceremony</li>
+  <li>Stars of Love Arch 4 poles with white sheer fabric and 2 starfish on each end</li>
+  <li>Decorated table setup</li>
+  <li>Unity Sand Ceremony (a $35 value)</li>
+  <li>Use of silk flower bouquet</li>
+  <li>Personalized keepsake vows</li>
+  <li>Personalized keepsake marriage certificate</li>
+  <li>Legal filing of marriage license</li>
+  <li>Digital delivery of 100 professional photos</li>
+  <li>Seating for up to 20 guests</li>
+</ul>
+        </div>
+        <span class="readmore" role="button" tabindex="0" aria-expanded="false" aria-controls="desc-something-blue">READ MORE</span>
+      </article>
+
+      <!-- 9) $2,999.00 -->
+      <article class="package" tabindex="0" role="listitem" aria-expanded="false" aria-controls="desc-bamboo-love-ii">
+        <img src="images/bamboo_love_ii.jpg" alt="Bamboo Love II Wedding Package" loading="lazy" />
+        <h3>Bamboo Love II Package</h3>
+        <p class="price">$2,999.00</p>
+        <div id="desc-bamboo-love-ii" class="desc" hidden>
+<ul>
+  <li>Wedding Officiant</li>
+  <li>Digital Wedding Photography (Photo CD) 100 photos</li>
+  <li>Video of Ceremony</li>
+  <li>Up to 50 Chairs with covers & bows</li>
+  <li>Delivery & set-up</li>
+</ul>
+        </div>
+        <span class="readmore" role="button" tabindex="0" aria-expanded="false" aria-controls="desc-bamboo-love-ii">READ MORE</span>
+      </article>
+
+      <!-- 10) $4,999 + tax -->
+      <article class="package" tabindex="0" role="listitem" aria-expanded="false" aria-controls="desc-tropical-bliss">
+        <img src="images/tropical_bliss.jpg" alt="Tropical Bliss Wedding Package" loading="lazy" />
+        <h3>Tropical Bliss Package</h3>
+        <p class="price">$4,999 + tax</p>
+        <div id="desc-tropical-bliss" class="desc" hidden>
+<!-- Common Features -->
+<ul>
+  <li>Wedding Officiant to perform the ceremony</li>
+  <li>Digital delivery of 100 professional wedding photos</li>
+  <li>Video of the ceremony</li>
+  <li>Up to 50 chairs with covers and bows (delivery and set-up included)</li>
+  <li>Hand-tied rose bridal bouquet</li>
+  <li>Rose groom&rsquo;s boutonni&egrave;re</li>
+  <li>Sand ceremony with bottle, sand, and setup</li>
+  <li>Bamboo Love II or Tropical Bliss setup included</li>
+  <li>Pre-recorded music</li>
+  <li>Starfish aisle way</li>
+  <li>Rose petals</li>
+  <li>Printed copy of your wedding ceremony</li>
+  <li>Keepsake wedding certificate</li>
+  <li>Filing of the marriage license</li>
+</ul>
+
+<!-- Package Differences -->
+<ul>
+  <li><strong>All Inclusive with Sand Castle &amp; Classic Car</strong>
+    <ul>
+      <li>Fairytale sand castle (based on date availability)</li>
+      <li>Red carpet treatment:
+        <ul>
+          <li>Pick-up of the bride at point of departure</li>
+          <li>Drop-off at the ceremony</li>
+          <li>Post-ceremony champagne toast with photography time</li>
+          <li>Drop-off of the couple at the reception</li>
+          <li>Service includes a complimentary bottle of champagne</li>
+          <li>Maximum service duration: three hours</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+        </div>
+        <span class="readmore" role="button" tabindex="0" aria-expanded="false" aria-controls="desc-tropical-bliss">READ MORE</span>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- BEACHES -->
+  <section id="beaches" aria-labelledby="beaches-title" class="beaches">
+    <h2 id="beaches-title">Top Beach Locations</h2>
+    <div class="beach-list" role="list">
+
+      <article class="beach-card" role="listitem" tabindex="0">
+        <img src="images/st_pete_beach.jpg" alt="St Pete Beach" loading="lazy" />
+        <a href="https://gulfbeachweddings.com/beach/st-pete-beach/" target="_blank" rel="noopener noreferrer" aria-label="Learn more about St Pete Beach">St Pete Beach</a>
+      </article>
+
+      <article class="beach-card" role="listitem" tabindex="0">
+        <img src="images/clearwater_beach.jpg" alt="Clearwater Beach" loading="lazy" />
+        <a href="https://gulfbeachweddings.com/beach/clearwater-beach/" target="_blank" rel="noopener noreferrer" aria-label="Learn more about Clearwater Beach">Clearwater Beach</a>
+      </article>
+
+      <article class="beach-card" role="listitem" tabindex="0">
+        <img src="images/anna_maria_island.jpg" alt="Anna Maria Island" loading="lazy" />
+        <a href="https://gulfbeachweddings.com/beach/anna-maria-island/" target="_blank" rel="noopener noreferrer" aria-label="Learn more about Anna Maria Island">Anna Maria Island</a>
+      </article>
+
+      <article class="beach-card" role="listitem" tabindex="0">
+        <img src="images/treasure_island.jpg" alt="Treasure Island" loading="lazy" />
+        <a href="https://gulfbeachweddings.com/beach/treasure-island/" target="_blank" rel="noopener noreferrer" aria-label="Learn more about Treasure Island">Treasure Island</a>
+      </article>
+
+      <article class="beach-card" role="listitem" tabindex="0">
+        <img src="images/sarasota_beach.jpg" alt="Sarasota Beach" loading="lazy" />
+        <a href="https://gulfbeachweddings.com/beach/sarasota-beach/" target="_blank" rel="noopener noreferrer" aria-label="Learn more about Sarasota Beach">Sarasota Beach</a>
+      </article>
+
+      <article class="beach-card" role="listitem" tabindex="0">
+        <img src="images/indian_rocks.jpg" alt="Indian Rocks Beach" loading="lazy" />
+        <a href="https://gulfbeachweddings.com/beach/indian-rocks-beach/" target="_blank" rel="noopener noreferrer" aria-label="Learn more about Indian Rocks Beach">Indian Rocks Beach</a>
+      </article>
+
+      <article class="beach-card" role="listitem" tabindex="0">
+        <img src="images/redington_beach.jpg" alt="Redington Beach" loading="lazy" />
+        <a href="https://gulfbeachweddings.com/beach/redington-beach/" target="_blank" rel="noopener noreferrer" aria-label="Learn more about Redington Beach">Redington Beach</a>
+      </article>
+
+      <article class="beach-card" role="listitem" tabindex="0">
+        <img src="images/madeira_beach.jpg" alt="Madeira Beach" loading="lazy" />
+        <a href="https://gulfbeachweddings.com/beach/madeira-beach/" target="_blank" rel="noopener noreferrer" aria-label="Learn more about Madeira Beach">Madeira Beach</a>
+      </article>
+
+      <article class="beach-card" role="listitem" tabindex="0">
+        <img src="images/tampa_beach.jpg" alt="Tampa Beach" loading="lazy" />
+        <a href="https://gulfbeachweddings.com/beach/tampa-beach/" target="_blank" rel="noopener noreferrer" aria-label="Learn more about Tampa Beach">Tampa Beach</a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- BROCHURE DOWNLOAD -->
+  <section id="brochure" aria-label="Download brochure" style="text-align:center; margin-bottom:80px;">
+    <a href="https://example.com/clearwater-coastal-weddings-brochure.pdf" target="_blank" rel="noopener" class="btn" download>
+      Download GBW Brochure (PDF)
+    </a>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section id="contact" aria-labelledby="contact-title">
+    <h2 id="contact-title">Contact Us</h2>
+    <form id="contact-form" novalidate>
+      <label for="name">Name *</label>
+      <input type="text" id="name" name="name" required aria-required="true" />
+
+      <label for="email">Email *</label>
+      <input type="email" id="email" name="email" required aria-required="true" />
+
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone" pattern="^\+?[\d\s\-\(\)]{7,}$" placeholder="+1 (555) 123-4567" />
+
+      <label for="message">Message *</label>
+      <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+
+      <button type="submit" class="submit-btn">Send Message</button>
+      <div class="form-message" aria-live="polite" role="alert" id="form-message"></div>
+    </form>
+  </section>
+
+</main>
+
+<script>
+  // Toggle read more/less in packages
+  document.querySelectorAll('.package .readmore').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const packageEl = btn.closest('.package');
+      const desc = packageEl.querySelector('.desc');
+      const expanded = packageEl.classList.toggle('expanded');
+      desc.hidden = !expanded;
+      btn.setAttribute('aria-expanded', expanded);
+      packageEl.setAttribute('aria-expanded', expanded);
+      btn.textContent = expanded ? 'READ LESS' : 'READ MORE';
+    });
+    btn.addEventListener('keydown', (e) => {
+      if(e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        btn.click();
+      }
+    });
+  });
+
+  // Simple Contact Form validation and fake submission
+  const form = document.getElementById('contact-form');
+  const messageDiv = document.getElementById('form-message');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    messageDiv.textContent = '';
+    if(!form.checkValidity()) {
+      messageDiv.style.color = 'red';
+      messageDiv.textContent = 'Please fill out all required fields correctly.';
+      form.reportValidity();
+      return;
+    }
+
+    // Simulate sending form (replace with real API / backend)
+    messageDiv.style.color = 'green';
+    messageDiv.textContent = 'Thank you! Your message has been sent.';
+    form.reset();
+  });
+</script>
+
+</body>
+</html>
