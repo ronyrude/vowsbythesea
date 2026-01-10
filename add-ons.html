@@ -6,17 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Romantic Add-Ons & Enhancements | Vows By The Sea – Florida Beach Weddings</title>
-  <meta name="description" content="Personalize your Florida beach wedding with Vows By The Sea: honeymoon photography, private boat cruise, unity sand ceremony, drone coverage, extended photo time, Bluetooth speaker system, Bluetooth mic system, and hotel/Airbnb liaison support." />
+  <meta name="description" content="Personalize your Florida beach wedding with Vows By The Sea: honeymoon photography, private boat cruise, extended photo time, private after-marriage sessions, unity sand ceremony, Bluetooth speaker system, Bluetooth mic system, and hotel/Airbnb liaison support." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="icon" href="https://vowsbythesea.com/favicon.ico" />
   <link rel="canonical" href="https://vowsbythesea.com/add-ons.html" />
 
   <!-- Open Graph -->
   <meta property="og:locale" content="en_US" />
   <meta property="og:title" content="Romantic Add-Ons & Enhancements | Vows By The Sea" />
-  <meta property="og:description" content="Honeymoon photography, sunset boat cruises, unity sand ceremony, drone coverage, Bluetooth speakers, Bluetooth mics, and more." />
+  <meta property="og:description" content="Honeymoon photography, sunset boat cruises, private after-marriage sessions, unity sand ceremony, extended photo time, Bluetooth speakers, Bluetooth mics, and more." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://vowsbythesea.com/add-ons.html" />
   <meta property="og:image" content="https://vowsbythesea.com/images/og/vbts-addons.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Romantic Add-Ons & Enhancements | Vows By The Sea" />
+  <meta name="twitter:description" content="Upgrade your Florida beach wedding with sunset cruises, private after-marriage sessions, extended photo time, and more." />
+  <meta name="twitter:image" content="https://vowsbythesea.com/images/og/vbts-addons.jpg" />
 
   <style>
     :root{
@@ -75,8 +80,8 @@
     "@type": "ItemList",
     "name": "Vows By The Sea Add-Ons",
     "itemListElement": [
-      {"@type":"ListItem","position":1,"name":"Extended Photography Time ($300/hr)"},
-      {"@type":"ListItem","position":2,"name":"Drone Coverage (4K) – Photos: $50 per 10 pictures or 3‑minute video"},
+      {"@type":"ListItem","position":1,"name":"Extended Photography Time ($250/hr)"},
+      {"@type":"ListItem","position":2,"name":"After Marriage Private Photography Session ($500/hr)"},
       {"@type":"ListItem","position":3,"name":"Honeymoon Photography Session ($300/hr)"},
       {"@type":"ListItem","position":4,"name":"Private Boat Cruise Experience (custom rate)"},
       {"@type":"ListItem","position":5,"name":"Unity Sand Ceremony ($40 per ceremony)"},
@@ -126,7 +131,7 @@
       },
       {
         "@type": "OfferCatalog",
-        "name": "Photo & Video",
+        "name": "Photography",
         "itemListElement": [
           {
             "@type": "Service",
@@ -135,18 +140,20 @@
             "offers": {
               "@type": "Offer",
               "priceCurrency": "USD",
-              "priceSpecification": {"@type": "UnitPriceSpecification", "price": 300, "priceCurrency": "USD", "unitText": "HOUR"},
+              "priceSpecification": {"@type": "UnitPriceSpecification", "price": 250, "priceCurrency": "USD", "unitText": "HOUR"},
               "availability": "https://schema.org/InStock"
             }
           },
           {
             "@type": "Service",
-            "name": "Drone Coverage (4K)",
-            "url": "https://vowsbythesea.com/add-ons.html#drone",
-            "offers": [
-              {"@type": "Offer", "name": "Drone Photos (per 10 pictures)", "priceCurrency": "USD", "price": 50, "availability": "https://schema.org/InStock"},
-              {"@type": "Offer", "name": "3‑minute Drone Video", "priceCurrency": "USD", "price": 50, "availability": "https://schema.org/InStock"}
-            ]
+            "name": "After Marriage Private Photography Session",
+            "url": "https://vowsbythesea.com/add-ons.html#after-marriage-session",
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "USD",
+              "priceSpecification": {"@type": "UnitPriceSpecification", "price": 500, "priceCurrency": "USD", "unitText": "HOUR"},
+              "availability": "https://schema.org/InStock"
+            }
           }
         ]
       },
@@ -191,16 +198,8 @@
 </head>
 <body>
   <!-- Shared Menu -->
-  <div id="vbts-menu" class="vbts-nav"></div>
-  <script>
-    // Load the shared menu.html exactly as used across the site
-    (function(){
-      fetch('/locations/shared-menu/menu.html',{cache:'no-cache'})
-        .then(r=>r.text())
-        .then(html=>{ document.getElementById('vbts-menu').innerHTML = html; })
-        .catch(()=>{ /* fail silent to avoid blocking page render */ });
-    })();
-  </script>
+  <div id="site-nav" data-include="/locations/shared-menu/menu.html"></div>
+  <script defer src="/locations/shared-menu/menu-loader.js"></script>
 
   <div class="spacer"></div>
 
@@ -227,7 +226,7 @@
           <li>Short social highlight reel available</li>
         </ul>
         <div class="actions">
-          <a class="btn btn-primary" href="/contact.html?subject=Add-on%3A%20Honeymoon%20Photography&addon=Honeymoon%20Photography%20Session" rel="nofollow">Add to My Package</a>
+          <a class="btn btn-primary addon-cta" href="/contact.html?subject=Add-on%3A%20Honeymoon%20Photography&addon=Honeymoon%20Photography%20Session" rel="nofollow">Add to My Package</a>
           <a class="btn btn-ghost" href="#boat-cruise">Pair with Boat Cruise →</a>
         </div>
       </article>
@@ -240,45 +239,46 @@
         <p class="desc">Set sail after your ceremony. A private charter or luxury pontoon for a golden‑hour cruise along the Gulf — optional champagne toast and onboard photos.</p>
         <ul class="bullets">
           <li>1–2 hour sunset cruise (Clearwater • St. Pete • AMI)</li>
-          <li>Photographer onboard option + drone shore shots</li>
+          <li>Photographer onboard option + shoreline portraits</li>
           <li>Custom playlist + “Just Married” boat sign</li>
         </ul>
         <div class="actions">
-          <a class="btn btn-primary" href="/contact.html?subject=Add-on%3A%20Private%20Boat%20Cruise&addon=Private%20Boat%20Cruise%20Experience" rel="nofollow">Add to My Package</a>
+          <a class="btn btn-primary addon-cta" href="/contact.html?subject=Add-on%3A%20Private%20Boat%20Cruise&addon=Private%20Boat%20Cruise%20Experience" rel="nofollow">Add to My Package</a>
           <a class="btn btn-ghost" href="#honeymoon-photography">Combine with Honeymoon Photos →</a>
         </div>
       </article>
     </section>
 
-    <h4 class="section-title">Photo & Video</h4>
-    <section class="grid" aria-label="Photo and Video Add-Ons">
+    <h4 class="section-title">Photography</h4>
+    <section class="grid" aria-label="Photography Add-Ons">
       <!-- Extended Photo Time -->
       <article class="card" id="extended-photo">
         <span class="pill">📸 Extended Time</span>
         <h3>Extended Photography Time</h3>
-        <span class="price">$300 / hour</span>
+        <span class="price">$250 / hour</span>
         <p class="desc">Add <strong>+30</strong> or <strong>+60 minutes</strong> for family groupings, décor details, and extra couple portraits.</p>
         <ul class="bullets">
           <li>Ideal for larger families or bridal parties</li>
           <li>More candid moments + detail coverage</li>
         </ul>
         <div class="actions">
-          <a class="btn btn-primary" href="/contact.html?subject=Add-on%3A%20Extended%20Photography%20Time&addon=Extended%20Photography%20Time">Add to My Package</a>
+          <a class="btn btn-primary addon-cta" href="/contact.html?subject=Add-on%3A%20Extended%20Photography%20Time&addon=Extended%20Photography%20Time">Add to My Package</a>
         </div>
       </article>
 
-      <!-- Drone Coverage -->
-      <article class="card" id="drone">
-        <span class="pill">🚁 Drone Coverage</span>
-        <h3>Drone Coverage (4K)</h3>
-        <span class="price">Photos: $50 per 10 pictures • or • 3‑minute video: $50</span>
-        <p class="desc">Aerial ceremony footage and establishing shots in cinematic <strong>4K</strong>. Weather, FAA, and beach rules permitting.</p>
+      <!-- After Marriage Private Session -->
+      <article class="card" id="after-marriage-session">
+        <span class="pill">💍 Private Session</span>
+        <h3>After Marriage Private Photography Session</h3>
+        <span class="price">$500 / hour</span>
+        <p class="desc">A private, after-marriage session with on-site editing and full delivery of all records. No records are kept by the photographer, and all copyrights belong to the couple.</p>
         <ul class="bullets">
-          <li>Stunning wide beach vistas & aisle reveal</li>
-          <li>Add to video or create a short reel</li>
+          <li>On-site editing during your session</li>
+          <li>All photo records delivered to the couple</li>
+          <li>Perfect for a quiet, romantic follow-up shoot</li>
         </ul>
         <div class="actions">
-          <a class="btn btn-primary" href="/contact.html?subject=Add-on%3A%20Drone%20Coverage&addon=Drone%20Coverage%204K">Add to My Package</a>
+          <a class="btn btn-primary addon-cta" href="/contact.html?subject=Add-on%3A%20After%20Marriage%20Private%20Session&addon=After%20Marriage%20Private%20Photography%20Session">Add to My Package</a>
         </div>
       </article>
     </section>
@@ -296,7 +296,7 @@
           <li>Engraved glass jar upgrade</li>
         </ul>
         <div class="actions">
-          <a class="btn btn-primary" href="/contact.html?subject=Add-on%3A%20Unity%20Sand%20Ceremony&addon=Unity%20Sand%20Ceremony">Add to My Package</a>
+          <a class="btn btn-primary addon-cta" href="/contact.html?subject=Add-on%3A%20Unity%20Sand%20Ceremony&addon=Unity%20Sand%20Ceremony">Add to My Package</a>
         </div>
       </article>
 
@@ -312,7 +312,7 @@
           <li><strong>Note:</strong> No loud music permitted at beaches per city/beach rules.</li>
         </ul>
         <div class="actions">
-          <a class="btn btn-primary" href="/contact.html?subject=Add-on%3A%20Bluetooth%20Speaker%20System&addon=Bluetooth%20Speaker%20System">Add to My Package</a>
+          <a class="btn btn-primary addon-cta" href="/contact.html?subject=Add-on%3A%20Bluetooth%20Speaker%20System&addon=Bluetooth%20Speaker%20System">Add to My Package</a>
         </div>
       </article>
 
@@ -327,7 +327,7 @@
           <li>Quick sound check before ceremony</li>
         </ul>
         <div class="actions">
-          <a class="btn btn-primary" href="/contact.html?subject=Add-on%3A%20Bluetooth%20Mic%20System&addon=Bluetooth%20Ceremony%20Mic%20System">Add to My Package</a>
+          <a class="btn btn-primary addon-cta" href="/contact.html?subject=Add-on%3A%20Bluetooth%20Mic%20System&addon=Bluetooth%20Ceremony%20Mic%20System">Add to My Package</a>
         </div>
       </article>
     </section>
@@ -344,7 +344,7 @@
           <li>Coordinate lobby meet‑ups & shuttle timing</li>
         </ul>
         <div class="actions">
-          <a class="btn btn-primary" href="/contact.html?subject=Add-on%3A%20Hotel%20%2F%20Airbnb%20Liaison&addon=Hotel%20%2F%20Airbnb%20Liaison%20Support">Add to My Package</a>
+          <a class="btn btn-primary addon-cta" href="/contact.html?subject=Add-on%3A%20Hotel%20%2F%20Airbnb%20Liaison&addon=Hotel%20%2F%20Airbnb%20Liaison%20Support">Add to My Package</a>
         </div>
       </article>
     </section>
@@ -363,6 +363,13 @@
   <footer class="container" style="opacity:.7;font-size:12px;padding-bottom:36px">
     © <span id="y"></span> Vows By The Sea · Florida Beach Weddings
   </footer>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    document.querySelectorAll('.addon-cta').forEach(function(link){
+      link.addEventListener('click', function(){
+        alert('Please add your add-on details in the “Tell us more” section of the contact form so we can prepare your quote.');
+      });
+    });
+  </script>
 </body>
 </html>
