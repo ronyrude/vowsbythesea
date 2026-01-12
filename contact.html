@@ -361,9 +361,22 @@
       const wrap = document.getElementById('dates-wrap');
       const add  = document.getElementById('add-date');
       if(!wrap || !add) return;
+
+      const now = new Date();
+      const minDate = now.toISOString().slice(0, 10);
+      const maxDateObj = new Date(now.getFullYear(), now.getMonth() + 10, now.getDate());
+      const maxDate = maxDateObj.toISOString().slice(0, 10);
+
+      function applyDateBounds(input){
+        input.min = minDate;
+        input.max = maxDate;
+      }
+
+      wrap.querySelectorAll('input[type="date"]').forEach(applyDateBounds);
       add.addEventListener('click', ()=>{
         const inp = document.createElement('input');
         inp.type='date'; inp.name='preferred_dates[]'; inp.required=false;
+        applyDateBounds(inp);
         wrap.appendChild(inp); inp.focus();
       });
     })();
