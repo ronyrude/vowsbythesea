@@ -15,6 +15,7 @@
 
   <title>Contact Us | Vows By The Sea – Florida Beach Weddings</title>
   <meta name="description" content="Contact Vows By The Sea for beautiful, stress-free Florida beach weddings across Clearwater, St. Pete, Anna Maria Island, and Sarasota." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="icon" href="https://vowsbythesea.com/favicon.ico" />
   <link rel="canonical" href="https://vowsbythesea.com/contact.html" />
 
@@ -26,6 +27,9 @@
   <meta property="og:url" content="https://vowsbythesea.com/contact.html" />
   <meta property="og:image" content="https://vowsbythesea.com/images/hero-social-1200x630-enhanced.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact Vows By The Sea" />
+  <meta name="twitter:description" content="Ask about dates, packages, and Florida Gulf Coast locations for your beach wedding." />
+  <meta name="twitter:image" content="https://vowsbythesea.com/images/hero-social-1200x630-enhanced.jpg" />
 
   <!-- Cloudflare Turnstile -->
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
@@ -200,15 +204,15 @@
               <label for="package">Preferred Package *</label>
               <select id="package" name="package" required>
                 <option value="">Select a package…</option>
-                <option>Sweet &amp; Simple – $448</option>
-                <option>I Love You – from $595</option>
-                <option>Bamboo &amp; Stars – $695</option>
-                <option>Stars of Love I – $1,050</option>
-                <option>Stars of Love II – $1,169</option>
-                <option>Tiki Parasol – $950</option>
-                <option>A Little More – from $1,198</option>
-                <option>Something Blue Stars – $1,988</option>
-                <option>Bamboo Love II – $3,999</option>
+                <option>Sweet &amp; Simple – $548</option>
+                <option>I Love You – from $695</option>
+                <option>Bamboo &amp; Stars – $795</option>
+                <option>Stars of Love I – $1,150</option>
+                <option>Stars of Love II – $1,269</option>
+                <option>Tiki Parasol – $1,050</option>
+                <option>A Little More – from $1,298</option>
+                <option>Something Blue Stars – $2,088</option>
+                <option>Bamboo Love II – $4,099</option>
               </select>
             </div>
 
@@ -279,7 +283,7 @@
             7901 4th St N STE 300<br/>St. Petersburg, FL 33702
           </div>
           <div class="badge" aria-label="Weddings completed this year">
-            💍 <span><strong>147</strong> Love Stories in 2025</span>
+            💍 <span><strong>198</strong> Love stories in 2025</span>
           </div>
           <div class="info-block">
             <b>Not sure on a date?</b>
@@ -357,9 +361,22 @@
       const wrap = document.getElementById('dates-wrap');
       const add  = document.getElementById('add-date');
       if(!wrap || !add) return;
+
+      const now = new Date();
+      const minDate = now.toISOString().slice(0, 10);
+      const maxDateObj = new Date(now.getFullYear(), now.getMonth() + 10, now.getDate());
+      const maxDate = maxDateObj.toISOString().slice(0, 10);
+
+      function applyDateBounds(input){
+        input.min = minDate;
+        input.max = maxDate;
+      }
+
+      wrap.querySelectorAll('input[type="date"]').forEach(applyDateBounds);
       add.addEventListener('click', ()=>{
         const inp = document.createElement('input');
         inp.type='date'; inp.name='preferred_dates[]'; inp.required=false;
+        applyDateBounds(inp);
         wrap.appendChild(inp); inp.focus();
       });
     })();

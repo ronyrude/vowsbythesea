@@ -6,7 +6,7 @@
   <!-- Blog index -->
   <url>
     <loc>https://vowsbythesea.com/blog.html</loc>
-    <lastmod>2025-10-01</lastmod>
+    <lastmod>2025-10-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -166,6 +166,16 @@
     </image:image>
   </url>
 
+  <url>
+    <loc>https://vowsbythesea.com/posts/anna-maria-island-honeymoon-vanessa-james.html</loc>
+    <lastmod>2025-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vowsbythesea.com/posts/nor_isl/nor_isl_%20(1).jpg</image:loc>
+      <image:title>Anna Maria Island Honeymoon Session – Vanessa &amp; James</image:title>
+    </image:image>
+  </url>
   <url>
     <loc>https://vowsbythesea.com/posts/honeymoon-island-wedding-akons-cinta.html</loc>
     <lastmod>2024-08-05</lastmod>
