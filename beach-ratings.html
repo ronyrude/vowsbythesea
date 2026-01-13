@@ -5,7 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tampa Bay - Beach Ratings | Clearwater Coastal Weddings</title>
 <meta name="description" content="Side-by-side beach ratings for Tampa Bay area ceremony spots with an interactive map: capacity, permits, privacy, parking, and overall scores." />
-<link rel="canonical" href="https://clearwatercoastalweddings.com/beach-ratings" />
+<meta name="robots" content="index,follow,max-image-preview:large" />
+<link rel="canonical" href="https://vowsbythesea.com/beach-ratings.html" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Tampa Bay Beach Ratings | Clearwater Coastal Weddings" />
+<meta property="og:description" content="Compare ceremony beaches by capacity, permits, privacy, parking, and overall scores." />
+<meta property="og:url" content="https://vowsbythesea.com/beach-ratings.html" />
+<meta property="og:image" content="https://vowsbythesea.com/images/hero-social-1200x630-enhanced.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Tampa Bay Beach Ratings" />
+<meta name="twitter:description" content="Side-by-side beach ratings with an interactive map for Tampa Bay ceremony spots." />
+<meta name="twitter:image" content="https://vowsbythesea.com/images/hero-social-1200x630-enhanced.jpg" />
 
 <style>
   :root{
@@ -22,7 +32,7 @@
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{margin:0; font-family:var(--font); color:var(--text); background:var(--light)}
+  body{margin:0; font-family:var(--font); color:var(--text); background:#f7f7f7}
 
   /* Top nav integrated with your site */
   nav.primary{
@@ -38,11 +48,12 @@
   nav.primary a:hover, nav.primary a.active{color:var(--primary)}
 
   header.hero{
-    padding:56px 16px 28px; text-align:center;
-    background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)), url('https://cdn.pixabay.com/photo/2016/02/19/11/53/clearwater-beach-1209438_1280.jpg') center/cover no-repeat;
+    padding:56px 16px 32px; text-align:center;
+    background: linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)), url('https://cdn.pixabay.com/photo/2016/02/19/11/53/clearwater-beach-1209438_1280.jpg') center/cover no-repeat;
     color:#fff;
   }
-  header.hero h1{margin:0 0 10px; font-size:2.2rem}
+  header.hero .hero-inner{max-width:900px;margin:0 auto}
+  header.hero h1{margin:0 0 10px; font-size:2.35rem}
   header.hero p{margin:0 auto 16px; max-width:760px; opacity:.95}
 
   /* Buttons */
@@ -60,14 +71,21 @@
   .breadcrumbs a{color:#fff; text-decoration:none}
   .breadcrumbs a:hover{text-decoration:underline}
 
+  .intro-grid{display:grid; gap:16px; margin:20px 0 12px}
+  @media (min-width:860px){ .intro-grid{grid-template-columns:1.1fr .9fr; align-items:stretch} }
   .note{
     background:#fff5e9; border:1px solid var(--border); border-left:4px solid var(--primary);
-    padding:12px 14px; border-radius:var(--radius); color:#533b15; margin:20px 0; font-size:.95rem;
+    padding:14px 16px; border-radius:var(--radius); color:#533b15; font-size:.95rem;
   }
 
   /* Legend */
+  .legend-card{
+    background:#fff; border:1px solid var(--border); border-radius:var(--radius);
+    padding:14px 16px; box-shadow:0 6px 16px rgba(0,0,0,.06);
+  }
+  .legend-title{font-weight:800; margin:0 0 8px; color:#333}
   .legend{
-    display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin:6px 0 18px;
+    display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin:0;
     color:var(--muted); font-size:.92rem;
   }
   .chip{
@@ -80,7 +98,7 @@
   .swatch.high{background:#ffe3c2}
 
   .region{
-    margin:30px 0 10px; color:var(--primary); font-size:1.45rem; font-weight:900;
+    margin:34px 0 10px; color:var(--primary); font-size:1.5rem; font-weight:900;
   }
 
   /* Desktop/Tablet tables */
@@ -94,7 +112,7 @@
     position:absolute; top:0; right:0; width:28px; height:100%;
     pointer-events:none; background:linear-gradient(to left,#fff 40%, rgba(255,255,255,0));
   }
-  table{width:100%; border-collapse:separate; border-spacing:0; min-width:900px; font-size:0.98rem}
+  table{width:100%; border-collapse:separate; border-spacing:0; min-width:860px; font-size:0.98rem}
   thead th{
     position:sticky; top:0; z-index:2;
     background:linear-gradient(0deg, #fff7ec, #fff);
@@ -190,26 +208,33 @@
 <script defer src="./locations/shared-menu/menu-loader.js"></script>
 
 <header class="hero" role="banner">
-  <div class="breadcrumbs"><a href="/#header">Home</a> > Beach Ratings</div>
-  <h1>Tampa Bay &ndash; Beach Ratings</h1>
-  <p>Capacity, permits, privacy, parking, and overall feel for popular ceremony spots &mdash; with a live map.</p>
-  <div class="btn-row">
-    <a class="btn" href="#map-block">Jump to Map</a>
-    <a class="btn ghost" href="/#packages">Back to Packages</a>
+  <div class="hero-inner">
+    <div class="breadcrumbs"><a href="/#header">Home</a> &gt; Beach Ratings</div>
+    <h1>Tampa Bay &ndash; Beach Ratings</h1>
+    <p>Capacity, permits, privacy, parking, and overall feel for popular ceremony spots &mdash; with a live map.</p>
+    <div class="btn-row">
+      <a class="btn" href="#map-block">Jump to Map</a>
+      <a class="btn ghost" href="/#packages">Back to Packages</a>
+    </div>
   </div>
 </header>
 
 <main>
 
-  <div class="note">
-    <strong>Heads up:</strong> Privacy and permit details can change by season, time of day, holidays, and public events. We keep this guide helpful, but on-the-ground conditions vary.
-  </div>
+  <div class="intro-grid">
+    <div class="note">
+      <strong>Heads up:</strong> Privacy and permit details can change by season, time of day, holidays, and public events. We keep this guide helpful, but on-the-ground conditions vary.
+    </div>
 
-  <div class="legend" aria-label="Legend">
-    <span class="chip"><span class="swatch low"></span> Privacy: Low (busier)</span>
-    <span class="chip"><span class="swatch med"></span> Privacy: Medium</span>
-    <span class="chip"><span class="swatch high"></span> Privacy: High (secluded)</span>
-    <span class="chip">Permit: <span class="pill permit-$">$</span> <span class="pill permit-$$">$$</span> <span class="pill permit-$$$">$$$</span></span>
+    <div class="legend-card" aria-label="Legend">
+      <p class="legend-title">Legend</p>
+      <div class="legend">
+        <span class="chip"><span class="swatch low"></span> Privacy: Low (busier)</span>
+        <span class="chip"><span class="swatch med"></span> Privacy: Medium</span>
+        <span class="chip"><span class="swatch high"></span> Privacy: High (secluded)</span>
+        <span class="chip">Permit: <span class="pill permit-$">$</span> <span class="pill permit-$$">$$</span> <span class="pill permit-$$$">$$$</span></span>
+      </div>
+    </div>
   </div>
 
   <!-- Helper templates for stars (fallback not strictly needed but kept) -->
